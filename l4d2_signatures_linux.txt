@@ -19,6 +19,14 @@ Signature for CBaseAbility::CreateForPlayer(CTerrorPlayer *):
 "@_ZN12CBaseAbility15CreateForPlayerEP13CTerrorPlayer"
 
 /* From "server_srv.so" */
+Signature for CBaseAnimating::GetAttachment(int,Vector &,QAngle &):
+"@_ZN14CBaseAnimating13GetAttachmentEiR6VectorR6QAngle"
+
+/* From "server_srv.so" */
+Signature for CBaseAnimating::LookupAttachment(char const*):
+"@_ZN14CBaseAnimating16LookupAttachmentEPKc"
+
+/* From "server_srv.so" */
 Signature for CBaseBackpackItem::StartAction(CBaseBackpackItem::BackpackItemActionType,CBaseBackpackItem::BackpackItemActionTrigger):
 "@_ZN17CBaseBackpackItem11StartActionENS_22BackpackItemActionTypeENS_25BackpackItemActionTriggerE"
 
@@ -83,6 +91,10 @@ Signature for CDirector::OnFirstSurvivorLeftSafeArea(CTerrorPlayer *):
 "@_ZN9CDirector27OnFirstSurvivorLeftSafeAreaEP13CTerrorPlayer"
 
 /* From "server_srv.so" */
+Signature for CDirectorItemManager::IsMeleeWeaponAllowedToExist(char const*):
+"@_ZN20CDirectorItemManager27IsMeleeWeaponAllowedToExistEPKc"
+
+/* From "server_srv.so" */
 Signature for CDirectorMusicBanks::OnRoundStart(void):
 "@_ZN19CDirectorMusicBanks12OnRoundStartEv"
 
@@ -107,6 +119,18 @@ Signature for CGib * _CreateEntity<CGib>(CGib *,char const*) [clone]:
 "@_Z13_CreateEntityI4CGibEPT_S2_PKc.isra.35.constprop.96"
 
 /* From "server_srv.so" */
+Signature for CGib::InitGib(CBaseEntity *,float,float):
+"@_ZN4CGib7InitGibEP11CBaseEntityff"
+
+/* From "server_srv.so" */
+Signature for CGib::Spawn(char const*):
+"@_ZN4CGib5SpawnEPKc"
+
+/* From "server_srv.so" */
+Signature for CHolidayGift::Create(Vector const&,QAngle const&,QAngle const&,Vector const&,CBaseCombatCharacter *):
+"@_ZN12CHolidayGift6CreateERK6VectorRK6QAngleS5_S2_P20CBaseCombatCharacter"
+
+/* From "server_srv.so" */
 Signature for CItem_Adrenaline::OnStartUse(CTerrorPlayer *):
 "@_ZN16CItem_Adrenaline10OnStartUseEP13CTerrorPlayer"
 
@@ -117,6 +141,10 @@ Signature for CItemDefibrillator::OnActionComplete(CTerrorPlayer *,CBaseEntity *
 /* From "server_srv.so" */
 Signature for CItemDefibrillator::OnStartAction(CBaseBackpackItem::BackpackItemActionType,CTerrorPlayer *,CBaseEntity *,float):
 "@_ZN18CItemDefibrillator13OnStartActionEN17CBaseBackpackItem22BackpackItemActionTypeEP13CTerrorPlayerP11CBaseEntityf"
+
+/* From "server_srv.so" */
+Signature for CMeleeWeaponInfo::Parse(char const*,KeyValues *):
+"@_ZN16CMeleeWeaponInfo5ParseEPKcP9KeyValues"
 
 /* From "server_srv.so" */
 Signature for CSmokeCloudSystem::FireGameEvent(IGameEvent *):
@@ -395,6 +423,10 @@ Signature for CTerrorWeapon::TrySwing(float,float,float):
 "@_ZN13CTerrorWeapon8TrySwingEfff"
 
 /* From "server_srv.so" */
+Signature for CTerrorWeaponInfo::Parse(KeyValues *,char const*):
+"@_ZN17CTerrorWeaponInfo5ParseEP9KeyValuesPKc"
+
+/* From "server_srv.so" */
 Signature for CTongue::IsAbilityReadyToFire(void)const:
 "@_ZNK7CTongue20IsAbilityReadyToFireEv"
 
@@ -423,6 +455,10 @@ Signature for InstallBotControl(void):
 "@_Z17InstallBotControlv"
 
 /* From "server_srv.so" */
+Signature for KeyValues::FindKey(char const*,bool):
+"@_ZN9KeyValues7FindKeyEPKcb"
+
+/* From "server_srv.so" */
 Signature for KeyValues::GetFirstTrueSubKey(void):
 "@_ZN9KeyValues18GetFirstTrueSubKeyEv"
 
@@ -437,6 +473,10 @@ Signature for KeyValues::GetNextTrueSubKey(void):
 /* From "server_srv.so" */
 Signature for KeyValues::GetString(char const*,char const*):
 "@_ZN9KeyValues9GetStringEPKcS1_"
+
+/* From "server_srv.so" */
+Signature for KeyValues::SetString(char const*,char const*):
+"@_ZN9KeyValues9SetStringEPKcS1_"
 
 /* From "server_srv.so" */
 Signature for MovePropAway(CBaseEntity *,CBasePlayer *):

@@ -19,6 +19,14 @@ Signature for CBaseAbility::CreateForPlayer(CTerrorPlayer *):
 "@_ZN12CBaseAbility15CreateForPlayerEP13CTerrorPlayer"
 
 /* From "server.so" */
+Signature for CBaseAnimating::GetAttachment(int,Vector &,QAngle &):
+"@_ZN14CBaseAnimating13GetAttachmentEiR6VectorR6QAngle"
+
+/* From "server.so" */
+Signature for CBaseAnimating::LookupAttachment(char const*):
+"@_ZN14CBaseAnimating16LookupAttachmentEPKc"
+
+/* From "server.so" */
 Signature for CBaseCombatWeapon::GetMaxClip1(void)const:
 "@_ZNK17CBaseCombatWeapon11GetMaxClip1Ev"
 
@@ -77,6 +85,14 @@ Signature for CFirstAidKit::FinishHealing(void):
 /* From "server.so" */
 Signature for CFirstAidKit::StartHealing(CFirstAidKit::HealTargetType) [clone]:
 "@_ZN12CFirstAidKit12StartHealingENS_14HealTargetTypeE.part.43"
+
+/* From "server.so" */
+Signature for CGib::InitGib(CBaseEntity *,float,float):
+"@_ZN4CGib7InitGibEP11CBaseEntityff"
+
+/* From "server.so" */
+Signature for CGib::Spawn(char const*):
+"@_ZN4CGib5SpawnEPKc"
 
 /* From "server.so" */
 Signature for CSmokeCloudSystem::FireGameEvent(IGameEvent *):
@@ -323,6 +339,10 @@ Signature for CTerrorWeapon::TrySwing(float,float,float):
 "@_ZN13CTerrorWeapon8TrySwingEfff"
 
 /* From "server.so" */
+Signature for CTerrorWeaponInfo::Parse(KeyValues *,char const*):
+"@_ZN17CTerrorWeaponInfo5ParseEP9KeyValuesPKc"
+
+/* From "server.so" */
 Signature for CTongue::IsAbilityReadyToFire(void)const:
 "@_ZNK7CTongue20IsAbilityReadyToFireEv"
 
@@ -347,6 +367,10 @@ Signature for InstallBotControl(void):
 "@_Z17InstallBotControlv"
 
 /* From "server.so" */
+Signature for KeyValues::FindKey(char const*,bool):
+"@_ZN9KeyValues7FindKeyEPKcb"
+
+/* From "server.so" */
 Signature for KeyValues::GetFirstTrueSubKey(void):
 "@_ZN9KeyValues18GetFirstTrueSubKeyEv"
 
@@ -361,6 +385,10 @@ Signature for KeyValues::GetNextTrueSubKey(void):
 /* From "server.so" */
 Signature for KeyValues::GetString(char const*,char const*):
 "@_ZN9KeyValues9GetStringEPKcS1_"
+
+/* From "server.so" */
+Signature for KeyValues::SetString(char const*,char const*):
+"@_ZN9KeyValues9SetStringEPKcS1_"
 
 /* From "server.so" */
 Signature for MovePropAway(CBaseEntity *,CBasePlayer *):

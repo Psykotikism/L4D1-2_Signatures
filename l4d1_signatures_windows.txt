@@ -24,6 +24,16 @@ Signature for detouring CBaseAbility::CreateForPlayer:
 /* ? ? ? ? ? ? ? ? 85 ? 0F 84 ? ? ? ? 8B ? E8 ? ? ? ? 83 ? ? 0F 85 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8D */
 
 /* From "server.dll" */
+Signature for detouring CBaseAnimating::GetAttachment:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x53\x8D\x2A\x2A\x2A\x52\x8B"
+/* ? ? ? ? ? ? ? ? 83 ? ? 53 8D ? ? ? 52 8B */
+
+/* From "server.dll" */
+Signature for detouring CBaseAnimating::LookupAttachment:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\xE8\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x86\x2A\x2A\x2A\x2A\x85\x2A\x5E\x74\x2A\x83\x2A\x2A\x75\x2A\x33\x2A\xC2\x2A\x2A\x8B\x2A\x2A\x2A\x51"
+/* ? ? ? ? ? ? ? ? ? ? 75 ? E8 ? ? ? ? 85 ? 74 ? 8B ? E8 ? ? ? ? 8B 86 ? ? ? ? 85 ? 5E 74 ? 83 ? ? 75 ? 33 ? C2 ? ? 8B ? ? ? 51 */
+
+/* From "server.dll" */
 Signature for detouring CBaseCombatWeapon::GetMaxClip1:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B\x80\x60"
 /* ? ? ? ? ? ? ? 50 E8 ? ? ? ? 8B 80 60 */
@@ -97,6 +107,16 @@ Signature for detouring CFirstAidKit::FinishHealing:
 Signature for detouring CFirstAidKit::StartHealing:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x53\x55\x56\x8D\xB1\x2A\x2A\x2A\x2A\x57\x89"
 /* ? ? ? ? ? ? ? ? 53 55 56 8D B1 ? ? ? ? 57 89 */
+
+/* From "server.dll" */
+Signature for detouring CGib::InitGib:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x8B\x2A\x0F\x84\x2A\x2A\x2A\x2A\xD9"
+/* ? ? ? ? ? ? ? ? ? 85 ? 8B ? 0F 84 ? ? ? ? D9 */
+
+/* From "server.dll" */
+Signature for detouring CGib::Spawn:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xD9\x05\x2A\x2A\x2A\x2A\x51\x8B\x2A\xD9\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x80"
+/* ? ? ? ? ? ? 8B ? E8 ? ? ? ? D9 05 ? ? ? ? 51 8B ? D9 ? ? E8 ? ? ? ? 80 */
 
 /* From "server.dll" */
 Signature for calling CSmokeCloudSystem::FireGameEvent:
@@ -404,6 +424,11 @@ Signature for detouring CTerrorWeapon::TrySwing:
 /* ? ? ? ? ? ? 8B ? 8B 90 ? ? ? ? FF ? 84 ? 0F 85 ? ? ? ? 55 */
 
 /* From "server.dll" */
+Signature for detouring CTerrorWeaponInfo::Parse:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x53\x55\x8B\x2A\x2A\x2A\x56\x57\x50\x55\x8B"
+/* ? ? ? ? ? ? ? 53 55 8B ? ? ? 56 57 50 55 8B */
+
+/* From "server.dll" */
 Signature for detouring CTongue::IsAbilityReadyToFire:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x74\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\x2A\x81\xE1\x2A\x2A\x2A\x2A\xC1\x2A\x2A\x8D\x2A\x2A\x2A\xC1\x2A\x2A\x39\x2A\x2A\x75\x2A\x8B\x2A\x85\x2A\x74\x2A\x83\xBF\x2A\x2A\x2A\x2A\x2A\x75"
 /* ? ? ? ? ? ? ? ? ? ? 83 ? ? 74 ? 8B 15 ? ? ? ? 8B ? 81 E1 ? ? ? ? C1 ? ? 8D ? ? ? C1 ? ? 39 ? ? 75 ? 8B ? 85 ? 74 ? 83 BF ? ? ? ? ? 75 */
@@ -434,6 +459,11 @@ Signature for detouring InstallBotControl:
 /* ? ? ? ? ? ? 85 ? 74 ? 8B ? 8B ? 6A ? FF ? A1 ? ? ? ? 8B */
 
 /* From "server.dll" */
+Signature for detouring KeyValues::FindKey:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x89\x2A\x2A\x75\x2A\x81"
+/* ? ? ? ? ? ? 8B ? 85 ? 89 ? ? 75 ? 81 */
+
+/* From "server.dll" */
 Signature for calling KeyValues::GetFirstTrueSubKey:
 "\x85\xC9\x74\x2A\x8B\x41\x18\x85\xC0\x74\x2A\xEB\x2A\x8D\x49\x00\x80\x78\x10\x00\x74"
 /* 85 C9 74 ? 8B 41 18 85 C0 74 ? EB ? 8D 49 00 80 78 10 00 74 */
@@ -452,6 +482,11 @@ Signature for calling KeyValues::GetNextTrueSubKey:
 Signature for detouring KeyValues::GetString:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x9C\x2A\x2A\x2A\x2A\x2A\x56\x57\x6A\x2A\x53\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x2A\x83\x2A\x2A\x83\x2A\x2A\x0F"
 /* ? ? ? ? ? ? 53 8B 9C ? ? ? ? ? 56 57 6A ? 53 8B ? E8 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? 0F ? ? ? 83 ? ? 83 ? ? 0F */
+
+/* From "server.dll" */
+Signature for detouring KeyValues::SetString:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x53"
+/* ? ? ? ? ? ? ? 50 E8 ? ? ? ? 8B ? 85 ? 74 ? 8B ? ? 53 */
 
 /* From "server.dll" */
 Signature for detouring MovePropAway:

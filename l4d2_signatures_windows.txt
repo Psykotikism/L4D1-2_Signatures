@@ -89,9 +89,39 @@ Signature for detouring CDeathFallCamera::Enable:
 /* ? ? ? ? ? ? ? ? 57 8B ? 8B ? 89 ? ? E8 ? ? ? ? 85 */
 
 /* From "server.dll" */
+Signature for detouring CDirector::AreTeamsFlipped:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\xF7\x05"
+/* ? ? ? ? ? ? ? ? 84 ? 75 ? F7 05 */
+
+/* From "server.dll" */
 Signature for calling CDirector::ForceNextStage:
 "\x8B\x2A\x88\x05\x00\x00\xE9\x2A\x9A\x01\x00"
 /* 8B ? 88 05 00 00 E9 ? 9A 01 00 */
+
+/* From "server.dll" */
+Signature for detouring CDirector::GetFurthestSurvivorFlow:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\xF7\x05"
+/* ? ? ? ? ? ? ? ? 84 ? 75 ? F7 05 */
+
+/* From "server.dll" */
+Signature for detouring CDirector::GetScriptValue(const char*, int):
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x83\x2A\x2A\x77\x2A\x0F"
+/* ? ? ? ? ? ? ? 0F ? ? 83 ? ? 77 ? 0F */
+
+/* From "server.dll" */
+Signature for detouring CDirector::GetScriptValue(const char*, float):
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x83\x2A\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\x56\x33\x2A\x8D\x2A\x2A\x56\x8B\x2A\x2A\x66\x2A\x2A\x2A\x66\x2A\x2A\x2A\x89\x2A\x2A\x8B\x2A\x56\x50\x8B\x82\x2A\x2A\x2A\x2A\xFF\x2A\x5E\x84\x2A\x74\x2A\x8D\x2A\x2A\x51\x8D\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x92\x2A\x2A\x2A\x2A\x8D\x2A\x2A\x50\xFF\x2A\xD9"
+/* ? ? ? ? ? ? ? ? ? 83 ? ? 83 ? ? 74 ? 8B 0D ? ? ? ? 85 ? 74 ? 56 33 ? 8D ? ? 56 8B ? ? 66 ? ? ? 66 ? ? ? 89 ? ? 8B ? 56 50 8B 82 ? ? ? ? FF ? 5E 84 ? 74 ? 8D ? ? 51 8D ? ? E8 ? ? ? ? 84 ? 75 ? 8B 0D ? ? ? ? 8B ? 8B 92 ? ? ? ? 8D ? ? 50 FF ? D9 */
+
+/* From "server.dll" */
+Signature for detouring CDirector::GetScriptValue(const char*, const char*, char*, int):
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x8B\x2A\x2A\x83\x2A\x2A\x74"
+/* ? ? ? ? ? ? ? ? ? 83 ? ? 56 8B ? ? 83 ? ? 74 */
+
+/* From "server.dll" */
+Signature for detouring CDirector::IsFinale:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x33\xC9\x83\x38"
+/* ? ? ? ? ? ? 33 C9 83 38 */
 
 /* From "server.dll" */
 Signature for detouring CDirector::IsFirstMapInScenario:
@@ -104,6 +134,11 @@ Signature for detouring CDirector::IsInTransition:
 /* ? ? ? ? ? ? ? 75 ? 80 B9 CC */
 
 /* From "server.dll" */
+Signature for calling CDirector::IsTankInPlay:
+"\x33\xC0\x39\x81\x00"
+/* 33 C0 39 81 00 */
+
+/* From "server.dll" */
 Signature for detouring CDirector::OnChangeMissionVote:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\xFF\x2A\x8B\x2A\x85\x2A\x0F"
 /* ? ? ? ? ? ? ? 8B 0D ? ? ? ? 8B ? 8B ? ? FF ? 8B ? 8B ? 8B ? ? 6A ? FF ? 8B ? 85 ? 0F */
@@ -112,6 +147,21 @@ Signature for detouring CDirector::OnChangeMissionVote:
 Signature for detouring CDirector::OnFirstSurvivorLeftSafeArea:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x2A\x2A\x57\x8B\x2A\x8B\x8F\x2A\x2A\x2A\x2A\x53"
 /* ? ? ? ? ? ? 53 8B ? ? 57 8B ? 8B 8F ? ? ? ? 53 */
+
+/* From "server.dll" */
+Signature for detouring CDirector::ResetMobTimer:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x8D\xB9\xD4"
+/* ? ? ? ? ? ? 8D B9 D4 */
+
+/* From "server.dll" */
+Signature for detouring CDirector::StartRematchVote:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x68\x2A\x2A\x2A\x2A\x6A"
+/* ? ? ? ? ? ? 56 8B ? 68 ? ? ? ? 6A */
+
+/* From "server.dll" */
+Signature for detouring CDirector::SwapTeams(void):
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\x8B\x8E\x2A\x2A\x2A\x2A\x57\x89"
+/* ? ? ? ? ? ? ? ? ? 53 56 8B ? 8B 8E ? ? ? ? 57 89 */
 
 /* From "server.dll" */
 Signature for detouring CDirectorItemManager::IsMeleeWeaponAllowedToExist:
@@ -127,6 +177,11 @@ Signature for detouring CDirectorMusicBanks::OnRoundStart:
 Signature for detouring CDirectorScavengeMode::EndScavengeRound:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x80\x2A\x2A\x2A\x0F\x84\x2A\x2A\x2A\x2A\x53\xC6"
 /* ? ? ? ? ? ? 56 8B ? 80 ? ? ? 0F 84 ? ? ? ? 53 C6 */
+
+/* From "server.dll" */
+Signature for detouring CDirectorScavengeMode::OnBeginRoundSetupTime:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x74\x2A\xF3\x2A\x2A\x2A\x2A\x83"
+/* ? ? ? ? ? ? 56 8B ? E8 ? ? ? ? 84 ? 74 ? F3 ? ? ? ? 83 */
 
 /* From "server.dll" */
 Signature for detouring CDirectorVersusMode::EndVersusModeRound:
@@ -239,6 +294,11 @@ Signature for detouring CTerrorGameMovement::DoJump:
 /* ? ? ? ? ? ? 56 8B ? 8B ? 8B 90 ? ? ? ? 57 6A ? FF ? 8B 8E ? ? ? ? 8B ? 8B 90 ? ? ? ? 6A ? 6A */
 
 /* From "server.dll" */
+Signature for detouring CTerrorGameRules::FastGetSurvivorSet:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\xE8\x2A\x2A\x2A\x2A\xA3\x2A\x2A\x2A\x2A\xC3"
+/* ? ? ? ? ? ? ? 75 ? E8 ? ? ? ? A3 ? ? ? ? C3 */
+
+/* From "server.dll" */
 Signature for calling CTerrorGameRules::GetMaxHumanPlayers:
 "\xF7\x05\x2A\x2A\x2A\x2A\x00\x10\x00\x00\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x40\x24\x85\xC0\x75\x2A\xB8\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x11\x50\x8B\x42\x10\xFF\xD0\x85\xC0\x74\x2A\x6A\x00\x68\x2A\x2A\x2A\x2A\x8B\xC8\xE8\x2A\x2A\x2A\x2A\x85\xC0\xB8"
 /* F7 05 ? ? ? ? 00 10 00 00 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B 40 24 85 C0 75 ? B8 ? ? ? ? 8B 0D ? ? ? ? 8B 11 50 8B 42 10 FF D0 85 C0 74 ? 6A 00 68 ? ? ? ? 8B C8 E8 ? ? ? ? 85 C0 B8 */
@@ -254,9 +314,39 @@ Signature for detouring CTerrorGameRules::GetMissionInfo:
 /* ? ? ? ? ? ? ? ? ? ? 8B ? 8B ? ? 56 FF ? 8B ? 8B ? 8B ? ? 6A ? FF ? 8B ? 85 ? 75 ? 5E */
 
 /* From "server.dll" */
+Signature for detouring CTerrorGameRules::GetSurvivorSet(void):
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x53\x56\xBB\x2A\x2A\x2A\x2A\xFF"
+/* ? ? ? ? ? ? ? ? ? ? 8B ? 8B ? ? 53 56 BB ? ? ? ? FF */
+
+/* From "server.dll" */
+Signature for detouring CTerrorGameRules::GetVersusCompletion:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x2A\xE8"
+/* ? ? ? ? ? ? 53 56 8B ? ? 8B ? 85 ? 0F 84 ? ? ? ? 8B ? E8 */
+
+/* From "server.dll" */
+Signature for detouring CTerrorGameRules::GetVersusCompletionPerCharacter:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x8D"
+/* ? ? ? ? ? ? 56 50 8B ? E8 ? ? ? ? 8B ? ? 8D */
+
+/* From "server.dll" */
 Signature for detouring CTerrorGameRules::IsMissionFinalMap:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x56\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\xFF\x2A\x8B\x2A\x85\x2A\x75\x2A\xB0"
 /* ? ? ? ? ? ? 8B ? 8B ? ? 56 FF ? 8B ? 8B ? 8B ? ? 6A ? FF ? 8B ? 85 ? 75 ? B0 */
+
+/* From "server.dll" */
+Signature for detouring CTerrorGameRules::RecordInfectedDamageForVersus:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x6A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x85\x2A\x7F\x2A\xBF\x2A\x2A\x2A\x2A\xEB\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x33\x2A\x84\x2A\x0F\x2A\x2A\x8D\x2A\x2A\x8B\xB4\x2A\x2A\x2A\x2A\x2A\x03"
+/* ? ? ? ? ? ? ? ? ? ? ? ? ? 53 56 57 8B ? 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 8B 0D ? ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 6A ? 68 ? ? ? ? 8B ? E8 ? ? ? ? 85 ? 7F ? BF ? ? ? ? EB ? 8B 0D ? ? ? ? E8 ? ? ? ? 33 ? 84 ? 0F ? ? 8D ? ? 8B B4 ? ? ? ? ? 03 */
+
+/* From "server.dll" */
+Signature for detouring CTerrorGameRules::ResetRoundNumber:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xE8\x2A\x2A\x2A\x2A\xC7\x86\x54"
+/* ? ? ? ? ? ? ? ? ? ? 74 ? E8 ? ? ? ? C7 86 54 */
+
+/* From "server.dll" */
+Signature for detouring CTerrorGameRules::SetRoundEndTime:
+"\x2A\x2A\x2A\x2A\x2A\x2A\xF3\x0F\x2A\x2A\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x2A\x9F\x57\xF6"
+/* ? ? ? ? ? ? F3 0F ? ? ? ? ? ? 0F ? ? ? 9F 57 F6 */
 
 /* From "server.dll" */
 Signature for detouring CTerrorGun::FireBullet:
@@ -369,6 +459,11 @@ Signature for detouring CTerrorPlayer::MaterializeFromGhost:
 /* ? ? ? ? ? ? ? ? ? ? ? FF ? 50 E8 ? ? ? ? 83 ? ? 50 8B ? 8B 90 ? ? ? ? 8B ? FF ? 50 68 ? ? ? ? E8 */
 
 /* From "server.dll" */
+Signature for detouring CTerrorPlayer::OnAdrenalineUsed:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8D\x9E\x2A\x2A\x2A\x2A\x57\x8B\x2A\xE8"
+/* ? ? ? ? ? ? 8B ? 8D 9E ? ? ? ? 57 8B ? E8 */
+
+/* From "server.dll" */
 Signature for detouring CTerrorPlayer::OnBeginChangeLevel:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x0F\x85\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x0F\x85\x2A\x2A\x2A\x2A\x53"
 /* ? ? ? ? ? ? ? E8 ? ? ? ? 84 ? 0F 85 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 0F 85 ? ? ? ? 53 */
@@ -409,6 +504,11 @@ Signature for detouring CTerrorPlayer::OnLadderMount:
 /* ? ? ? ? ? ? 8B ? E8 ? ? ? ? 8B ? E8 ? ? ? ? 6A ? 8B ? E8 ? ? ? ? 8B ? E8 ? ? ? ? 50 */
 
 /* From "server.dll" */
+Signature for detouring CTerrorPlayer::OnLeptOnSurvivor:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x83\x2A\x2A\x2A\x57\x8B\x2A\x0F\x85\x2A\x2A\x2A\x2A\x56"
+/* ? ? ? ? ? ? ? ? 83 ? ? 83 ? ? ? 57 8B ? 0F 85 ? ? ? ? 56 */
+
+/* From "server.dll" */
 Signature for detouring CTerrorPlayer::OnPummelEnded:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\x8B\x86\x2A\x2A\x2A\x2A\x57\x83\x2A\x2A\x0F"
 /* ? ? ? ? ? ? ? ? ? 53 56 8B ? 8B 86 ? ? ? ? 57 83 ? ? 0F */
@@ -422,6 +522,11 @@ Signature for detouring CTerrorPlayer::OnPounceEnded:
 Signature for detouring CTerrorPlayer::OnRevived:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x57\xFF\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x2A\xE8"
 /* ? ? ? ? ? ? 53 56 8B ? 8B ? 8B 90 ? ? ? ? 57 FF ? 84 ? 0F 84 ? ? ? ? 8B ? E8 */
+
+/* From "server.dll" */
+Signature for detouring CTerrorPlayer::OnRideEnded:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x68\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8D"
+/* ? ? ? ? ? ? 53 56 57 68 ? ? ? ? 8B ? E8 ? ? ? ? 8D */
 
 /* From "server.dll" */
 Signature for detouring CTerrorPlayer::OnShovedByPounceLanding:
@@ -559,6 +664,11 @@ Signature for detouring ForEachSurvivor<MinigunnerScan>:
 /* ? ? ? ? ? ? ? ? 57 BF ? ? ? ? 39 ? ? 7C ? 53 8B ? ? 56 57 E8 ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? ? 85 ? 74 ? 8B 0D ? ? ? ? 2B ? ? C1 ? ? 85 ? 74 ? 8B ? 8B 82 ? ? ? ? 8B ? FF ? 84 ? 74 ? 83 BE ? ? ? ? ? 74 ? 8B ? E8 ? ? ? ? 83 ? ? 75 ? 80 */
 
 /* From "server.dll" */
+Signature for detouring Infected::OnHitByVomitJar:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\xFF\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x75\x2A\x56"
+/* ? ? ? ? ? ? 56 8B ? 8B ? 8B 90 ? ? ? ? FF ? 84 ? 0F 84 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 75 ? 56 */
+
+/* From "server.dll" */
 Signature for detouring InfectedExecAction::OnInjured:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\x2A\x8B\x2A\x2A\x57\xA8"
 /* ? ? ? ? ? ? 53 56 8B ? ? 8B ? ? 57 A8 */
@@ -644,6 +754,11 @@ Signature for detouring SurvivorLegsMeetRescueVehicleArrival::Update:
 /* ? ? ? ? ? ? A1 ? ? ? ? 53 57 8B B8 */
 
 /* From "server.dll" */
+Signature for detouring SurvivorResponseCachedInfo::Update:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x83\x2A\x2A\x55\x8B\x2A\x2A\x89\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x33"
+/* ? ? ? ? ? ? 83 ? ? 83 ? ? 55 8B ? ? 89 ? ? ? 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 33 */
+
+/* From "server.dll" */
 Signature for detouring Tank::EnterStasis:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8D\xB7\x2A\x2A\x2A\x2A\x74\x2A\x8B\x86\x2A\x2A\x2A\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8D\x8E\x2A\x2A\x2A\x2A\x56\xFF\x2A\xC6\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x6A"
 /* ? ? ? ? ? ? ? ? ? ? ? 8D B7 ? ? ? ? 74 ? 8B 86 ? ? ? ? 8B 90 ? ? ? ? 8D 8E ? ? ? ? 56 FF ? C6 ? ? 8B ? 8B 90 ? ? ? ? 6A */
@@ -652,6 +767,11 @@ Signature for detouring Tank::EnterStasis:
 Signature for detouring Tank::LeaveStasis:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8D\xB7\x2A\x2A\x2A\x2A\x74\x2A\x8B\x86\x2A\x2A\x2A\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8D\x8E\x2A\x2A\x2A\x2A\x56\xFF\x2A\xC6\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B"
 /* ? ? ? ? ? ? ? ? ? ? ? 8D B7 ? ? ? ? 74 ? 8B 86 ? ? ? ? 8B 90 ? ? ? ? 8D 8E ? ? ? ? 56 FF ? C6 ? ? 8B ? 8B 90 ? ? ? ? 8B */
+
+/* From "server.dll" */
+Signature for detouring ThrowImpactedSurvivor(CTerrorPlayer *,CTerrorPlayer *,float,bool):
+"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x2A\x8B\x87\x2A\x2A\x2A\x2A\xC1\x2A\x2A\xA8\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x8F"
+/* ? ? ? ? ? ? 53 56 57 8B ? ? 8B 87 ? ? ? ? C1 ? ? A8 ? 74 ? 8B ? E8 ? ? ? ? 8B 8F */
 
 /* From "server.dll" */
 Signature for detouring Witch::DoAttack:
@@ -684,7 +804,17 @@ Signature for detouring ZombieManager::ReplaceTank:
 /* ? ? ? ? ? ? 53 56 8B ? ? 8B ? 8B 90 ? ? ? ? 57 8B ? 8B ? FF ? 84 ? 0F 84 ? ? ? ? 8B ? E8 ? ? ? ? 83 ? ? 0F 85 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 83 */
 
 /* From "server.dll" */
+Signature for detouring ZombieManager::SpawnSpecial:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8D\x2A\x2A\x56\x8B\x2A\x83"
+/* ? ? ? ? ? ? ? 8D ? ? 56 8B ? 83 */
+
+/* From "server.dll" */
 Signature for detouring ZombieManager::SpawnTank:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x85\x2A\x78\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x39\x81\x2A\x2A\x2A\x2A\x7C\x2A\x33\x2A\x5F"
 /* ? ? ? ? ? ? 8B 0D ? ? ? ? E8 ? ? ? ? 85 ? 78 ? 8B 0D ? ? ? ? 39 81 ? ? ? ? 7C ? 33 ? 5F */
+
+/* From "server.dll" */
+Signature for detouring ZombieManager::SpawnWitchBride:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x5D\xC2\x2A\x2A\x56"
+/* ? ? ? ? ? ? ? ? ? E8 ? ? ? ? 85 ? 75 ? 5D C2 ? ? 56 */
 

@@ -31,8 +31,16 @@ Signature for CBaseAnimating::LookupAttachment(char const*):
 "@_ZN14CBaseAnimating16LookupAttachmentEPKc"
 
 /* From "server.so" */
+Signature for CBaseAnimating::SelectWeightedSequence(Activity):
+"@_ZN14CBaseAnimating22SelectWeightedSequenceE8Activity"
+
+/* From "server.so" */
 Signature for CBaseCombatWeapon::GetMaxClip1(void)const:
 "@_ZNK17CBaseCombatWeapon11GetMaxClip1Ev"
+
+/* From "server.so" */
+Signature for CBaseEntity::ApplyLocalAngularVelocityImpulse(Vector const&):
+"@_ZN11CBaseEntity32ApplyLocalAngularVelocityImpulseERK6Vector"
 
 /* From "server.so" */
 Signature for CBaseEntity::Create(char const*,Vector const&,QAngle const&,CBaseEntity*):
@@ -107,12 +115,32 @@ Signature for Director::EndVersusModeRound(bool):
 "@_ZN8Director18EndVersusModeRoundEb"
 
 /* From "server.so" */
+Signature for Director::GetHighestFlowSurvivor(TerrorNavArea::FlowType)const:
+"@_ZNK8Director22GetHighestFlowSurvivorEN13TerrorNavArea8FlowTypeE"
+
+/* From "server.so" */
 Signature for Director::HasAnySurvivorLeftSafeArea(void):
 "@_ZN8Director26HasAnySurvivorLeftSafeAreaEv"
 
 /* From "server.so" */
+Signature for Director::IsAnySurvivorInExitCheckpoint(void)const:
+"@_ZNK8Director29IsAnySurvivorInExitCheckpointEv"
+
+/* From "server.so" */
+Signature for Director::IsAnySurvivorInStartArea(void)const:
+"@_ZNK8Director24IsAnySurvivorInStartAreaEv"
+
+/* From "server.so" */
+Signature for Director::IsFinaleEscapeInProgress(void)const:
+"@_ZNK8Director24IsFinaleEscapeInProgressEv"
+
+/* From "server.so" */
 Signature for Director::IsInTransition(void)const:
 "@_ZNK8Director14IsInTransitionEv"
+
+/* From "server.so" */
+Signature for Director::IsTeamFull(int,Director::PlayerCountType)const:
+"@_ZNK8Director10IsTeamFullEiNS_15PlayerCountTypeE"
 
 /* From "server.so" */
 Signature for Director::OnChangeChapterVote(char const*):
@@ -135,12 +163,24 @@ Signature for Director::OnServerShutdown(void):
 "@_ZN8Director16OnServerShutdownEv"
 
 /* From "server.so" */
+Signature for Director::RegisterForbiddenTarget(CBaseEntity *):
+"@_ZN8Director23RegisterForbiddenTargetEP11CBaseEntity"
+
+/* From "server.so" */
+Signature for Director::RestartScenarioFromVote(char const*):
+"@_ZN8Director23RestartScenarioFromVoteEPKc"
+
+/* From "server.so" */
 Signature for Director::SendInRescueVehicle(void):
 "@_ZN8Director19SendInRescueVehicleEv"
 
 /* From "server.so" */
 Signature for Director::TryOfferingTankBot(CBaseEntity *,bool):
 "@_ZN8Director18TryOfferingTankBotEP11CBaseEntityb"
+
+/* From "server.so" */
+Signature for Director::UnregisterForbiddenTarget(CBaseEntity *):
+"@_ZN8Director25UnregisterForbiddenTargetEP11CBaseEntity"
 
 /* From "server.so" */
 Signature for CEntityDissolve::Create(CBaseEntity *,char const*,float,int,bool *):
@@ -163,12 +203,20 @@ Signature for CFirstAidKit::StartHealing(CFirstAidKit::HealTargetType) [clone]:
 "@_ZN12CFirstAidKit12StartHealingENS_14HealTargetTypeE.part.43"
 
 /* From "server.so" */
+Signature for CGameRulesProxy::NotifyNetworkStateChanged(void):
+"@_ZN15CGameRulesProxy25NotifyNetworkStateChangedEv"
+
+/* From "server.so" */
 Signature for CGib::InitGib(CBaseEntity *,float,float):
 "@_ZN4CGib7InitGibEP11CBaseEntityff"
 
 /* From "server.so" */
 Signature for CGib::Spawn(char const*):
 "@_ZN4CGib5SpawnEPKc"
+
+/* From "server.so" */
+Signature for CInferno::Spread(Vector const&):
+"@_ZN8CInferno6SpreadERK6Vector"
 
 /* From "server.so" */
 Signature for CNavArea::IsBlocked(int,bool)const:
@@ -251,12 +299,20 @@ Signature for CTerrorGameRules::GetMissionInfo(void):
 "@_ZN16CTerrorGameRules14GetMissionInfoEv"
 
 /* From "server.so" */
+Signature for CTerrorGameRules::GetTeamScore(int,bool)const:
+"@_ZNK16CTerrorGameRules12GetTeamScoreEib"
+
+/* From "server.so" */
 Signature for CTerrorGameRules::HasPlayerControlledZombies(void):
 "@_ZN16CTerrorGameRules26HasPlayerControlledZombiesEv"
 
 /* From "server.so" */
 Signature for CTerrorGameRules::IsMissionFinalMap(void):
 "@_ZN16CTerrorGameRules17IsMissionFinalMapEv"
+
+/* From "server.so" */
+Signature for CTerrorGameRules::SetCampaignScores(int,int):
+"@_ZN16CTerrorGameRules17SetCampaignScoresEii"
 
 /* From "server.so" */
 Signature for CTerrorGun::FireBullet(void):
@@ -289,6 +345,14 @@ Signature for CTerrorPlayer::BecomeGhost(ZombieClassType,bool):
 /* From "server.so" */
 Signature for CTerrorPlayer::CanBecomeGhost(bool):
 "@_ZN13CTerrorPlayer14CanBecomeGhostEb"
+
+/* From "server.so" */
+Signature for CTerrorPlayer::CancelStagger(void):
+"@_ZN13CTerrorPlayer13CancelStaggerEv"
+
+/* From "server.so" */
+Signature for CTerrorPlayer::CullZombie(void):
+"@_ZN13CTerrorPlayer10CullZombieEv"
 
 /* From "server.so" */
 Signature for CTerrorPlayer::DoAnimationEvent(PlayerAnimEvent_t,int):
@@ -389,6 +453,10 @@ Signature for CTerrorPlayer::OnLadderDismount(void):
 /* From "server.so" */
 Signature for CTerrorPlayer::OnLadderMount(void):
 "@_ZN13CTerrorPlayer13OnLadderMountEv"
+
+/* From "server.so" */
+Signature for CTerrorPlayer::OnLedgeGrabbed(Vector const&):
+"@_ZN13CTerrorPlayer14OnLedgeGrabbedERK6Vector"
 
 /* From "server.so" */
 Signature for CTerrorPlayer::OnPouncedOnSurvivor(CTerrorPlayer*):
@@ -527,6 +595,10 @@ Signature for CTerrorWeaponInfo::Parse(KeyValues *,char const*):
 "@_ZN17CTerrorWeaponInfo5ParseEP9KeyValuesPKc"
 
 /* From "server.so" */
+Signature for CThrow::ActivateAbility(void):
+"@_ZN6CThrow15ActivateAbilityEv"
+
+/* From "server.so" */
 Signature for CTongue::IsAbilityReadyToFire(void)const:
 "@_ZNK7CTongue20IsAbilityReadyToFireEv"
 
@@ -557,6 +629,10 @@ Signature for IGameSystem::LevelInitPreEntityAllSystems(char const*):
 /* From "server.so" */
 Signature for Infected::AttackSurvivorTeam(void):
 "@_ZN8Infected18AttackSurvivorTeamEv"
+
+/* From "server.so" */
+Signature for Infected::GetFlowDistance(void)const:
+"@_ZNK8Infected15GetFlowDistanceEv"
 
 /* From "server.so" */
 Signature for InfectedExecAction::OnInjured(Infected *,CTakeDamageInfo const&):
@@ -639,6 +715,10 @@ Signature for NextBotManager::ShouldUpdate(INextBot *):
 "@_ZN14NextBotManager12ShouldUpdateEP8INextBot"
 
 /* From "server.so" */
+Signature for ReadWeaponDataFromFileForSlot(IFileSystem *,char const*,unsigned short *,unsigned char const*):
+"@_Z29ReadWeaponDataFromFileForSlotP11IFileSystemPKcPtPKh"
+
+/* From "server.so" */
 Signature for SelectModelByPopulation(char const*,CUtlVector<char const*,CUtlMemory<char const*,int>> &):
 "@_Z23SelectModelByPopulationPKcR10CUtlVectorIS0_10CUtlMemoryIS0_iEE"
 
@@ -683,6 +763,10 @@ Signature for TankAttack::Update(Tank *,float):
 "@_ZN10TankAttack6UpdateEP4Tankf"
 
 /* From "server.so" */
+Signature for TerrorNavArea::FindRandomSpot(void)const:
+"@_ZNK13TerrorNavArea14FindRandomSpotEv"
+
+/* From "server.so" */
 Signature for Witch::DoAttack(CBaseEntity *):
 "@_ZN5Witch8DoAttackEP11CBaseEntity"
 
@@ -723,12 +807,32 @@ Signature for ZombieManager::CanZombieSpawnHere(Vector const&,TerrorNavArea *,Zo
 "@_ZNK13ZombieManager18CanZombieSpawnHereERK6VectorP13TerrorNavArea15ZombieClassTypebP20CBaseCombatCharacter.part.89"
 
 /* From "server.so" */
+Signature for ZombieManager::GetRandomPZSpawnPosition(ZombieClassType,int,CTerrorPlayer *,Vector *)const:
+"@_ZNK13ZombieManager24GetRandomPZSpawnPositionE15ZombieClassTypeiP13CTerrorPlayerP6Vector"
+
+/* From "server.so" */
 Signature for ZombieManager::ReplaceTank(CTerrorPlayer *,CTerrorPlayer *):
 "@_ZN13ZombieManager11ReplaceTankEP13CTerrorPlayerS1_"
 
 /* From "server.so" */
+Signature for ZombieManager::SpawnBoomer(TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager11SpawnBoomerEPK13TerrorNavAreaRK6QAngle"
+
+/* From "server.so" */
+Signature for ZombieManager::SpawnBoomer(Vector const&,QAngle const&):
+"@_ZN13ZombieManager11SpawnBoomerERK6VectorRK6QAngle"
+
+/* From "server.so" */
 Signature for ZombieManager::SpawnCommonZombie(TerrorNavArea *,Vector const&,bool)const:
 "@_ZNK13ZombieManager17SpawnCommonZombieEP13TerrorNavAreaRK6Vectorb"
+
+/* From "server.so" */
+Signature for ZombieManager::SpawnHunter(TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager11SpawnHunterEPK13TerrorNavAreaRK6QAngle"
+
+/* From "server.so" */
+Signature for ZombieManager::SpawnHunter(Vector const&,QAngle const&):
+"@_ZN13ZombieManager11SpawnHunterERK6VectorRK6QAngle"
 
 /* From "server.so" */
 Signature for ZombieManager::SpawnITMob(int):
@@ -737,6 +841,14 @@ Signature for ZombieManager::SpawnITMob(int):
 /* From "server.so" */
 Signature for ZombieManager::SpawnMob(int):
 "@_ZN13ZombieManager8SpawnMobEi"
+
+/* From "server.so" */
+Signature for ZombieManager::SpawnSmoker(TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager11SpawnSmokerEPK13TerrorNavAreaRK6QAngle"
+
+/* From "server.so" */
+Signature for ZombieManager::SpawnSmoker(Vector const&,QAngle const&):
+"@_ZN13ZombieManager11SpawnSmokerERK6VectorRK6QAngle"
 
 /* From "server.so" */
 Signature for ZombieManager::SpawnTank(TerrorNavArea const*,QAngle const&):

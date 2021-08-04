@@ -50,8 +50,8 @@ Signature for detouring CBaseEntity::Create:
 
 /* From "server.dll" */
 Signature for calling CBaseEntity::GetUsePriority:
-"\xB8\x01\x00\x00\x00\xC2\x04\x00"
-/* B8 01 00 00 00 C2 04 00 */
+"\xB8\x01\x00\x00\x00\xC2\x04\x00\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\x56"
+/* B8 01 00 00 00 C2 04 00 CC CC CC CC CC CC CC CC 56 */
 
 /* From "server.dll" */
 Signature for detouring CBaseEntity::SetAbsAngles:

@@ -24,8 +24,8 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 
 ## Credits
 Thank you to the following people for helping me locate a lot of these functions:
-- epz/epzminion: Taught me everything about sigscanning, patching, vtable look-ups, etc.
-- Silvers (SilverShot): Leaves great notes in his gamedata files and also introduced the method of including the `CC ...` lines plus the first few bytes of following functions to create unique signatures for very short functions.
-- Lux/LuxLuma: Uses lots of uncommon functions that no other person uses.
-- BHaType: Uses lots of rare functions that no other person thinks to utilize.
-- Scag/Scags: Wrote several useful/helpful IDA scripts to help make all of this a faster process.
+- **epz/epzminion**: Taught me everything about sigscanning, patching, vtable look-ups, etc.
+- **Silvers (SilverShot)**: Leaves great notes in his gamedata files and also introduced the method of including the `CC ...` lines plus the first few bytes of following functions to create unique signatures for very short functions.
+- **Lux/LuxLuma**: Uses lots of uncommon functions that no other person uses.
+- **BHaType**: Uses lots of rare functions that no other person thinks to utilize.
+- **Scag/Scags**: Wrote several useful/helpful IDA scripts to help make all of this a faster process.

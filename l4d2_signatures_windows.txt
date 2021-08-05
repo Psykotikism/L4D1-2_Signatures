@@ -650,8 +650,8 @@ Signature for detouring CTerrorGameRules::RecordInfectedDamageForVersus:
 
 /* From "server.dll" */
 Signature for detouring CTerrorGameRules::ResetRoundNumber:
-"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xE8\x2A\x2A\x2A\x2A\xC7\x86\x54"
-/* ? ? ? ? ? ? ? ? ? ? 74 ? E8 ? ? ? ? C7 86 54 */
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xE8\x2A\x2A\x2A\x2A\xC7\x86\x2A\x2A\x00\x00\x00\x00\x00\x00\x5E\xC3\xCC\xCC\xCC\x55"
+/* ? ? ? ? ? ? ? ? ? ? 74 ? E8 ? ? ? ? C7 86 ? ? 00 00 00 00 00 00 5E C3 CC CC CC 55 */
 
 /* From "server.dll" */
 Signature for detouring CTerrorGameRules::SetCampaignScores:
@@ -980,8 +980,8 @@ Signature for detouring CTerrorPlayer::ReleaseTongueVictim:
 
 /* From "server.dll" */
 Signature for calling CTerrorPlayer::RemoveUpgrade:
-"\x55\x8B\xEC\x8B\x01\x8B\x90\x80\x04\x00\x00\x6A\x00\xFF\xD2\x85\xC0\x74\x2A\x8B\x10\x8B\xC8\x8B\x92\xA8\x06\x00\x00\x5D\xFF\xE2\x5D\xC2\x04\x00"
-/* 55 8B EC 8B 01 8B 90 80 04 00 00 6A 00 FF D2 85 C0 74 ? 8B 10 8B C8 8B 92 A8 06 00 00 5D FF E2 5D C2 04 00 */
+"\x55\x8B\xEC\x8B\x01\x8B\x90\x80\x04\x00\x00\x6A\x00\xFF\xD2\x85\xC0\x74\x2A\x8B\x10\x8B\xC8\x8B\x92\xA8\x06\x00\x00\x5D\xFF\xE2\x5D\xC2\x04\x00\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\x55"
+/* 55 8B EC 8B 01 8B 90 80 04 00 00 6A 00 FF D2 85 C0 74 ? 8B 10 8B C8 8B 92 A8 06 00 00 5D FF E2 5D C2 04 00 CC CC CC CC CC CC CC CC CC CC CC CC 55 */
 
 /* From "server.dll" */
 Signature for detouring CTerrorPlayer::ReplaceWithBot:
@@ -1095,8 +1095,8 @@ Signature for detouring CTerrorWeapon::TrySwing:
 
 /* From "server.dll" */
 Signature for detouring CTerrorWeaponInfo::Parse:
-"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x57\x8B\x2A\x2A\x50"
-/* ? ? ? ? ? ? 83 ? ? 56 57 8B ? ? 50 */
+"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x57\x8B\x2A\x2A\x50\x57"
+/* ? ? ? ? ? ? 83 ? ? 56 57 8B ? ? 50 57 */
 
 /* From "server.dll" */
 Signature for detouring CThrow::ActivateAbility:
@@ -1235,8 +1235,8 @@ Signature for detouring Music::OnPZAlert:
 
 /* From "server.dll" */
 Signature for detouring Music::Play:
-"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x83\x2A\x2A\x2A\x53\x8B\x2A\x2A\x56"
-/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? A1 ? ? ? ? 83 ? ? ? 53 8B ? ? 56 */
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x83\x2A\x2A\x2A\x53\x8B\x2A\x2A\x56\x57"
+/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? A1 ? ? ? ? 83 ? ? ? 53 8B ? ? 56 57 */
 
 /* From "server.dll" */
 Signature for detouring Music::StopPlaying:

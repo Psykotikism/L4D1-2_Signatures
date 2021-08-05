@@ -407,6 +407,10 @@ Signature for CRifle_M60::PrimaryAttack(void):
 "@_ZN10CRifle_M6013PrimaryAttackEv"
 
 /* From "server_srv.so" */
+Signature for CServerGameClients::GetPlayerLimits(int &,int &,int &)const:
+"@_ZNK18CServerGameClients15GetPlayerLimitsERiS0_S0_"
+
+/* From "server_srv.so" */
 Signature for CSmokeCloudSystem::FireGameEvent(IGameEvent *):
 "@_ZN17CSmokeCloudSystem13FireGameEventEP10IGameEvent"
 
@@ -417,10 +421,6 @@ Signature for CSpitterProjectile::Create(Vector const&,QAngle const&,Vector cons
 /* From "server_srv.so" */
 Signature for CSpitterProjectile::Detonate(void):
 "@_ZN18CSpitterProjectile8DetonateEv"
-
-/* From "server_srv.so" */
-Signature for CServerGameClients::GetPlayerLimits(int &,int &,int &)const:
-"@_ZNK18CServerGameClients15GetPlayerLimitsERiS0_S0_"
 
 /* From "server_srv.so" */
 Signature for CSurvivorDeathModel::Create(CTerrorPlayer *):
@@ -455,12 +455,12 @@ Signature for CTerrorGameMovement::DoJump(Vector *):
 "@_ZN19CTerrorGameMovement6DoJumpEP6Vector"
 
 /* From "server_srv.so" */
-Signature for CTerrorGameRules::ClearTeamScores(bool):
-"@_ZN16CTerrorGameRules15ClearTeamScoresEb"
-
-/* From "server_srv.so" */
 Signature for CTerrorGameRules::ClearScavengeScores(bool):
 "@_ZN16CTerrorGameRules19ClearScavengeScoresEb"
+
+/* From "server_srv.so" */
+Signature for CTerrorGameRules::ClearTeamScores(bool):
+"@_ZN16CTerrorGameRules15ClearTeamScoresEb"
 
 /* From "server_srv.so" */
 Signature for CTerrorGameRules::FastGetSurvivorSet(void):
@@ -1103,16 +1103,16 @@ Signature for WitchAttack::GetVictim(void)const:
 "@_ZNK11WitchAttack9GetVictimEv"
 
 /* From "server_srv.so" */
-Signature for WitchAttack::OnMoveToFailure(Infected *,Path const*,MoveToFailureType):
-"@_ZN11WitchAttack15OnMoveToFailureEP8InfectedPK4Path17MoveToFailureType"
-
-/* From "server_srv.so" */
 Signature for WitchAttack::OnAnimationEvent(Infected *,animevent_t *):
 "@_ZN11WitchAttack16OnAnimationEventEP8InfectedP11animevent_t"
 
 /* From "server_srv.so" */
 Signature for WitchAttack::OnContact(Infected *,CBaseEntity *,CGameTrace *):
 "@_ZN11WitchAttack9OnContactEP8InfectedP11CBaseEntityP10CGameTrace"
+
+/* From "server_srv.so" */
+Signature for WitchAttack::OnMoveToFailure(Infected *,Path const*,MoveToFailureType):
+"@_ZN11WitchAttack15OnMoveToFailureEP8InfectedPK4Path17MoveToFailureType"
 
 /* From "server_srv.so" */
 Signature for WitchAttack::OnStart(Infected *,Action<Infected> *):

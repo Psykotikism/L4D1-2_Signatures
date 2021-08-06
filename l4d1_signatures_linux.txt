@@ -69,6 +69,9 @@ Signature for CCarProp::InputSurvivorStandingOnCar(inputdata_t &):
 Signature for CClaw::OnPlayerHit(CTerrorPlayer *):
 "@_ZN5CClaw11OnPlayerHitEP13CTerrorPlayer"
 
+Signature for CCSPlayer::EmitPrivateSound(char const*):
+"@_ZN9CCSPlayer16EmitPrivateSoundEPKc"
+
 Signature for CCSPlayer::State_Transition(CSPlayerState):
 "@_ZN9CCSPlayer16State_TransitionE13CSPlayerState"
 
@@ -206,6 +209,9 @@ Signature for CTankRock::Create(Vector const&,QAngle const&,Vector const&,CBaseC
 
 Signature for CTankRock::Detonate(void):
 "@_ZN9CTankRock8DetonateEv"
+
+Signature for CTankRock::OnRelease(Vector const&,QAngle const&,Vector const&,Vector const&) [clone]:
+"@_ZN9CTankRock9OnReleaseERK6VectorRK6QAngleS2_S2_.constprop.121"
 
 Signature for CTerrorGameMovement::DoJump(Vector *):
 "@_ZN19CTerrorGameMovement6DoJumpEP6Vector"
@@ -411,6 +417,9 @@ Signature for CTerrorPlayer::StartReviving(CTerrorPlayer*):
 Signature for CTerrorPlayer::StopRevivingSomeone(bool):
 "@_ZN13CTerrorPlayer19StopRevivingSomeoneEb"
 
+Signature for CTerrorPlayer::StopTrackedSound(char const*):
+"@_ZN13CTerrorPlayer16StopTrackedSoundEPKc"
+
 Signature for CTerrorPlayer::TakeOverBot(bool):
 "@_ZN13CTerrorPlayer11TakeOverBotEb"
 
@@ -419,6 +428,9 @@ Signature for CTerrorPlayer::TakeOverZombieBot(CTerrorPlayer*):
 
 Signature for CTerrorPlayer::ThrowWeapon(CTerrorWeapon *,CTerrorPlayer*,float,char const*,char const*):
 "@_ZN13CTerrorPlayer11ThrowWeaponEP13CTerrorWeaponPS_fPKcS4_"
+
+Signature for CTerrorPlayer::TrackSound(char const*):
+"@_ZN13CTerrorPlayer10TrackSoundEPKc"
 
 Signature for CTerrorPlayer::UpdatePounce(void):
 "@_ZN13CTerrorPlayer12UpdatePounceEv"

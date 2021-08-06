@@ -551,6 +551,10 @@ Signature for CTerrorGun::ShouldUnzoom(void)const:
 "@_ZNK10CTerrorGun12ShouldUnzoomEv"
 
 /* From "server_srv.so" */
+Signature for CTerrorMeleeWeapon::DoMeleeSwing(void):
+"@_ZN18CTerrorMeleeWeapon12DoMeleeSwingEv"
+
+/* From "server_srv.so" */
 Signature for CTerrorMeleeWeapon::Holster(CBaseCombatWeapon *):
 "@_ZN18CTerrorMeleeWeapon7HolsterEP17CBaseCombatWeapon"
 
@@ -1181,4 +1185,8 @@ Signature for ZombieManager::SpawnWitch(Vector const&,QAngle const&):
 /* From "server_srv.so" */
 Signature for ZombieManager::SpawnWitchBride(Vector const&,QAngle const&):
 "@_ZN13ZombieManager15SpawnWitchBrideERK6VectorRK6QAngle"
+
+/* From "server_srv.so" */
+Signature for outtro_stats_done(CCommand const&):
+"@_ZL17outtro_stats_doneRK8CCommand"
 

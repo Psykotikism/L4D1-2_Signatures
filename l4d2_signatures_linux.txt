@@ -258,9 +258,6 @@ Signature for CGasCan::OnActionComplete(CTerrorPlayer *,CBaseEntity *):
 Signature for CGasCan::ShouldStartAction(CBaseBackpackItem::BackpackItemActionType,CTerrorPlayer *,CBaseEntity *):
 "@_ZN7CGasCan17ShouldStartActionEN17CBaseBackpackItem22BackpackItemActionTypeEP13CTerrorPlayerP11CBaseEntity"
 
-Signature for CGib * _CreateEntity<CGib>(CGib *,char const*) [clone]:
-"@_Z13_CreateEntityI4CGibEPT_S2_PKc.isra.35.constprop.96"
-
 Signature for CGib::InitGib(CBaseEntity *,float,float):
 "@_ZN4CGib7InitGibEP11CBaseEntityff"
 
@@ -497,6 +494,9 @@ Signature for CTerrorPlayer::Input_GoAwayFromKeyboard(void):
 
 Signature for CTerrorPlayer::IsClassOverLimit(int):
 "@_ZN13CTerrorPlayer16IsClassOverLimitEi"
+
+Signature for CTerrorPlayer::IsDominatedBySpecialInfected(void)const:
+"@_ZNK13CTerrorPlayer28IsDominatedBySpecialInfectedEv"
 
 Signature for CTerrorPlayer::IsInvulnerable(void)const:
 "@_ZNK13CTerrorPlayer14IsInvulnerableEv"

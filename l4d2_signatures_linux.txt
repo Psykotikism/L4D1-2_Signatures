@@ -492,6 +492,9 @@ Signature for CTerrorPlayer::GiveNamedItem(char const*,int,bool,CBaseEntity *):
 Signature for CTerrorPlayer::GoAwayFromKeyboard(void):
 "@_ZN13CTerrorPlayer18GoAwayFromKeyboardEv"
 
+Signature for CTerrorPlayer::Input_GoAwayFromKeyboard(void):
+"@_ZN13CTerrorPlayer24Input_GoAwayFromKeyboardEv"
+
 Signature for CTerrorPlayer::IsClassOverLimit(int):
 "@_ZN13CTerrorPlayer16IsClassOverLimitEi"
 
@@ -902,6 +905,10 @@ Signature for ZombieManager::SpawnWitch(Vector const&,QAngle const&):
 
 Signature for ZombieManager::SpawnWitchBride(Vector const&,QAngle const&):
 "@_ZN13ZombieManager15SpawnWitchBrideERK6VectorRK6QAngle"
+
+/* From "server_srv.so" */
+Signature for go_away_from_keyboard(CCommand const&):
+"@_ZL21go_away_from_keyboardRK8CCommand"
 
 Signature for outtro_stats_done(CCommand const&):
 "@_ZL17outtro_stats_doneRK8CCommand"

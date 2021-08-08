@@ -156,6 +156,9 @@ Signature for CFirstAidKit::FinishHealing(void):
 Signature for CFirstAidKit::StartHealing(CFirstAidKit::HealTargetType) [clone]:
 "@_ZN12CFirstAidKit12StartHealingENS_14HealTargetTypeE.part.43"
 
+Signature for CFirstAidKit::StopHealing(void) [clone]:
+"@_ZN12CFirstAidKit11StopHealingEv.part.42"
+
 Signature for CGameRulesProxy::NotifyNetworkStateChanged(void):
 "@_ZN15CGameRulesProxy25NotifyNetworkStateChangedEv"
 
@@ -662,6 +665,9 @@ Signature for ZombieManager::SpawnWitch(TerrorNavArea const*,QAngle const&):
 
 Signature for ZombieManager::SpawnWitch(Vector const&,QAngle const&):
 "@_ZN13ZombieManager10SpawnWitchERK6VectorRK6QAngle"
+
+Signature for go_away_from_keyboard(CCommand const&):
+"@_ZL21go_away_from_keyboardRK8CCommand"
 
 Signature for outtro_stats_done(CCommand const&):
 "@_ZL17outtro_stats_doneRK8CCommand"

@@ -627,20 +627,20 @@ Signature for ZombieManager::GetRandomPZSpawnPosition(ZombieClassType,int,CTerro
 Signature for ZombieManager::ReplaceTank(CTerrorPlayer *,CTerrorPlayer *):
 "@_ZN13ZombieManager11ReplaceTankEP13CTerrorPlayerS1_"
 
-Signature for ZombieManager::SpawnBoomer(TerrorNavArea const*,QAngle const&):
-"@_ZN13ZombieManager11SpawnBoomerEPK13TerrorNavAreaRK6QAngle"
-
 Signature for ZombieManager::SpawnBoomer(Vector const&,QAngle const&):
 "@_ZN13ZombieManager11SpawnBoomerERK6VectorRK6QAngle"
+
+Signature for ZombieManager::SpawnBoomer(TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager11SpawnBoomerEPK13TerrorNavAreaRK6QAngle"
 
 Signature for ZombieManager::SpawnCommonZombie(TerrorNavArea *,Vector const&,bool)const:
 "@_ZNK13ZombieManager17SpawnCommonZombieEP13TerrorNavAreaRK6Vectorb"
 
-Signature for ZombieManager::SpawnHunter(TerrorNavArea const*,QAngle const&):
-"@_ZN13ZombieManager11SpawnHunterEPK13TerrorNavAreaRK6QAngle"
-
 Signature for ZombieManager::SpawnHunter(Vector const&,QAngle const&):
 "@_ZN13ZombieManager11SpawnHunterERK6VectorRK6QAngle"
+
+Signature for ZombieManager::SpawnHunter(TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager11SpawnHunterEPK13TerrorNavAreaRK6QAngle"
 
 Signature for ZombieManager::SpawnITMob(int):
 "@_ZN13ZombieManager10SpawnITMobEi"
@@ -648,23 +648,23 @@ Signature for ZombieManager::SpawnITMob(int):
 Signature for ZombieManager::SpawnMob(int):
 "@_ZN13ZombieManager8SpawnMobEi"
 
-Signature for ZombieManager::SpawnSmoker(TerrorNavArea const*,QAngle const&):
-"@_ZN13ZombieManager11SpawnSmokerEPK13TerrorNavAreaRK6QAngle"
-
 Signature for ZombieManager::SpawnSmoker(Vector const&,QAngle const&):
 "@_ZN13ZombieManager11SpawnSmokerERK6VectorRK6QAngle"
 
-Signature for ZombieManager::SpawnTank(TerrorNavArea const*,QAngle const&):
-"@_ZN13ZombieManager9SpawnTankEPK13TerrorNavAreaRK6QAngle"
+Signature for ZombieManager::SpawnSmoker(TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager11SpawnSmokerEPK13TerrorNavAreaRK6QAngle"
 
 Signature for ZombieManager::SpawnTank(Vector const&,QAngle const&):
 "@_ZN13ZombieManager9SpawnTankERK6VectorRK6QAngle"
 
-Signature for ZombieManager::SpawnWitch(TerrorNavArea const*,QAngle const&):
-"@_ZN13ZombieManager10SpawnWitchEPK13TerrorNavAreaRK6QAngle"
+Signature for ZombieManager::SpawnTank(TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager9SpawnTankEPK13TerrorNavAreaRK6QAngle"
 
 Signature for ZombieManager::SpawnWitch(Vector const&,QAngle const&):
 "@_ZN13ZombieManager10SpawnWitchERK6VectorRK6QAngle"
+
+Signature for ZombieManager::SpawnWitch(TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager10SpawnWitchEPK13TerrorNavAreaRK6QAngle"
 
 Signature for go_away_from_keyboard(CCommand const&):
 "@_ZL21go_away_from_keyboardRK8CCommand"

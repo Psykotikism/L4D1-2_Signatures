@@ -885,28 +885,27 @@ Signature for ZombieManager::SpawnITMob(int):
 Signature for ZombieManager::SpawnMob(int):
 "@_ZN13ZombieManager8SpawnMobEi"
 
-Signature for ZombieManager::SpawnSpecial(ZombieClassType,TerrorNavArea const*,QAngle const&):
-"@_ZN13ZombieManager12SpawnSpecialE15ZombieClassTypePK13TerrorNavAreaRK6QAngle"
-
 Signature for ZombieManager::SpawnSpecial(ZombieClassType,Vector const&,QAngle const&):
 "@_ZN13ZombieManager12SpawnSpecialE15ZombieClassTypeRK6VectorRK6QAngle"
 
-Signature for ZombieManager::SpawnTank(TerrorNavArea const*,QAngle const&,bool):
-"@_ZN13ZombieManager9SpawnTankEPK13TerrorNavAreaRK6QAngleb"
+Signature for ZombieManager::SpawnSpecial(ZombieClassType,TerrorNavArea const*,QAngle const&):
+"@_ZN13ZombieManager12SpawnSpecialE15ZombieClassTypePK13TerrorNavAreaRK6QAngle"
 
 Signature for ZombieManager::SpawnTank(Vector const&,QAngle const&):
 "@_ZN13ZombieManager9SpawnTankERK6VectorRK6QAngle"
 
-Signature for ZombieManager::SpawnWitch(TerrorNavArea const*,QAngle const&,bool):
-"@_ZN13ZombieManager10SpawnWitchEPK13TerrorNavAreaRK6QAngleb"
+Signature for ZombieManager::SpawnTank(TerrorNavArea const*,QAngle const&,bool):
+"@_ZN13ZombieManager9SpawnTankEPK13TerrorNavAreaRK6QAngleb"
 
 Signature for ZombieManager::SpawnWitch(Vector const&,QAngle const&):
 "@_ZN13ZombieManager10SpawnWitchERK6VectorRK6QAngle"
 
+Signature for ZombieManager::SpawnWitch(TerrorNavArea const*,QAngle const&,bool):
+"@_ZN13ZombieManager10SpawnWitchEPK13TerrorNavAreaRK6QAngleb"
+
 Signature for ZombieManager::SpawnWitchBride(Vector const&,QAngle const&):
 "@_ZN13ZombieManager15SpawnWitchBrideERK6VectorRK6QAngle"
 
-/* From "server_srv.so" */
 Signature for go_away_from_keyboard(CCommand const&):
 "@_ZL21go_away_from_keyboardRK8CCommand"
 

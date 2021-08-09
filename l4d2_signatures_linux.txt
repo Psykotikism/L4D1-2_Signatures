@@ -12,8 +12,14 @@ Signature for CreateServerRagdoll(CBaseAnimating *,int,CTakeDamageInfo const&,in
 Signature for CAmmoDef::MaxCarry(int,CBaseCombatCharacter const*):
 "@_ZN8CAmmoDef8MaxCarryEiPK20CBaseCombatCharacter"
 
+Signature for CBaseAbility::ActivateAbility(void):
+"@_ZN12CBaseAbility15ActivateAbilityEv"
+
 Signature for CBaseAbility::CreateForPlayer(CTerrorPlayer *):
 "@_ZN12CBaseAbility15CreateForPlayerEP13CTerrorPlayer"
+
+Signature for CBaseAbility::IsAbilityReadyToFire(void)const:
+"@_ZNK12CBaseAbility20IsAbilityReadyToFireEv"
 
 Signature for CBaseAbility::StartActivationTimer(float,float):
 "@_ZN12CBaseAbility20StartActivationTimerEff"
@@ -66,6 +72,9 @@ Signature for CBasePlayer::WaterMove(void):
 Signature for CBaseShotgun::Reload(void):
 "@_ZN12CBaseShotgun6ReloadEv"
 
+Signature for CBaseTrigger::IsTouching(CBaseEntity *):
+"@_ZN12CBaseTrigger10IsTouchingEP11CBaseEntity"
+
 Signature for CCarProp::InputSurvivorStandingOnCar(inputdata_t &):
 "@_ZN8CCarProp26InputSurvivorStandingOnCarER11inputdata_t"
 
@@ -74,6 +83,12 @@ Signature for CCharge::ActivateAbility(void):
 
 Signature for CCharge::HandleCustomCollision(CBaseEntity *,Vector const&,Vector const&,CGameTrace *,CMoveData *):
 "@_ZN7CCharge21HandleCustomCollisionEP11CBaseEntityRK6VectorS4_P10CGameTraceP9CMoveData"
+
+Signature for CCharge::IsAbilityReadyToFire(void)const:
+"@_ZNK7CCharge20IsAbilityReadyToFireEv"
+
+Signature for CCharge::UpdateAbility(void):
+"@_ZN7CCharge13UpdateAbilityEv"
 
 Signature for CClaw::OnPlayerHit(CTerrorPlayer *):
 "@_ZN5CClaw11OnPlayerHitEP13CTerrorPlayer"
@@ -282,6 +297,24 @@ Signature for CItemDefibrillator::OnActionComplete(CTerrorPlayer *,CBaseEntity *
 Signature for CItemDefibrillator::OnStartAction(CBaseBackpackItem::BackpackItemActionType,CTerrorPlayer *,CBaseEntity *,float):
 "@_ZN18CItemDefibrillator13OnStartActionEN17CBaseBackpackItem22BackpackItemActionTypeEP13CTerrorPlayerP11CBaseEntityf"
 
+Signature for CLeap::ActivateAbility(void):
+"@_ZN5CLeap15ActivateAbilityEv"
+
+Signature for CLeap::IsAbilityReadyToFire(void)const:
+"@_ZNK5CLeap20IsAbilityReadyToFireEv"
+
+Signature for CLeap::UpdateAbility(void):
+"@_ZN5CLeap13UpdateAbilityEv"
+
+Signature for CLunge::ActivateAbility(void):
+"@_ZN6CLunge15ActivateAbilityEv"
+
+Signature for CLunge::IsAbilityReadyToFire(void)const:
+"@_ZNK6CLunge20IsAbilityReadyToFireEv"
+
+Signature for CLunge::UpdateAbility(void):
+"@_ZN6CLunge13UpdateAbilityEv"
+
 Signature for CMeleeWeaponInfo::Parse(char const*,KeyValues *):
 "@_ZN16CMeleeWeaponInfo5ParseEPKcP9KeyValues"
 
@@ -306,11 +339,29 @@ Signature for CPistol::GetRateOfFire(void)const:
 Signature for CRifle_M60::PrimaryAttack(void):
 "@_ZN10CRifle_M6013PrimaryAttackEv"
 
+Signature for CSelfDestruct::ActivateAbility(void):
+"@_ZN13CSelfDestruct15ActivateAbilityEv"
+
+Signature for CSelfDestruct::IsAbilityReadyToFire(void)const:
+"@_ZNK13CSelfDestruct20IsAbilityReadyToFireEv"
+
+Signature for CSelfDestruct::UpdateAbility(void):
+"@_ZN13CSelfDestruct13UpdateAbilityEv"
+
 Signature for CServerGameClients::GetPlayerLimits(int &,int &,int &)const:
 "@_ZNK18CServerGameClients15GetPlayerLimitsERiS0_S0_"
 
 Signature for CSmokeCloudSystem::FireGameEvent(IGameEvent *):
 "@_ZN17CSmokeCloudSystem13FireGameEventEP10IGameEvent"
+
+Signature for CSpitAbility::ActivateAbility(void):
+"@_ZN12CSpitAbility15ActivateAbilityEv"
+
+Signature for CSpitAbility::IsAbilityReadyToFire(void)const:
+"@_ZNK12CSpitAbility20IsAbilityReadyToFireEv"
+
+Signature for CSpitAbility::UpdateAbility(void):
+"@_ZN12CSpitAbility13UpdateAbilityEv"
 
 Signature for CSpitterProjectile::Create(Vector const&,QAngle const&,Vector const&,Vector const&,CBaseCombatCharacter *):
 "@_ZN18CSpitterProjectile6CreateERK6VectorRK6QAngleS2_S2_P20CBaseCombatCharacter"
@@ -447,6 +498,9 @@ Signature for CTerrorPlayer::CancelStagger(void):
 Signature for CTerrorPlayer::ChooseSurvivorCharacter(SurvivorCharacterType)const:
 "@_ZNK13CTerrorPlayer23ChooseSurvivorCharacterE21SurvivorCharacterType"
 
+Signature for CTerrorPlayer::CleanupPlayerState(void):
+"@_ZN13CTerrorPlayer18CleanupPlayerStateEv"
+
 Signature for CTerrorPlayer::CullZombie(void):
 "@_ZN13CTerrorPlayer10CullZombieEv"
 
@@ -548,6 +602,9 @@ Signature for CTerrorPlayer::OnLedgeGrabbed(Vector const&):
 
 Signature for CTerrorPlayer::OnLeptOnSurvivor(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer16OnLeptOnSurvivorEPS_"
+
+Signature for CTerrorPlayer::OnLungeEnd(void):
+"@_ZN13CTerrorPlayer10OnLungeEndEv"
 
 Signature for CTerrorPlayer::OnPouncedOnSurvivor(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer19OnPouncedOnSurvivorEPS_"
@@ -651,6 +708,9 @@ Signature for CTerrorPlayer::TrackSound(char const*):
 Signature for CTerrorPlayer::UpdatePounce(void):
 "@_ZN13CTerrorPlayer12UpdatePounceEv"
 
+Signature for CTerrorPlayer::UpdateZombieFrustration(void):
+"@_ZN13CTerrorPlayer23UpdateZombieFrustrationEv"
+
 Signature for CTerrorPlayer::Vocalize(char const*,float,float):
 "@_ZN13CTerrorPlayer8VocalizeEPKcff"
 
@@ -681,14 +741,29 @@ Signature for CTerrorWeaponInfo::Parse(KeyValues *,char const*):
 Signature for CThrow::ActivateAbility(void):
 "@_ZN6CThrow15ActivateAbilityEv"
 
+Signature for CThrow::IsAbilityReadyToFire(void)const:
+"@_ZNK6CThrow20IsAbilityReadyToFireEv"
+
+Signature for CThrow::UpdateAbility(void):
+"@_ZN6CThrow13UpdateAbilityEv"
+
+Signature for CTongue::ActivateAbility(void):
+"@_ZN7CTongue15ActivateAbilityEv"
+
 Signature for CTongue::IsAbilityReadyToFire(void)const:
 "@_ZNK7CTongue20IsAbilityReadyToFireEv"
 
 Signature for CTongue::OnUpdateAttachedToTargetState(void):
 "@_ZN7CTongue29OnUpdateAttachedToTargetStateEv"
 
+Signature for CTongue::UpdateAbility(void):
+"@_ZN7CTongue13UpdateAbilityEv"
+
 Signature for CTriggerTraceEnum::EnumEntity(IHandleEntity *):
 "@_ZN17CTriggerTraceEnum10EnumEntityEP13IHandleEntity"
+
+Signature for CVomit::ActivateAbility(void):
+"@_ZN6CVomit15ActivateAbilityEv"
 
 Signature for CVomit::IsAbilityReadyToFire(void)const:
 "@_ZNK6CVomit20IsAbilityReadyToFireEv"
@@ -795,6 +870,9 @@ Signature for Tank * NextBotCreatePlayerBot<Tank>(char const*):
 Signature for NextBotManager::ShouldUpdate(INextBot *):
 "@_ZN14NextBotManager12ShouldUpdateEP8INextBot"
 
+Signature for PassServerEntityFilter(IHandleEntity const*,IHandleEntity const*):
+"@_Z22PassServerEntityFilterPK13IHandleEntityS1_"
+
 Signature for ReadWeaponDataFromFileForSlot(IFileSystem *,char const*,unsigned short *,unsigned char const*):
 "@_Z29ReadWeaponDataFromFileForSlotP11IFileSystemPKcPtPKh"
 
@@ -836,6 +914,15 @@ Signature for TankAttack::Update(Tank *,float):
 
 Signature for TerrorNavArea::FindRandomSpot(void)const:
 "@_ZNK13TerrorNavArea14FindRandomSpotEv"
+
+Signature for TerrorNavArea::ScriptGetDoor(void):
+"@_ZN13TerrorNavArea13ScriptGetDoorEv"
+
+Signature for TerrorNavArea::ScriptGetSpawnAttributes(void)const:
+"@_ZNK13TerrorNavArea24ScriptGetSpawnAttributesEv"
+
+Signature for TerrorNavArea::ScriptHasSpawnAttributes(int)const:
+"@_ZNK13TerrorNavArea24ScriptHasSpawnAttributesEi"
 
 Signature for ThrowImpactedSurvivor(CTerrorPlayer *,CTerrorPlayer *,float,bool):
 "@_Z21ThrowImpactedSurvivorP13CTerrorPlayerS0_fb"

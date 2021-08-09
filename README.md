@@ -2,9 +2,17 @@
 
 ## About
 This is a repository for hosting/storing several L4D1&2 signatures. More signatures will be added and supported as I come across or use more functions. I will try my best to keep all the signatures in this repository up-to-date.
-
 - If you want me to add/support any function that isn't in this repository already, file an issue.
 - If you have some signatures you want to share, make a pull request.
+
+## Files
+1. `l4d1_signatures_linux` - List of L4D1 Linux signatures
+2. `l4d1_signatures_windows` - List of L4D1 Windows signatures
+3. `l4d2_signatures_linux` - List of L4D2 Linux signatures
+4. `l4d2_signatures_windows` - List of L4D2 Windows signatures
+5. `l4d_signatures`
+- Gamedata file that contains all of the signatures listed in the above files.
+- Includes instructions for finding each signature.
 
 ## Notes
 

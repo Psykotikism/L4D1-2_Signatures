@@ -5254,7 +5254,7 @@
 			 *
 			 * How to find on Windows:
 			 * 1. Locate the "WitchAttack::OnContact" function.
-			 * 2. The fourth function call should be this function.
+			 * 2. The fourth function call in "WitchAttack::OnContact" should be this function.
 			 **/
 			"WitchAttack::GetVictim"
 			{

@@ -30,7 +30,7 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 
 ### Left 4 Dead
 - Most of the signatures have been verified to have withstood the last landmark update:
-1. `Pre-Current (7-24-2019)` - `18/238` changed since the latest version came out.
+1. `Pre-Current (7-24-2019)` - `19/238` changed since the latest version came out.
 2. `Current (8-9-2021)`
 
 ### Left 4 Dead 2

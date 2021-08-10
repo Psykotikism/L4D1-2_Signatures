@@ -3545,15 +3545,15 @@
 			 * WitchAttack::GetVictim()
 			 *
 			 * How to find on Windows:
-			 * 1. Locate the "Witch::DoAttack" function.
-			 * 2. One of the functions that calls "Witch::DoAttack" should be this function.
+			 * 1. Locate the "WitchAttack::OnContact" function.
+			 * 2. The fourth function call in "WitchAttack::OnContact" should be this function.
 			 **/
 			"WitchAttack::GetVictim"
 			{
 				"library"	"server"
 				"linux"		"@_ZNK11WitchAttack9GetVictimEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83"
-						/* ? ? ? ? ? ? ? 75 ? 8B ? ? 83 ? ? 75 ? 8B ? ? 83 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83\x2A\x2A\x74\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\x2A\x81\xE1\x2A\x2A\x2A\x2A\xC1\x2A\x2A\x8D\x2A\x2A\x2A\x85\x2A\x74\x2A\xC1\x2A\x2A\x39\x2A\x2A\x75\x2A\x8B\x2A\xC3"
+						/* ? ? ? ? ? ? 75 ? 8B ? ? 83 ? ? 74 ? 8B 15 ? ? ? ? 8B ? 81 E1 ? ? ? ? C1 ? ? 8D ? ? ? 85 ? 74 ? C1 ? ? 39 ? ? 75 ? 8B ? C3 */
 			}
 
 			/**
@@ -3570,8 +3570,8 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN11WitchAttack16OnAnimationEventEP8InfectedP11animevent_t"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xCC\xCC\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\xC7\x46\x2A\x2A\x2A\x2A\x2A\xC7\x46\x2A\x2A\x2A\x2A\x2A\x33\x2A\x33\x2A\x33"
-						/* ? ? ? ? ? ? ? ? CC CC ? ? ? ? ? ? 53 56 8B ? C7 46 ? ? ? ? ? C7 46 ? ? ? ? ? 33 ? 33 ? 33 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83"
+						/* ? ? ? ? ? ? ? 75 ? 8B ? ? 83 ? ? 75 ? 8B ? ? 83 */
 			}
 
 			/**
@@ -3588,8 +3588,8 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN11WitchAttack9OnContactEP8InfectedP11CBaseEntityP10CGameTrace"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83"
-						/* ? ? ? ? ? ? ? 75 ? 8B ? ? 83 ? ? 75 ? 8B ? ? 83 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x57\x8B\x2A\x0F\x84\x2A\x2A\x2A\x2A\x6A\x2A\x6A"
+						/* ? ? ? ? ? ? ? 85 ? 57 8B ? 0F 84 ? ? ? ? 6A ? 6A */
 			}
 
 			/**
@@ -3606,8 +3606,8 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN11WitchAttack15OnMoveToFailureEP8InfectedPK4Path17MoveToFailureType"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x57\x8B\x2A\x0F\x84\x2A\x2A\x2A\x2A\x6A\x2A\x6A"
-						/* ? ? ? ? ? ? ? 85 ? 57 8B ? 0F 84 ? ? ? ? 6A ? 6A */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xCC\xCC\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\xC7\x46\x2A\x2A\x2A\x2A\x2A\xC7\x46\x2A\x2A\x2A\x2A\x2A\x33\x2A\x33\x2A\x33"
+						/* ? ? ? ? ? ? ? ? CC CC ? ? ? ? ? ? 53 56 8B ? C7 46 ? ? ? ? ? C7 46 ? ? ? ? ? 33 ? 33 ? 33 */
 			}
 
 			/**

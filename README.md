@@ -4,6 +4,8 @@
 This is a repository for hosting/storing several L4D1&2 signatures. More signatures will be added and supported as I come across or use more functions. I will try my best to keep all the signatures in this repository up-to-date.
 - If you want me to add/support any function that isn't in this repository already, file an issue.
 - If you have some signatures you want to share, make a pull request.
+- If you encounter any bad/broken signatures, file an issue.
+- Any signature that's broken by a game update will usually be fixed within 24 hours, so please allow at least that much time to pass before filing an issue.
 
 ## Files
 1. `l4d1_signatures_linux` - List of L4D1 Linux signatures

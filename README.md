@@ -8,13 +8,16 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 ## Files
 1. `l4d1_signatures_linux` - List of L4D1 Linux signatures
 2. `l4d1_signatures_windows` - List of L4D1 Windows signatures
-3. `l4d_signatures`
+3. `l4d1_signatures`
 - Gamedata file that contains all of the signatures listed in the above files.
 - Includes instructions for finding each signature.
 4. `l4d2_signatures_linux` - List of L4D2 Linux signatures
 5. `l4d2_signatures_windows` - List of L4D2 Windows signatures
 6. `l4d2_signatures`
 - Gamedata file that contains all of the signatures listed in the above files.
+- Includes instructions for finding each signature.
+7. `l4d_signatures`
+- Gamedata file that contains all of the signatures for both games listed in the above files.
 - Includes instructions for finding each signature.
 
 ## Notes

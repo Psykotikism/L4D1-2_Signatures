@@ -41,7 +41,7 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 1. `Pre-TLS (6-5-2020)` - `46/333` changed since the latest version came out.
 2. `TLS (9-24-2020)` - `41/333` changed since the latest version came out.
 3. `Post-TLS (2-18-2021)` - `41/333` changed since the latest version came out.
-4. `Post-Post-TLS (6-15-2021)` - `38/333` changed since the latest version came out.
+4. `Pre-Current (6-15-2021)` - `38/333` changed since the latest version came out.
 5. `Current (7-8-2021)`
 - Keep in mind that does not mean that most of these signatures will never break. It just means that they are durable enough to withstand several major updates unless VALVe updates the code of their respective functions and/or uses different compiler settings.
 
@@ -55,3 +55,6 @@ Thank you to the following people for helping me locate a lot of these functions
 
 ## Other Resources
 **[All Linux Signatures](https://github.com/dragokas/SM-Signatures)** by Dragokas - A repository for all the Linux signatures in the L4D/L4D2 binaries.
+
+## Final Words
+I hope that people can make use of all the signatures provided in this repository. I would appreciate if you could credit me (or whoever contributed) when using any of these signatures. I don't require any specific way of being credited so long as you mention my name and/or link this repository in your project information.

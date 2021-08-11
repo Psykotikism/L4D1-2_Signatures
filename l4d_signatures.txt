@@ -379,7 +379,7 @@
 			}
 
 			/**
-			 * CBaseTrigger:IsTouching(CBaseEntity *)
+			 * CBaseTrigger::IsTouching(CBaseEntity *)
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "PlayerOutsideCheckpoint" string.
@@ -388,7 +388,7 @@
 			 * 4. Click on the last function call in that function.
 			 * 5. This function should be the second function call in that function.
 			 **/
-			"CBaseTrigger:IsTouching"
+			"CBaseTrigger::IsTouching"
 			{
 				"library"	"server"
 				"linux"		"@_ZN12CBaseTrigger10IsTouchingEP11CBaseEntity"
@@ -4365,7 +4365,7 @@
 			}
 
 			/**
-			 * CBaseTrigger:IsTouching(CBaseEntity *)
+			 * CBaseTrigger::IsTouching(CBaseEntity *)
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "PlayerOutsideCheckpoint" string.
@@ -4374,7 +4374,7 @@
 			 * 4. Click on the last function call in that function.
 			 * 5. This function should be the second function call in that function.
 			 **/
-			"CBaseTrigger:IsTouching"
+			"CBaseTrigger::IsTouching"
 			{
 				"library"	"server"
 				"linux"		"@_ZN12CBaseTrigger10IsTouchingEP11CBaseEntity"

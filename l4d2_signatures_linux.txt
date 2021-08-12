@@ -321,6 +321,9 @@ Signature for CMeleeWeaponInfo::Parse(char const*,KeyValues *):
 Signature for CNavArea::IsBlocked(int,bool)const:
 "@_ZNK8CNavArea9IsBlockedEib"
 
+Signature for CNavArea::SpliceEdit(CNavArea*):
+"@_ZN8CNavArea10SpliceEditEPS_"
+
 Signature for CNavMesh::GetNavArea(Vector const&,float)const:
 "@_ZNK8CNavMesh10GetNavAreaERK6Vectorf"
 
@@ -807,6 +810,9 @@ Signature for InfoChangelevel::StartChangeLevel(Checkpoint const*):
 Signature for InstallBotControl(void):
 "@_Z17InstallBotControlv"
 
+Signature for IsAreaConnectedToNonCheckpointArea(TerrorNavArea *):
+"@_Z34IsAreaConnectedToNonCheckpointAreaP13TerrorNavArea"
+
 Signature for KeyValues::FindKey(char const*,bool):
 "@_ZN9KeyValues7FindKeyEPKcb"
 
@@ -995,6 +1001,9 @@ Signature for ZombieManager::SpawnWitchBride(Vector const&,QAngle const&):
 
 Signature for go_away_from_keyboard(CCommand const&):
 "@_ZL21go_away_from_keyboardRK8CCommand"
+
+Signature for nav_update_lighting(CCommand const&):
+"@_ZL19nav_update_lightingRK8CCommand"
 
 Signature for outtro_stats_done(CCommand const&):
 "@_ZL17outtro_stats_doneRK8CCommand"

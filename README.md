@@ -2,23 +2,25 @@
 
 ## About
 This is a repository for hosting/storing several L4D1&2 signatures. More signatures will be added and supported as I come across or use more functions. I will try my best to keep all the signatures in this repository up-to-date.
-- If you want me to add/support any function that isn't in this repository already, file an issue.
-- If you have some signatures you want to share, make a pull request.
-- If you encounter any bad/broken signatures, file an issue.
-- Any signature that's broken by a game update will usually be fixed within 24 hours, so please allow at least that much time to pass before filing an issue.
+1. If you want me to add/support any function that isn't in this repository already, file an issue.
+2. If you have some signatures you want to share, make a pull request.
+- Be sure to state which game the signatures are from.
+3. If you encounter any bad/broken signatures, file an issue.
+- Mention the game and platform.
+4. Any signature that's broken by a game update will usually be fixed within 24 hours, so please allow at least that much time to pass before filing an issue.
 
 ## Files
-1. `l4d1_signatures_linux` - List of L4D1 Linux signatures
-2. `l4d1_signatures_windows` - List of L4D1 Windows signatures
-3. `l4d1_signatures`
+1. `l4d1_signatures_linux.txt` - List of L4D1 Linux signatures
+2. `l4d1_signatures_windows.txt` - List of L4D1 Windows signatures
+3. `l4d1_signatures.txt`
 - Gamedata file that contains all of the signatures listed in the above files.
 - Includes instructions for finding each signature.
-4. `l4d2_signatures_linux` - List of L4D2 Linux signatures
-5. `l4d2_signatures_windows` - List of L4D2 Windows signatures
-6. `l4d2_signatures`
+4. `l4d2_signatures_linux.txt` - List of L4D2 Linux signatures
+5. `l4d2_signatures_windows.txt` - List of L4D2 Windows signatures
+6. `l4d2_signatures.txt`
 - Gamedata file that contains all of the signatures listed in the above files.
 - Includes instructions for finding each signature.
-7. `l4d_signatures`
+7. `l4d_signatures.txt`
 - Gamedata file that contains all of the signatures for both games listed in the above files.
 - Includes instructions for finding each signature.
 
@@ -30,20 +32,20 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 - Most of these signatures are heavily wildcarded but have been tested across multiple versions of both games to be very durable. While shorter signatures are ideal, longer but durable ones are more convenient.
 
 ### Signature Count
-- **L4D1**: 238
-- **L4D2**: 333
+- **L4D1**: 240
+- **L4D2**: 336
 
 ### Left 4 Dead
 - Most of the signatures have been verified to have withstood the last landmark update:
-1. `Pre-Current (7-24-2019)` - `19/238` changed since the latest version came out.
+1. `Pre-Current (7-24-2019)` - `19/240` changed since the latest version came out.
 2. `Current (8-9-2021)`
 
 ### Left 4 Dead 2
-- Most of the signatures have been verified to have withstood the last 5 landmark updates:
-1. `Pre-TLS (6-5-2020)` - `46/333` changed since the latest version came out.
-2. `TLS (9-24-2020)` - `41/333` changed since the latest version came out.
-3. `Post-TLS (2-18-2021)` - `41/333` changed since the latest version came out.
-4. `Pre-Current (6-15-2021)` - `38/333` changed since the latest version came out.
+- Most of the signatures have been verified to have withstood the last five landmark updates:
+1. `Pre-TLS (6-5-2020)` - `47/336` changed since the latest version came out.
+2. `TLS (9-24-2020)` - `42/336` changed since the latest version came out.
+3. `Post-TLS (2-18-2021)` - `42/336` changed since the latest version came out.
+4. `Pre-Current (6-15-2021)` - `39/336` changed since the latest version came out.
 5. `Current (7-8-2021)`
 - Keep in mind that does not mean that most of these signatures will never break. It just means that they are durable enough to withstand several major updates unless VALVe updates the code of their respective functions and/or uses different compiler settings.
 

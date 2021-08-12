@@ -1828,6 +1828,21 @@
 			}
 
 			/**
+			 * CNavArea::SpliceEdit(CNavArea*)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "SpliceEdit: Out of memory.\n" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"CNavArea::SpliceEdit"
+			{
+				"library"	"server"
+				"linux"		"@_ZN8CNavArea10SpliceEditEPS_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x2A\x2A\xF3\x2A\x2A\x2A\x2A\x56"
+						/* ? ? ? ? ? ? 53 8B ? ? F3 ? ? ? ? 56 */
+			}
+
+			/**
 			 * CNavMesh::GetNavArea(Vector const&, float)
 			 *
 			 * How to find on Windows:
@@ -4570,6 +4585,23 @@
 			}
 
 			/**
+			 * IsAreaConnectedToNonCheckpointArea(TerrorNavArea *)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "GetPlayerSpawnPosition: No spawn zones\n" string.
+			 * 2. The string can only be found in "GetPlayerSpawnPosition".
+			 * 3. There are 3 while loops ("while ( 1 )") inside "GetPlayerSpawnPosition".
+			 * 4. This function should be the first function call in the third/last while loop.
+			 **/
+			"IsAreaConnectedToNonCheckpointArea"
+			{
+				"library"	"server"
+				"linux"		"@_Z34IsAreaConnectedToNonCheckpointAreaP13TerrorNavArea"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x53\x56\xC7\x45"
+						/* ? ? ? ? ? ? 8B ? ? 53 56 C7 45 */
+			}
+
+			/**
 			 * KeyValues::FindKey(char const*, bool)
 			 *
 			 * How to find on Windows:
@@ -5603,6 +5635,21 @@
 				"linux"		"@_ZL21go_away_from_keyboardRK8CCommand"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x0F\x2A\x2A\xF7\x2A\x1B\x2A\x23\x2A\x5E"
 						/* ? ? ? ? ? ? 8B ? 85 ? 74 ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 74 ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 0F ? ? F7 ? 1B ? 23 ? 5E */
+			}
+
+			/**
+			 * nav_update_lighting(CCommand const&)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Computed lighting for %d/%d areas\n" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"nav_update_lighting"
+			{
+				"library"	"server"
+				"linux"		"@_ZL19nav_update_lightingRK8CCommand"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x57\x33\x2A\x83\x2A\x2A\x75"
+						/* ? ? ? ? ? ? 57 33 ? 83 ? ? 75 */
 			}
 
 			/**

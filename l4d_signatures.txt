@@ -8581,8 +8581,8 @@
 			 * How to find on Windows:
 			 * 1. Search for the "GetPlayerSpawnPosition: No spawn zones\n" string.
 			 * 2. The string can only be found in "GetPlayerSpawnPosition".
-			 * 3. There are 3 while loops ("while ( 1 )") inside "GetPlayerSpawnPosition".
-			 * 4. This function should be the first function call in the third/last while loop.
+			 * 3. There are four while loops ("while ( 1 )") inside "GetPlayerSpawnPosition".
+			 * 4. This function should be the first function call in the fourth/last while loop.
 			 **/
 			"IsAreaConnectedToNonCheckpointArea"
 			{

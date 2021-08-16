@@ -540,6 +540,9 @@ Signature for CTerrorPlayer::GetWalkTopSpeed(void)const:
 Signature for CTerrorPlayer::GiveActiveWeapon(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer16GiveActiveWeaponEPS_"
 
+Signature for CTerrorPlayer::GiveDefaultItems(void):
+"@_ZN13CTerrorPlayer16GiveDefaultItemsEv"
+
 Signature for CTerrorPlayer::GiveNamedItem(char const*,int,bool,CBaseEntity *):
 "@_ZN13CTerrorPlayer13GiveNamedItemEPKcibP11CBaseEntity"
 

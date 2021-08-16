@@ -95,7 +95,7 @@
 			 * - "ability_throw"
 			 * - "ability_tongue"
 			 * - "ability_vomit"
-			 * 2. One of the functions that references any of these strings actually calls ALL of these strings.
+			 * 2. One of the functions that references any of these strings actually references ALL of these strings.
 			 **/
 			"CBaseAbility::CreateForPlayer"
 			{
@@ -1167,8 +1167,8 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN17CSmokeCloudSystem13FireGameEventEP10IGameEvent"
-				"windows"	"\x83\x2A\x2A\x56\x8B\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x57\x8B\x2A\x8B\x2A\xFF\x2A\x3D\x2A\x2A\x2A\x2A\x74\x2A\x68\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x0F\x85\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B"
-						/* 83 ? ? 56 8B ? ? ? 8B ? 8B ? ? 57 8B ? 8B ? FF ? 3D ? ? ? ? 74 ? 68 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 0F 85 ? ? ? ? 8B ? 8B ? ? 6A ? 68 ? ? ? ? 8B ? FF ? 50 E8 ? ? ? ? 8B */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x57\x8B\x2A\x8B\x2A\xFF\x2A\x3D\x2A\x2A\x2A\x2A\x74\x2A\x68\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x0F\x85\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B"
+						/* ? ? ? ? ? ? ? ? 8B ? 8B ? ? 57 8B ? 8B ? FF ? 3D ? ? ? ? 74 ? 68 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 0F 85 ? ? ? ? 8B ? 8B ? ? 6A ? 68 ? ? ? ? 8B ? FF ? 50 E8 ? ? ? ? 8B */
 			}
 
 			/**
@@ -1336,8 +1336,8 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZNK16CTerrorGameRules18GetMaxHumanPlayersEv"
-				"windows"	"\xE8\x2A\x2A\x2A\x2A\xF6\xD8\x1B\xC0\x83\xE0\x04"
-						/* E8 ? ? ? ? F6 D8 1B C0 83 E0 04 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x1B\xC0\x83\xE0\x04\x83\xC0\x04\xC3"
+						/* ? ? ? ? ? ? ? 1B C0 83 E0 04 83 C0 04 C3 */
 			}
 
 			/**
@@ -1560,7 +1560,7 @@
 			 *
 			 * How to find on Windows:
 			 * 1. Locate the "CTerrorPlayer::CanBecomeGhost" function.
-			 * 2. One of the functions that references that function should be this function.
+			 * 2. One of the functions that calls that function should be this function.
 			 **/
 			"CTerrorPlayer::BecomeGhost"
 			{
@@ -1801,6 +1801,28 @@
 				"linux"		"@_ZN13CTerrorPlayer16GiveActiveWeaponEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x0F\x85\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90"
 						/* ? ? ? ? ? ? 57 8B ? E8 ? ? ? ? 83 ? ? 0F 85 ? ? ? ? 8B ? 8B 90 */
+			}
+
+			/**
+			 * CTerrorPlayer::GiveDefaultItems()
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "AMMO_TYPE_PISTOL" string.
+			 * 2a. One of the functions that references that string should be this function.
+			 * 3a. This function references the string twice.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CTerrorPlayer::`vftable'" to jump to the "CTerrorPlayer" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CTerrorPlayer::GiveDefaultItems"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer16GiveDefaultItemsEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x0F\x85\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x6A"
+						/* ? ? ? ? ? ? ? ? 83 ? ? 0F 85 ? ? ? ? 8B ? 8B 90 ? ? ? ? 6A */
 			}
 
 			/**
@@ -2180,7 +2202,7 @@
 			 * CTerrorPlayer::OnStaggered(CBaseEntity*, Vector const*)
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "PlayerShoved" string.
+			 * 1. Search for the "Player.Shoved" string.
 			 * 2. One of the functions that references that string should be this function.
 			 **/
 			"CTerrorPlayer::OnStaggered"
@@ -2348,9 +2370,8 @@
 			 * CTerrorPlayer::SetBecomeGhostAt(float)
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "ghost_spawn_time" string.
-			 * 2. The string can only be found in "CTerrorPlayer::CanBecomeGhost".
-			 * 3. The first function call above the string should be this function.
+			 * 1. Locate the "CTerrorPlayer::CanBecomeGhost" function.
+			 * 2. This function should be two function calls above the "ghost_spawn_time" string.
 			 **/
 			"CTerrorPlayer::SetBecomeGhostAt"
 			{
@@ -2841,8 +2862,8 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN17CTriggerTraceEnum10EnumEntityEP13IHandleEntity"
-				"windows"	"\x83\x2A\x2A\x53\x8B\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x56"
-						/* 83 ? ? 53 8B ? ? ? 8B ? 8B ? ? 56 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x56\x8B\x2A\x57\x8B\x2A\xFF\x2A\x8B\x2A\x83"
+						/* ? ? ? ? ? ? ? ? 8B ? 8B ? ? 56 8B ? 57 8B ? FF ? 8B ? 83 */
 			}
 
 			/**
@@ -3440,7 +3461,7 @@
 			 * SurvivorLegsMeetRescueVehicleArrival::Update(SurvivorBot*, float)
 			 *
 			 * How to find on Windows:
-			 * 1a. Search for the "The rescue vehicle is here!!!" or "%3.2f: %s ERROR: No RESCUE_VEHICLE area" string.
+			 * 1a. Search for the "The rescue vehicle is here!!!" or "%3.2f: %s ERROR: No RESCUE_VEHICLE area!\n" string.
 			 * 2a. One of the functions that references that string should be this function.
 			 *
 			 * 1b. Find the function's offsets with asherkin's VTable dump.

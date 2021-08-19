@@ -1,7 +1,7 @@
 # L4D1&2 Signatures
 
 ## PayPal
-[Donate to my PayPal if you appreciate my work](https://paypal.me/Psyk0tikism?locale.x=en_US)
+[Donate to Motivate](https://paypal.me/Psyk0tikism?locale.x=en_US)
 
 ## About
 This is a repository for hosting/storing several L4D1&2 signatures. More signatures will be added and supported as I come across or use more functions. I will try my best to keep all the signatures in this repository up-to-date.

@@ -13,17 +13,17 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 4. Any signature that's broken by a game update will usually be fixed within 24 hours, so please allow at least that much time to pass before filing an issue.
 
 ## Files
-1. `l4d1_signatures_linux.txt` - List of L4D1 Linux signatures
-2. `l4d1_signatures_windows.txt` - List of L4D1 Windows signatures
-3. `l4d1_signatures.txt`
+1. `l4d1/raw/l4d1_signatures_linux.txt` - List of L4D1 Linux signatures
+2. `l4d1/raw/l4d1_signatures_windows.txt` - List of L4D1 Windows signatures
+3. `l4d1/gamedata/l4d1_signatures.txt`
 - Gamedata file that contains all of the signatures listed in the above files.
 - Includes instructions for finding each signature.
-4. `l4d2_signatures_linux.txt` - List of L4D2 Linux signatures
-5. `l4d2_signatures_windows.txt` - List of L4D2 Windows signatures
-6. `l4d2_signatures.txt`
+4. `l4d2/raw/l4d2_signatures_linux.txt` - List of L4D2 Linux signatures
+5. `l4d2/raw/l4d2_signatures_windows.txt` - List of L4D2 Windows signatures
+6. `l4d2/gamedata/l4d2_signatures.txt`
 - Gamedata file that contains all of the signatures listed in the above files.
 - Includes instructions for finding each signature.
-7. `l4d_signatures.txt`
+7. `gamedata/l4d_signatures.txt`
 - Gamedata file that contains all of the signatures for both games listed in the above files.
 - Includes instructions for finding each signature.
 

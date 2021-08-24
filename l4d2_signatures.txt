@@ -626,7 +626,7 @@
 			/**
 			 * CDirector::ClearScavengeScores(bool)
 			 *
-			 * Note: This function is in-lined with the "CTerrorGameRules::ClearScavengeScores" function.
+			 * Note: (Windows) This function is in-lined with the "CTerrorGameRules::ClearScavengeScores" function.
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "RefreshInitialSpawnPositions" string.
@@ -1027,6 +1027,21 @@
 				"linux"		"@_ZN9CDirector13ResetMobTimerEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8D\xB9\xD4"
 						/* ? ? ? ? ? ? 8D B9 D4 */
+			}
+
+			/**
+			 * CDirector::Restart()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Reloading original map %s\n" or "Staying on original map %s\n" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"CDirector::Restart"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CDirector7RestartEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\xD8\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\xA1\x90\x2A\x2A\x2A\x8B\x2A\x2A\x53\x56\x57\x8B"
+						/* ? ? ? ? ? ? ? ? ? A1 D8 ? ? ? 33 ? 89 ? ? A1 90 ? ? ? 8B ? ? 53 56 57 8B */
 			}
 
 			/**
@@ -1743,7 +1758,7 @@
 			/**
 			 * CLunge::UpdateAbility()
 			 *
-			 * Note: This function is in-lined with the "CTerrorPlayer::OnLungeEnd" function.
+			 * Note: (Windows) This function is in-lined with the "CTerrorPlayer::OnLungeEnd" function.
 			 *
 			 * How to find on Windows:
 			 * 1a. Search for the "%s ending a pounce\n" or "%s ending a lunge\n" string.
@@ -1868,6 +1883,24 @@
 				"linux"		"@_ZNK8CNavMesh17GetNearestNavAreaERK6Vectorbfbbb"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x8B\x2A\x83\x2A\x2A\x2A\x57\x8B"
 						/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 8B ? 83 ? ? ? 57 8B */
+			}
+
+			/**
+			 * CommandNavSave()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for any of the following strings:
+			 * - "Navigation map '%s' saved.\n"
+			 * - "ERROR: Cannot save navigation map '%s'.\n"
+			 * - "(null)"
+			 * 2. One of the functions that references any of these strings should be this function.
+			 **/
+			"CommandNavSave"
+			{
+				"library"	"server"
+				"linux"		"@_Z14CommandNavSavev"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\xFF\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x84"
+						/* ? ? ? ? ? ? ? 74 ? 8B 0D ? ? ? ? 8B ? 8B ? ? FF ? 8B 0D ? ? ? ? 84 */
 			}
 
 			/**
@@ -2190,6 +2223,24 @@
 			}
 
 			/**
+			 * CTankClaw::OnWindupFinished()
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CTankClaw::`vftable'" to jump to the "CTankClaw" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"CTankClaw::OnWindupFinished"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CTankClaw16OnWindupFinishedEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x33\x2A\x3B\x2A\x0F\x84\x2A\x2A\x2A\x2A\xD9"
+						/* ? ? ? ? ? ? 53 56 57 8B ? E8 ? ? ? ? 8B ? 33 ? 3B ? 0F 84 ? ? ? ? D9 */
+			}
+
+			/**
 			 * CTankClaw::SweepFist(Vector const&, Vector const&)
 			 *
 			 * How to find on Windows:
@@ -2256,6 +2307,21 @@
 			}
 
 			/**
+			 * CTankRock::ProximityThink()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "CTankRock::ProximityThink" or "Terror" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"CTankRock::ProximityThink"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CTankRock14ProximityThinkEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x28\x2A\x2A\x2A\x53\x56\x57\x33\x2A\x89\x2A\x2A\x89\x2A\x2A\x8B\x2A\x39\x2A\x2A\x74\x2A\x8B\x2A\x2A\x68\xE8"
+						/* ? ? ? ? ? ? A1 28 ? ? ? 53 56 57 33 ? 89 ? ? 89 ? ? 8B ? 39 ? ? 74 ? 8B ? ? 68 E8 */
+			}
+
+			/**
 			 * CTerrorGameMovement::DoJump(Vector*)
 			 *
 			 * How to find on Windows:
@@ -2273,7 +2339,7 @@
 			/**
 			 * CTerrorGameRules::ClearScavengeScores(bool)
 			 *
-			 * Note: This function is in-lined with the "CDirector::ClearScavengeScores" function.
+			 * Note: (Windows) This function is in-lined with the "CDirector::ClearScavengeScores" function.
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "RefreshInitialSpawnPositions" string.
@@ -2951,6 +3017,21 @@
 			}
 
 			/**
+			 * CTerrorPlayer::FireBullet(Vector, QAngle const&, CSWeaponID, int)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "CTerrorPlayer::FireBullet SpreadDir" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"CTerrorPlayer::FireBullet"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer10FireBulletE6VectorRK6QAngle10CSWeaponIDi"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x57\x8B\x2A\x50\x89"
+						/* ? ? ? ? ? ? ? ? ? 8B ? ? 57 8B ? 50 89 */
+			}
+
+			/**
 			 * CTerrorPlayer::Fling(Vector const&, PlayerAnimEvent_t, CBaseCombatCharacter*, float)
 			 *
 			 * How to find on Windows:
@@ -3114,7 +3195,7 @@
 			/**
 			 * CTerrorPlayer::Input_GoAwayFromKeyboard()
 			 *
-			 * Note: This function is in-lined with the "go_away_from_keyboard" function.
+			 * Note: (Windows) This function is in-lined with the "go_away_from_keyboard" function.
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "Go away from the keyboard so a bot will take over." string.
@@ -3448,7 +3529,7 @@
 			/**
 			 * CTerrorPlayer::OnLungeEnd()
 			 *
-			 * Note: This function is in-lined with the "CLunge::UpdateAbility" function.
+			 * Note: (Windows) This function is in-lined with the "CLunge::UpdateAbility" function.
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "%s ending a pounce\n" or "%s ending a lunge\n" string.
@@ -4455,6 +4536,22 @@
 			}
 
 			/**
+			 * ForEachPlayer<ProximityCheck>(ProximityCheck &)
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "CTankRock::ProximityThink" function.
+			 * 2. Click on the first function call above the "prop_door*" string.
+			 * 3. The last function call in that function should be this function.
+			 **/
+			"ForEachPlayer<ProximityCheck>"
+			{
+				"library"	"server"
+				"linux"		"@_Z13ForEachPlayerI14ProximityCheckEbRT_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\xD8\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x8B\x2A\x2A\x57\x8B\x2A\x85\x2A\x74"
+						/* ? ? ? ? ? ? ? ? ? A1 D8 ? ? ? 33 ? 89 ? ? 56 8B ? ? 57 8B ? 85 ? 74 */
+			}
+
+			/**
 			 * ForEachSurvivor<MinigunnerScan>(MinigunnerScan &)
 			 *
 			 * How to find on Windows:
@@ -4533,6 +4630,27 @@
 				"linux"		"@_ZN8Infected15OnHitByVomitJarEP20CBaseCombatCharacter"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\xFF\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x75\x2A\x56"
 						/* ? ? ? ? ? ? 56 8B ? 8B ? 8B 90 ? ? ? ? FF ? 84 ? 0F 84 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 75 ? 56 */
+			}
+
+			/**
+			 * Infected::Spawn()
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "UpperBody" or "LowerBody" string.
+			 * 2a. One of the functions that references that string should be this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "Infected::`vftable'" to jump to the "Infected" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"Infected::Spawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZN8Infected5SpawnEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x57\xFF\x2A\xF7"
+						/* ? ? ? ? ? ? 56 8B ? 8B ? 8B 90 ? ? ? ? 57 FF ? F7 */
 			}
 
 			/**
@@ -4954,6 +5072,21 @@
 				"linux"		"@_Z22NextBotCreatePlayerBotI4TankEPT_PKc"
 				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x80"
 						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 80 */
+			}
+
+			/**
+			 * NextBotManager::OnCharacterVomitedUpon(CBaseCombatCharacter *)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "(MOB) %d wanderers grabbed for an IT mob of desired size %d.\n" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"NextBotManager::OnCharacterVomitedUpon"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14NextBotManager22OnCharacterVomitedUponEP20CBaseCombatCharacter"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x57\x33\x2A\x85"
+						/* ? ? ? ? ? ? 83 ? ? 56 57 33 ? 85 */
 			}
 
 			/**
@@ -5529,7 +5662,7 @@
 			/**
 			 * ZombieManager::SpawnSpecial(ZombieClassType, Vector const&, QAngle const&)
 			 *
-			 * Note: This function is in-lined with the "ZombieManager::SpawnSpecial<TerrorNavArea>" function.
+			 * Note: (Windows) This function is in-lined with the "ZombieManager::SpawnSpecial<TerrorNavArea>" function.
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "ragdoll flag is not implemented" string.
@@ -5546,7 +5679,7 @@
 			/**
 			 * ZombieManager::SpawnSpecial(ZombieClassType, TerrorNavArea const*, QAngle const&)
 			 *
-			 * Note: This function is in-lined with the "ZombieManager::SpawnSpecial<Vector>" function.
+			 * Note: (Windows) This function is in-lined with the "ZombieManager::SpawnSpecial<Vector>" function.
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "ragdoll flag is not implemented" string.
@@ -5640,7 +5773,7 @@
 			/**
 			 * go_away_from_keyboard(CCommand const&)
 			 *
-			 * Note: This function is in-lined with the "CTerrorPlayer::Input_GoAwayFromKeyboard" function.
+			 * Note: (Windows) This function is in-lined with the "CTerrorPlayer::Input_GoAwayFromKeyboard" function.
 			 *
 			 * How to find on Windows:
 			 * 1. Search for the "Go away from the keyboard so a bot will take over." string.

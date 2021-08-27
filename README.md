@@ -11,6 +11,8 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 3. If you encounter any bad/broken signatures, file an issue.
 - Mention the game and platform.
 4. Any signature that's broken by a game update will usually be fixed within 24 hours, so please allow at least that much time to pass before filing an issue.
+5. If you encounter any signature that doesn't work on late plugin loads, file an issue.
+- This usually only happens when another plugin detours or patches something in the same function.
 
 ## Files
 1. `l4d1/raw/l4d1_signatures_linux.txt` - List of L4D1 Linux signatures

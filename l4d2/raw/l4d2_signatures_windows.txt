@@ -88,6 +88,10 @@ Signature for detouring CBasePlayer::SetFOV:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x85\x2A\x75\x2A\x5E\x32"
 /* ? ? ? ? ? ? ? 56 8B ? 85 ? 75 ? 5E 32 */
 
+Signature for detouring CBasePlayer::SetModel:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x3D"
+/* ? ? ? ? ? ? 56 57 50 8B ? E8 ? ? ? ? 8B 3D */
+
 Signature for detouring CBasePlayer::WaterMove:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x80\xBE\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x86"
 /* ? ? ? ? ? ? 56 8B ? 80 BE ? ? ? ? ? 75 ? 8B 86 */
@@ -547,6 +551,10 @@ Signature for detouring CTankRock::ProximityThink:
 Signature for detouring CTerrorGameMovement::DoJump:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x57\x6A\x2A\xFF\x2A\x8B\x8E\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x6A\x2A\x6A"
 /* ? ? ? ? ? ? 56 8B ? 8B ? 8B 90 ? ? ? ? 57 6A ? FF ? 8B 8E ? ? ? ? 8B ? 8B 90 ? ? ? ? 6A ? 6A */
+
+Signature for detouring CTerrorGameRules::CalculateSurvivalMultiplier:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x80\x2A\x2A\x2A\x53\x56\x8B\x2A\x0F\x84"
+/* ? ? ? ? ? ? 80 ? ? ? 53 56 8B ? 0F 84 */
 
 Signature for detouring CTerrorGameRules::ClearScavengeScores (in-lined with CDirector::ClearScavengeScores):
 "\x2A\x2A\x2A\x2A\x2A\x2A\x57\x33\x2A\x8B\x2A\x33\x2A\x8D\x2A\x2A\x39"

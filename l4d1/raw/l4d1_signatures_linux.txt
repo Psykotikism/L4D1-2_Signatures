@@ -63,6 +63,9 @@ Signature for CBasePlayer::GetFOV(void):
 Signature for CBasePlayer::SetFOV(CBaseEntity *, int, float, int):
 "@_ZN11CBasePlayer6SetFOVEP11CBaseEntityifi"
 
+Signature for CBasePlayer::SetModel(char const*):
+"@_ZN11CBasePlayer8SetModelEPKc"
+
 Signature for CBasePlayer::WaterMove(void):
 "@_ZN11CBasePlayer9WaterMoveEv"
 

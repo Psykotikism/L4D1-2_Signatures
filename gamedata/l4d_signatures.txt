@@ -346,6 +346,27 @@
 			}
 
 			/**
+			 * CBasePlayer::SetModel(char const*)
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "body_pitch" string.
+			 * 2a. One of the functions that references that string should be this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CBasePlayer::`vftable'" to jump to the "CBasePlayer" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CBasePlayer::SetModel"
+			{
+				"library"	"server"
+				"linux"		"@_ZN11CBasePlayer8SetModelEPKc"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x3D"
+						/* ? ? ? ? ? ? 50 8B ? E8 ? ? ? ? 8B 3D */
+			}
+
+			/**
 			 * CBasePlayer::WaterMove()
 			 *
 			 * How to find on Windows:
@@ -1965,10 +1986,9 @@
 			 * CTerrorPlayer::IsInvulnerable()
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "Tongue letting go for a melee." string.
-			 * 2. The string can only be found in "CTerrorWeapon::OnHit".
-			 * 3. The ninth function call below the string should be this function.
-			 * 4. This function is called in an if-statement with three other function calls.
+			 * 1. Locate the "CTerrorWeapon::OnHit" function.
+			 * 2. The ninth function call below the "Tongue letting go for a melee." string should be this function.
+			 * 3. This function is called in an if-statement with three other function calls.
 			 **/
 			"CTerrorPlayer::IsInvulnerable"
 			{
@@ -4505,6 +4525,27 @@
 			}
 
 			/**
+			 * CBasePlayer::SetModel(char const*)
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "body_pitch" string.
+			 * 2a. One of the functions that references that string should be this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CBasePlayer::`vftable'" to jump to the "CBasePlayer" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CBasePlayer::SetModel"
+			{
+				"library"	"server"
+				"linux"		"@_ZN11CBasePlayer8SetModelEPKc"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x3D"
+						/* ? ? ? ? ? ? 56 57 50 8B ? E8 ? ? ? ? 8B 3D */
+			}
+
+			/**
 			 * CBasePlayer::WaterMove()
 			 *
 			 * How to find on Windows:
@@ -6471,6 +6512,21 @@
 			}
 
 			/**
+			 * CTerrorGameRules::CalculateSurvivalMultiplier(bool)
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "CDirectorVersusMode::EndVersusModeRound" function.
+			 * 2. The second function call should be this function.
+			 **/
+			"CTerrorGameRules::CalculateSurvivalMultiplier"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules27CalculateSurvivalMultiplierEb"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x80\x2A\x2A\x2A\x53\x56\x8B\x2A\x0F\x84"
+						/* ? ? ? ? ? ? 80 ? ? ? 53 56 8B ? 0F 84 */
+			}
+
+			/**
 			 * CTerrorGameRules::ClearScavengeScores(bool)
 			 *
 			 * Note: (Windows) This function is in-lined with the "CDirector::ClearScavengeScores" function.
@@ -6601,10 +6657,9 @@
 			 * CTerrorGameRules::GetTeamScore(int, bool)
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "versus_match_finished" string.
-			 * 2. The string can only be found in "CDirectorVersusMode::EndVersusModeRound".
-			 * 3. Click on the function that is three function calls above the string to go to "CDirectorVersusMode::UpdateCampaignScores".
-			 * 4. The first function call in "CDirectorVersusMode::UpdateCampaignScores" should be this function.
+			 * 1. Locate the "CDirectorVersusMode::EndVersusModeRound" function.
+			 * 2. Click on the function that is three function calls above the "versus_match_finished" string to go to "CDirectorVersusMode::UpdateCampaignScores".
+			 * 3. The first function call in "CDirectorVersusMode::UpdateCampaignScores" should be this function.
 			 **/
 			"CTerrorGameRules::GetTeamScore"
 			{
@@ -6752,10 +6807,9 @@
 			 * CTerrorGameRules::SetCampaignScores(int, int)
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "versus_match_finished" string.
-			 * 2. The string can only be found in "CDirectorVersusMode::EndVersusModeRound".
-			 * 3. Click on the function that is three function calls above the string to go to "CDirectorVersusMode::UpdateCampaignScores".
-			 * 4. The last function call in "CDirectorVersusMode::UpdateCampaignScores" should be this function.
+			 * 1. Locate the "CDirectorVersusMode::EndVersusModeRound" function.
+			 * 2. Click on the function that is three function calls above the "versus_match_finished" string to go to "CDirectorVersusMode::UpdateCampaignScores".
+			 * 3. The last function call in "CDirectorVersusMode::UpdateCampaignScores" should be this function.
 			 **/
 			"CTerrorGameRules::SetCampaignScores"
 			{
@@ -7169,9 +7223,8 @@
 			 * CTerrorPlayer::Fling(Vector const&, PlayerAnimEvent_t, CBaseCombatCharacter*, float)
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "charger_impact" string.
-			 * 2. The string can only be found in "ThrowImpactedSurvivor".
-			 * 3. The function call before the line where that string is referenced should be this function.
+			 * 1. Locate the "ThrowImpactedSurvivor" function.
+			 * 2. The function call before the line where the "charger_impact" string is referenced should be this function.
 			 **/
 			"CTerrorPlayer::Fling"
 			{
@@ -7379,10 +7432,9 @@
 			 * CTerrorPlayer::IsInvulnerable()
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "Tongue letting go for a melee." string.
-			 * 2. The string can only be found in "CTerrorWeapon::OnHit".
-			 * 3. The sixth function call below the string should be this function.
-			 * 4. This function is called in an if-statement with two other function calls.
+			 * 1. Locate the "CTerrorWeapon::OnHit" function.
+			 * 2. The sixth function call below the "Tongue letting go for a melee." string should be this function.
+			 * 3. This function is called in an if-statement with two other function calls.
 			 **/
 			"CTerrorPlayer::IsInvulnerable"
 			{

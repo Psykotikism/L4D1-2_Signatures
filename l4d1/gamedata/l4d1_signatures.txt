@@ -346,6 +346,27 @@
 			}
 
 			/**
+			 * CBasePlayer::SetModel(char const*)
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "body_pitch" string.
+			 * 2a. One of the functions that references that string should be this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CBasePlayer::`vftable'" to jump to the "CBasePlayer" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CBasePlayer::SetModel"
+			{
+				"library"	"server"
+				"linux"		"@_ZN11CBasePlayer8SetModelEPKc"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x3D"
+						/* ? ? ? ? ? ? 50 8B ? E8 ? ? ? ? 8B 3D */
+			}
+
+			/**
 			 * CBasePlayer::WaterMove()
 			 *
 			 * How to find on Windows:
@@ -1965,10 +1986,9 @@
 			 * CTerrorPlayer::IsInvulnerable()
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "Tongue letting go for a melee." string.
-			 * 2. The string can only be found in "CTerrorWeapon::OnHit".
-			 * 3. The ninth function call below the string should be this function.
-			 * 4. This function is called in an if-statement with three other function calls.
+			 * 1. Locate the "CTerrorWeapon::OnHit" function.
+			 * 2. The ninth function call below the "Tongue letting go for a melee." string should be this function.
+			 * 3. This function is called in an if-statement with three other function calls.
 			 **/
 			"CTerrorPlayer::IsInvulnerable"
 			{

@@ -846,6 +846,21 @@
 			}
 
 			/**
+			 * Director::UpdateVersusBossSpawning()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Update Versus Boss Spawning: Highest survivor flow distance = %f  Tank at = %f witch at %f\n" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"Director::UpdateVersusBossSpawning"
+			{
+				"library"	"server"
+				"linux"		"@_ZN8Director24UpdateVersusBossSpawningEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\x53\x33\x2A\x38\x9F"
+						/* ? ? ? ? ? ? E8 ? ? ? ? 84 ? 0F 84 ? ? ? ? 53 33 ? 38 9F */
+			}
+
+			/**
 			 * CEntityDissolve::Create(CBaseEntity *, char const*, float, int, bool *)
 			 *
 			 * How to find on Windows:
@@ -1093,10 +1108,9 @@
 			 * CNavMesh::GetNavArea(Vector const&, float)
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "Update Versus Boss Spawning: Highest survivor flow distance = %f  Tank at = %f witch at %f\n" string.
-			 * 2. The string can only be found in "Director::UpdateVersusBossSpawning".
-			 * 3. This function should be four function calls below the string.
-			 * 4. The value "120.0" is passed to this function.
+			 * 1. Locate the "Director::UpdateVersusBossSpawning" function.
+			 * 2. This function should be four function calls below the "Update Versus Boss Spawning: Highest survivor flow distance = %f  Tank at = %f witch at %f\n" string.
+			 * 3. The value "120.0" is passed to this function.
 			 **/
 			"CNavMesh::GetNavArea"
 			{
@@ -1318,6 +1332,27 @@
 			}
 
 			/**
+			 * CTankRock::BounceTouch(CBaseEntity *)
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "HulkZombie.ThrownProjectileHit" string.
+			 * 2a. One of the functions that references that string should be this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CTankRock::`vftable'" to jump to the "CTankRock" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CTankRock::BounceTouch"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CTankRock11BounceTouchEP11CBaseEntity"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x9C\x2A\x2A\x2A\x2A\x2A\x0F"
+						/* ? ? ? ? ? ? 53 8B 9C ? ? ? ? ? 0F */
+			}
+
+			/**
 			 * CTankRock::Create(Vector const&, QAngle const&, Vector const&, CBaseCombatCharacter*)
 			 *
 			 * How to find on Windows:
@@ -1497,6 +1532,8 @@
 			/**
 			 * CTerrorGameRules::HasPlayerControlledZombies()
 			 *
+			 * Note: (Windows) This function is in-lined with the "CTerrorGameRules::IsVersusMode" function.
+			 *
 			 * How to find on Windows:
 			 * 1. Search for the "teamversus" string.
 			 * 2. One of the functions that references that string should be this function.
@@ -1505,8 +1542,38 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN16CTerrorGameRules26HasPlayerControlledZombiesEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74"
-						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 68 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 74 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\xA0\x2A\x2A\x2A\xEB\x2A\xA1\x54\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x7C\x2A\x2A\x2A\x68\x04"
+						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 A0 ? ? ? EB ? A1 54 ? ? ? 8B ? ? 85 ? 75 ? B8 7C ? ? ? 68 04 */
+			}
+
+			/**
+			 * CTerrorGameRules::IsCoopMode()
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "outtro_stats_done" function.
+			 * 2. The second function call in "outtro_stats_done" should be this function.
+			 **/
+			"CTerrorGameRules::IsCoopMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules10IsCoopModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\xA0\x2A\x2A\x2A\xEB\x2A\xA1\x54\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x7C\x2A\x2A\x2A\x68\x50\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\xF7"
+						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 A0 ? ? ? EB ? A1 54 ? ? ? 8B ? ? 85 ? 75 ? B8 7C ? ? ? 68 50 ? ? ? 50 E8 ? ? ? ? 83 ? ? F7 */
+			}
+
+			/**
+			 * CTerrorGameRules::IsHoldoutMode()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "survival" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"CTerrorGameRules::IsHoldoutMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules13IsHoldoutModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\xA0\x2A\x2A\x2A\xEB\x2A\xA1\x54\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x7C\x2A\x2A\x2A\x68\xF4\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\xF7"
+						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 A0 ? ? ? EB ? A1 54 ? ? ? 8B ? ? 85 ? 75 ? B8 7C ? ? ? 68 F4 ? ? ? 50 E8 ? ? ? ? 83 ? ? F7 */
 			}
 
 			/**
@@ -1523,6 +1590,23 @@
 				"linux"		"@_ZN16CTerrorGameRules17IsMissionFinalMapEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x56\xFF\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x6A\x2A\xFF\x2A\x8B\x2A\x85\x2A\x75\x2A\xB0"
 						/* ? ? ? ? ? ? 8B ? 8B ? ? 56 FF ? 8B ? 8B ? 8B ? ? 6A ? FF ? 8B ? 85 ? 75 ? B0 */
+			}
+
+			/**
+			 * CTerrorGameRules::IsVersusMode()
+			 *
+			 * Note: (Windows) This function is in-lined with the "CTerrorGameRules::HasPlayerControlledZombies" function.
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "teamversus" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"CTerrorGameRules::IsVersusMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules12IsVersusModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\xA0\x2A\x2A\x2A\xEB\x2A\xA1\x54\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x7C\x2A\x2A\x2A\x68\x04"
+						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 A0 ? ? ? EB ? A1 54 ? ? ? 8B ? ? 85 ? 75 ? B8 7C ? ? ? 68 04 */
 			}
 
 			/**
@@ -2551,6 +2635,24 @@
 				"linux"		"@_ZN13CTerrorPlayer15SetMainActivityE8Activityb"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x3D\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x8B\x2A\x8B\x2A\x89\x2A\x2A\x2A\xFF\x2A\x8B"
 						/* ? ? ? ? ? ? 8B 3D ? ? ? ? 8B ? 8B ? ? 8B ? 8B ? 89 ? ? ? FF ? 8B */
+			}
+
+			/**
+			 * CTerrorPlayer::SetNextShoveTime(float)
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CTerrorPlayer::`vftable'" to jump to the "CTerrorPlayer" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"CTerrorPlayer::SetNextShoveTime"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer16SetNextShoveTimeEf"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8D\xB1\x2A\x2A\x2A\x2A\xDF\x2A\xF6\x2A\x2A\x75"
+						/* ? ? ? ? ? ? ? ? ? ? ? 8D B1 ? ? ? ? DF ? F6 ? ? 75 */
 			}
 
 			/**
@@ -5302,6 +5404,21 @@
 			}
 
 			/**
+			 * CDirectorVersusMode::UpdateVersusBossSpawning()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the " Highest survivor flow distance = %f  Tank at = %f witch at %f\n" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"CDirectorVersusMode::UpdateVersusBossSpawning"
+			{
+				"library"	"server"
+				"linux"		"@_ZN19CDirectorVersusMode24UpdateVersusBossSpawningEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x57\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x89\x2A\x2A\xE8"
+						/* ? ? ? ? ? ? 57 8B ? 8B 0D ? ? ? ? 89 ? ? E8 */
+			}
+
+			/**
 			 * CDirectorChallengeMode::ShouldPlayBossMusic(bool *)
 			 *
 			 * How to find on Windows:
@@ -6030,9 +6147,8 @@
 			 * CNavMesh::GetNavArea(Vector const&, float)
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the " Highest survivor flow distance = %f  Tank at = %f witch at %f\n" string.
-			 * 2. The string can only be found in "Director::UpdateVersusBossSpawning".
-			 * 3. This function should be five function calls below the string.
+			 * 1. Locate the "CDirectorVersusMode::UpdateVersusBossSpawning" function.
+			 * 3. This function should be five function calls below the " Highest survivor flow distance = %f  Tank at = %f witch at %f\n" string.
 			 * 4. The value "120.0" is passed to this function.
 			 **/
 			"CNavMesh::GetNavArea"
@@ -6431,6 +6547,27 @@
 			}
 
 			/**
+			 * CTankRock::BounceTouch(CBaseEntity *)
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "prop_minigun*" or "HulkZombie.ThrownProjectileHit" string.
+			 * 2a. One of the functions that references that string should be this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CTankRock::`vftable'" to jump to the "CTankRock" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CTankRock::BounceTouch"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CTankRock11BounceTouchEP11CBaseEntity"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\xD8\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x53\x8B\x2A\x2A\x0F\xB7"
+						/* ? ? ? ? ? ? ? ? ? A1 D8 ? ? ? 33 ? 89 ? ? 53 8B ? ? 0F B7 */
+			}
+
+			/**
 			 * CTankRock::Create(Vector const&, QAngle const&, Vector const&, CBaseCombatCharacter*)
 			 *
 			 * How to find on Windows:
@@ -6734,6 +6871,36 @@
 			}
 
 			/**
+			 * CTerrorGameRules::IsCoopMode()
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "CTerrorGameRules::IsGenericCooperativeMode" function.
+			 * 2. The first function call in "CTerrorGameRules::IsGenericCooperativeMode" should be this function.
+			 **/
+			"CTerrorGameRules::IsCoopMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules10IsCoopModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x3C"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 3C */
+			}
+
+			/**
+			 * CTerrorGameRules::IsGenericCooperativeMode()
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "CTerrorGameRules::IsRealismMode" function.
+			 * 2. One of the functions that calls "CTerrorGameRules::IsRealismMode" should be this function.
+			 **/
+			"CTerrorGameRules::IsGenericCooperativeMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules24IsGenericCooperativeModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0\x75\x2A\x33\xC0\xC3\xB8\x01\x00\x00\x00\xC3\xCC\xCC\xCC\xCC\xCC\x8B"
+						/* ? ? ? ? ? ? ? 75 ? E8 ? ? ? ? 84 C0 75 ? 33 C0 C3 B8 01 00 00 00 C3 CC CC CC CC CC 8B */
+			}
+
+			/**
 			 * CTerrorGameRules::IsInIntro()
 			 *
 			 * How to find on Windows:
@@ -6769,6 +6936,66 @@
 			}
 
 			/**
+			 * CTerrorGameRules::IsRealismMode()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "realism" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"CTerrorGameRules::IsRealismMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules13IsRealismModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x5C"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 5C */
+			}
+
+			/**
+			 * CTerrorGameRules::IsScavengeMode()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "scavenge" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"CTerrorGameRules::IsScavengeMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules14IsScavengeModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x30"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 30 */
+			}
+
+			/**
+			 * CTerrorGameRules::IsSurvivalMode()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "survival" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"CTerrorGameRules::IsSurvivalMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules14IsSurvivalModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x50"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 50 */
+			}
+
+			/**
+			 * CTerrorGameRules::IsVersusMode()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "versus" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"CTerrorGameRules::IsVersusMode"
+			{
+				"library"	"server"
+				"linux"		"@_ZN16CTerrorGameRules12IsVersusModeEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x48"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 48 */
+			}
+
+			/**
 			 * CTerrorGameRules::RecordInfectedDamageForVersus(int)
 			 *
 			 * How to find on Windows:
@@ -6792,7 +7019,7 @@
 			 *
 			 * How to find on Windows:
 			 * 1. Locate the "CDirector::RestartScenarioFromVote" function.
-			 * 2. One of the functions that calls "CDirector::RestartScenarioFromVote" is "CDirector::Rematch" (called twice).
+			 * 2. One of the functions that calls "CDirector::RestartScenarioFromVote" should be "CDirector::Rematch" (called twice).
 			 * 3. This function is only called somewhere inside "CDirector::Rematch".
 			 **/
 			"CTerrorGameRules::ResetRoundNumber"
@@ -7402,7 +7629,7 @@
 			 * How to find on Windows:
 			 * 1. Search for the "ConvertZombieClass" string.
 			 * 2. The string can only be found in "CDirectorChallengeMode::ConvertZombieClass".
-			 * 3. The only function that calls "CDirectorChallengeMode::ConvertZombieClass" is "CTerrorPlayer::Spawn".
+			 * 3. The only function that calls "CDirectorChallengeMode::ConvertZombieClass" should be "CTerrorPlayer::Spawn".
 			 * 4. This function is called before "CDirectorChallengeMode::ConvertZombieClass" inside "CTerrorPlayer::Spawn".
 			 **/
 			"CTerrorPlayer::IsClassOverLimit"
@@ -8154,6 +8381,24 @@
 				"linux"		"@_ZN13CTerrorPlayer15SetHealthBufferEf"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x0F\x2A\x2A\x56\x57\x8B\x2A\x77"
 						/* ? ? ? ? ? ? ? ? 0F ? ? 0F ? ? 56 57 8B ? 77 */
+			}
+
+			/**
+			 * CTerrorPlayer::SetNextShoveTime(float)
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CTerrorPlayer::`vftable'" to jump to the "CTerrorPlayer" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"CTerrorPlayer::SetNextShoveTime"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer16SetNextShoveTimeEf"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x0F\x2F\x2A\x2A\x2A\x2A\x2A\x76\x2A\xF3\x0F\x2A\x2A\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x9F\xF6\x2A\x2A\x7B\x2A\x80\x2A\x2A\x2A\x74\x2A\x80\x2A\x2A\x2A\xF3\x0F\x2A\x2A\x2A\x2A\x2A\x2A\x5E\x5D"
+						/* ? ? ? ? ? ? ? ? 56 8B ? 0F 2F ? ? ? ? ? 76 ? F3 0F ? ? ? ? ? ? 0F ? ? 9F F6 ? ? 7B ? 80 ? ? ? 74 ? 80 ? ? ? F3 0F ? ? ? ? ? ? 5E 5D */
 			}
 
 			/**

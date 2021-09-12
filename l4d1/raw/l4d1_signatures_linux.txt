@@ -156,6 +156,9 @@ Signature for Director::TryOfferingTankBot(CBaseEntity *, bool):
 Signature for Director::UnregisterForbiddenTarget(CBaseEntity *):
 "@_ZN8Director25UnregisterForbiddenTargetEP11CBaseEntity"
 
+Signature for Director::UpdateVersusBossSpawning(void):
+"@_ZN8Director24UpdateVersusBossSpawningEv"
+
 Signature for CEntityDissolve::Create(CBaseEntity *, char const*, float, int, bool *):
 "@_ZN15CEntityDissolve6CreateEP11CBaseEntityPKcfiPb"
 
@@ -240,6 +243,9 @@ Signature for CTankClaw::OnWindupFinished(void):
 Signature for CTankClaw::SweepFist(Vector const&, Vector const&) [clone]:
 "@_ZN9CTankClaw9SweepFistERK6VectorS2_.constprop.248"
 
+Signature for CTankRock::BounceTouch(CBaseEntity *):
+"@_ZN9CTankRock11BounceTouchEP11CBaseEntity"
+
 Signature for CTankRock::Create(Vector const&, QAngle const&, Vector const&, CBaseCombatCharacter *) [clone]:
 "@_ZN9CTankRock6CreateERK6VectorRK6QAngleS2_P20CBaseCombatCharacter.constprop.123"
 
@@ -276,8 +282,17 @@ Signature for CTerrorGameRules::GetTeamScore(int, bool)const:
 Signature for CTerrorGameRules::HasPlayerControlledZombies(void):
 "@_ZN16CTerrorGameRules26HasPlayerControlledZombiesEv"
 
+Signature for CTerrorGameRules::IsCoopMode(void):
+"@_ZN16CTerrorGameRules10IsCoopModeEv"
+
+Signature for CTerrorGameRules::IsHoldoutMode(void):
+"@_ZN16CTerrorGameRules13IsHoldoutModeEv"
+
 Signature for CTerrorGameRules::IsMissionFinalMap(void):
 "@_ZN16CTerrorGameRules17IsMissionFinalMapEv"
+
+Signature for CTerrorGameRules::IsVersusMode(void):
+"@_ZN16CTerrorGameRules12IsVersusModeEv"
 
 Signature for CTerrorGameRules::SetCampaignScores(int, int):
 "@_ZN16CTerrorGameRules17SetCampaignScoresEii"
@@ -461,6 +476,9 @@ Signature for CTerrorPlayer::SetHealthBuffer(float):
 
 Signature for CTerrorPlayer::SetMainActivity(Activity, bool):
 "@_ZN13CTerrorPlayer15SetMainActivityE8Activityb"
+
+Signature for CTerrorPlayer::SetNextShoveTime(float):
+"@_ZN13CTerrorPlayer16SetNextShoveTimeEf"
 
 Signature for CTerrorPlayer::StartReviving(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer13StartRevivingEPS_"

@@ -252,6 +252,9 @@ Signature for CDirectorVersusMode::HideScoreboardNonVirtual(void):
 Signature for CDirectorVersusMode::OnVersusRoundStarted(void):
 "@_ZN19CDirectorVersusMode20OnVersusRoundStartedEv"
 
+Signature for CDirectorVersusMode::UpdateVersusBossSpawning(void):
+"@_ZN19CDirectorVersusMode24UpdateVersusBossSpawningEv"
+
 Signature for CEntityDissolve::Create(CBaseEntity *, char const*, float, int, bool *):
 "@_ZN15CEntityDissolve6CreateEP11CBaseEntityPKcfiPb"
 
@@ -399,6 +402,9 @@ Signature for CTankClaw::OnWindupFinished(void):
 Signature for CTankClaw::SweepFist(Vector const&, Vector const&):
 "@_ZN9CTankClaw9SweepFistERK6VectorS2_"
 
+Signature for CTankRock::BounceTouch(CBaseEntity *):
+"@_ZN9CTankRock11BounceTouchEP11CBaseEntity"
+
 Signature for CTankRock::Create(Vector const&, QAngle const&, Vector const&, CBaseCombatCharacter *):
 "@_ZN9CTankRock6CreateERK6VectorRK6QAngleS2_P20CBaseCombatCharacter"
 
@@ -456,11 +462,29 @@ Signature for CTerrorGameRules::HasConfigurableDifficultySetting(void):
 Signature for CTerrorGameRules::HasPlayerControlledZombies(void):
 "@_ZN16CTerrorGameRules26HasPlayerControlledZombiesEv"
 
+Signature for CTerrorGameRules::IsCoopMode(void):
+"@_ZN16CTerrorGameRules10IsCoopModeEv"
+
+Signature for CTerrorGameRules::IsGenericCooperativeMode(void):
+"@_ZN16CTerrorGameRules24IsGenericCooperativeModeEv"
+
 Signature for CTerrorGameRules::IsInIntro(void):
 "@_ZN16CTerrorGameRules9IsInIntroEv"
 
 Signature for CTerrorGameRules::IsMissionFinalMap(void):
 "@_ZN16CTerrorGameRules17IsMissionFinalMapEv"
+
+Signature for CTerrorGameRules::IsRealismMode(void):
+"@_ZN16CTerrorGameRules13IsRealismModeEv"
+
+Signature for CTerrorGameRules::IsScavengeMode(void):
+"@_ZN16CTerrorGameRules14IsScavengeModeEv"
+
+Signature for CTerrorGameRules::IsSurvivalMode(void):
+"@_ZN16CTerrorGameRules14IsSurvivalModeEv"
+
+Signature for CTerrorGameRules::IsVersusMode(void):
+"@_ZN16CTerrorGameRules12IsVersusModeEv"
 
 Signature for CTerrorGameRules::RecordInfectedDamageForVersus(int):
 "@_ZN16CTerrorGameRules29RecordInfectedDamageForVersusEi"
@@ -710,6 +734,9 @@ Signature for CTerrorPlayer::SetClass(ZombieClassType):
 
 Signature for CTerrorPlayer::SetHealthBuffer(float):
 "@_ZN13CTerrorPlayer15SetHealthBufferEf"
+
+Signature for CTerrorPlayer::SetNextShoveTime(float):
+"@_ZN13CTerrorPlayer16SetNextShoveTimeEf"
 
 Signature for CTerrorPlayer::StartReviving(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer13StartRevivingEPS_"

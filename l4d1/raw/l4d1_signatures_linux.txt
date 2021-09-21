@@ -297,6 +297,9 @@ Signature for CTerrorGameRules::IsVersusMode(void):
 Signature for CTerrorGameRules::SetCampaignScores(int, int):
 "@_ZN16CTerrorGameRules17SetCampaignScoresEii"
 
+Signature for CTerrorGun::EquipSecondWeapon(void):
+"@_ZN10CTerrorGun17EquipSecondWeaponEv"
+
 Signature for CTerrorGun::FireBullet(void):
 "@_ZN10CTerrorGun10FireBulletEv"
 
@@ -311,6 +314,9 @@ Signature for CTerrorGun::Reload(void):
 
 Signature for CTerrorGun::ShouldUnzoom(void)const:
 "@_ZNK10CTerrorGun12ShouldUnzoomEv"
+
+Signature for CTerrorGun::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
+"@_ZN10CTerrorGun3UseEP11CBaseEntityS1_8USE_TYPEf"
 
 Signature for CTerrorPlayer::AddUpgrade(SurvivorUpgradeType):
 "@_ZN13CTerrorPlayer10AddUpgradeE19SurvivorUpgradeType"

@@ -840,6 +840,9 @@ Signature for CVomitJarProjectile::ExplodeVomit(Vector, Vector):
 Signature for CWeaponAmmoSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 "@_ZN16CWeaponAmmoSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
 
+Signature for CWeaponSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
+"@_ZN12CWeaponSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
+
 Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &):
 "@_Z13ForEachPlayerI14ProximityCheckEbRT_"
 

@@ -570,6 +570,9 @@ Signature for CVomit::UpdateAbility(void):
 Signature for CWeaponAmmoSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 "@_ZN16CWeaponAmmoSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
 
+Signature for CWeaponSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
+"@_ZN12CWeaponSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
+
 Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &) (in-lined with CTankRock::ProximityThink(void)):
 "@_ZN9CTankRock14ProximityThinkEv"
 

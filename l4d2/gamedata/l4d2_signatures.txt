@@ -4748,6 +4748,27 @@
 			}
 
 			/**
+			 * CWeaponSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float)
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "spawner_give_item" string.
+			 * 2a. The string can only be found in this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CWeaponSpawn::`vftable'" to jump to the "CWeaponSpawn" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CWeaponSpawn::Use"
+			{
+				"library"	"server"
+				"linux"		"@_ZN12CWeaponSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x57\x8B\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B"
+						/* ? ? ? ? ? ? 53 57 8B ? ? 8B ? 85 ? 0F 84 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 0F 84 ? ? ? ? 8B */
+			}
+
+			/**
 			 * ForEachPlayer<ProximityCheck>(ProximityCheck &)
 			 *
 			 * How to find on Windows:

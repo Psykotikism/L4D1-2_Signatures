@@ -9,6 +9,9 @@ Signature for CreateGameRulesObject(char const*):
 Signature for CreateServerRagdoll(CBaseAnimating *, int, CTakeDamageInfo const&, int, bool):
 "@_Z19CreateServerRagdollP14CBaseAnimatingiRK15CTakeDamageInfoib"
 
+Signature for CAmmoDef::CanCarryInfiniteAmmo(int):
+"@_ZN8CAmmoDef20CanCarryInfiniteAmmoEi"
+
 Signature for CAmmoDef::MaxCarry(int, CBaseCombatCharacter const*):
 "@_ZN8CAmmoDef8MaxCarryEiPK20CBaseCombatCharacter"
 
@@ -287,6 +290,9 @@ Signature for CGib::InitGib(CBaseEntity *, float, float):
 
 Signature for CGib::Spawn(char const*):
 "@_ZN4CGib5SpawnEPKc"
+
+Signature for CGrenadeLauncher::PrimaryAttack(void):
+"@_ZN16CGrenadeLauncher13PrimaryAttackEv"
 
 Signature for CHolidayGift::Create(Vector const&, QAngle const&, QAngle const&, Vector const&, CBaseCombatCharacter *):
 "@_ZN12CHolidayGift6CreateERK6VectorRK6QAngleS5_S2_P20CBaseCombatCharacter"
@@ -746,6 +752,9 @@ Signature for CTerrorPlayer::SetNextShoveTime(float):
 
 Signature for CTerrorPlayer::StartReviving(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer13StartRevivingEPS_"
+
+Signature for CTerrorPlayer::StopBeingRevived(bool):
+"@_ZN13CTerrorPlayer16StopBeingRevivedEb"
 
 Signature for CTerrorPlayer::StopRevivingSomeone(bool):
 "@_ZN13CTerrorPlayer19StopRevivingSomeoneEb"

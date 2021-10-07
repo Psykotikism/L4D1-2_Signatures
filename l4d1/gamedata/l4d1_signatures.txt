@@ -51,6 +51,23 @@
 			}
 
 			/**
+			 * CAmmoDef::CanCarryInfiniteAmmo(int)
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "CTerrorGun::FireBullet" function.
+			 * 2. Look for the "!HEV_AMO0" string in "CTerrorGun::FireBullet".
+			 * 3. The first function call above the string should be "CBaseCombatCharacter::GetAmmoCount".
+			 * 4. The second and last function call in "CBaseCombatCharacter::GetAmmoCount" should be this function.
+			 **/
+			"CAmmoDef::CanCarryInfiniteAmmo"
+			{
+				"library"	"server"
+				"linux"		"@_ZN8CAmmoDef20CanCarryInfiniteAmmoEi"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x7C\x2A\x3B\x2A\x2A\x7D\x2A\x6B\x2A\x2A\x03\x2A\x8B\x2A\x2A\x83\x2A\x2A\x75\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x8B\x2A\x2A\x83"
+						/* ? ? ? ? ? ? ? 7C ? 3B ? ? 7D ? 6B ? ? 03 ? 8B ? ? 83 ? ? 75 ? 8B ? ? 85 ? 74 ? 8B ? ? 8B ? ? 83 */
+			}
+
+			/**
 			 * CAmmoDef::MaxCarry(int, CBaseCombatCharacter const*)
 			 *
 			 * How to find on Windows:
@@ -2714,6 +2731,21 @@
 				"linux"		"@_ZN13CTerrorPlayer13StartRevivingEPS_"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x9C\x2A\x2A\x2A\x2A\x2A\x8B\x83\x2A\x2A\x2A\x2A\x83"
 						/* ? ? ? ? ? ? 53 8B 9C ? ? ? ? ? 8B 83 ? ? ? ? 83 */
+			}
+
+			/**
+			 * CTerrorPlayer::StopBeingRevived(bool)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Player.StopVoice" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"CTerrorPlayer::StopBeingRevived"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer16StopBeingRevivedEb"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x6A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x85\x2A\x2A\x2A\x2A\x83\x2A\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\x2A\x81\xE1\x2A\x2A\x2A\x2A\xC1\x2A\x2A\x8D\x2A\x2A\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\xC1\x2A\x2A\x39\x2A\x2A\x0F\x85\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\xD9\x2A\x51\x8B\x2A\xD9\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x8B\x90\x2A\x2A\x2A\x2A\x6A\x2A\x6A\x2A\x8B\x2A\xFF\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x6A\x2A\x6A\x2A\x8B\x2A\xFF\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8D\x2A\x2A\x85\x2A\x8D\xBE"
+						/* ? ? ? ? ? ? ? ? 6A ? 8B ? E8 ? ? ? ? 8B 85 ? ? ? ? 83 ? ? 0F 84 ? ? ? ? 8B 15 ? ? ? ? 8B ? 81 E1 ? ? ? ? C1 ? ? 8D ? ? ? 85 ? 0F 84 ? ? ? ? C1 ? ? 39 ? ? 0F 85 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? 8B ? E8 ? ? ? ? 85 ? 74 ? D9 ? 51 8B ? D9 ? ? E8 ? ? ? ? 8B ? E8 ? ? ? ? 8B ? ? 8B 90 ? ? ? ? 6A ? 6A ? 8B ? FF ? 8B ? 8B 90 ? ? ? ? 6A ? 6A ? 8B ? FF ? 8B 0D ? ? ? ? 8D ? ? 85 ? 8D BE */
 			}
 
 			/**

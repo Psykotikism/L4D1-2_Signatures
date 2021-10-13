@@ -78,6 +78,9 @@ Signature for CBaseShotgun::Reload(void):
 Signature for CBaseTrigger::IsTouching(CBaseEntity *):
 "@_ZN12CBaseTrigger10IsTouchingEP11CBaseEntity"
 
+Signature for CBreakableProp::Break(CBaseEntity *, CTakeDamageInfo const&):
+"@_ZN14CBreakableProp5BreakEP11CBaseEntityRK15CTakeDamageInfo"
+
 Signature for CCarProp::InputSurvivorStandingOnCar(inputdata_t &):
 "@_ZN8CCarProp26InputSurvivorStandingOnCarER11inputdata_t"
 
@@ -582,6 +585,9 @@ Signature for CWeaponSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &) (in-lined with CTankRock::ProximityThink(void)):
 "@_ZN9CTankRock14ProximityThinkEv"
 
+Signature for GetWeaponInfo(CSWeaponID):
+"@_Z13GetWeaponInfo10CSWeaponID"
+
 Signature for IGameSystem::LevelInitPreEntityAllSystems(char const*):
 "@_ZN11IGameSystem28LevelInitPreEntityAllSystemsEPKc"
 
@@ -632,6 +638,9 @@ Signature for Music::Play(char const*, int, float, bool, bool) [clone]:
 
 Signature for Music::StopPlaying(char const*, float, bool):
 "@_ZN5Music11StopPlayingEPKcfb"
+
+Signature for float NavAreaTravelDistance<ShortestPathCost>(Vector const&, Vector const&, ShortestPathCost &) [clone]:
+"@_Z21NavAreaTravelDistanceI16ShortestPathCostEfRK6VectorS3_RT_.constprop.127"
 
 Signature for NextBotCombatCharacter::DoThink(void):
 "@_ZN22NextBotCombatCharacter7DoThinkEv"

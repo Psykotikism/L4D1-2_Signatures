@@ -435,6 +435,25 @@
 			}
 
 			/**
+			 * CBreakableProp::Break(CBaseEntity *, CTakeDamageInfo const&)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for any of the following strings (they can each only be found in this function):
+			 * - "crate"
+			 * - "ExplosionType"
+			 * - "PropExplosion"
+			 * - "Explosion prop detonated %.0f,%.0f,%.0f.  Breaker:%s. Attacker:%s.\n"
+			 * - "Fire prop detonated %.0f,%.0f,%.0f.  Breaker:%s. Attacker:%s.\n"
+			 **/
+			"CBreakableProp::Break"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14CBreakableProp5BreakEP11CBaseEntityRK15CTakeDamageInfo"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x55\x56\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x57\x8D"
+						/* ? ? ? ? ? ? 53 55 56 8B ? 8B ? 8B ? ? 57 8D */
+			}
+
+			/**
 			 * CCarProp::InputSurvivorStandingOnCar(inputdata_t &)
 			 *
 			 * How to find on Windows:
@@ -3255,6 +3274,23 @@
 			}
 
 			/**
+			 * GetWeaponInfo(CSWeaponID)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "weapon_reparse_server" string.
+			 * 2. The string can only be found in one function.
+			 * 3. The second function call in that function should be "weapon_reparse_server".
+			 * 4. The first function call in "weapon_reparse_server" should be this function.
+			 **/
+			"GetWeaponInfo"
+			{
+				"library"	"server"
+				"linux"		"@_Z13GetWeaponInfo10CSWeaponID"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x33\x2A\x5B\xC3\x80"
+						/* ? ? ? ? ? ? ? 75 ? 33 ? 5B C3 80 */
+			}
+
+			/**
 			 * IGameSystem::LevelInitPreEntityAllSystems(char const*)
 			 *
 			 * How to find on Windows:
@@ -3546,6 +3582,25 @@
 				"linux"		"@_ZN5Music11StopPlayingEPKcfb"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x2A\x55\x8B\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x8D\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x53\x56"
 						/* ? ? ? ? ? ? ? ? 83 ? ? ? 55 8B ? 0F 84 ? ? ? ? 8B 8D ? ? ? ? 8B ? ? 85 ? 53 56 */
+			}
+
+			/**
+			 * float NavAreaTravelDistance<ShortestPathCost>(Vector const&, Vector const&, ShortestPathCost &)
+			 *
+			 * How to find on Windows:
+			 * 1. Find the "CNavArea::ComputeEarliestOccupyTimes" function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CNavArea::`vftable'" to jump to the "CNavArea" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the "CNavArea::ComputeEarliestOccupyTimes" function.
+			 * 5. Look for the "CNavArea::ComputeEarliestOccupyTimes" function in the Windows binary.
+			 * 6. The first function call above both "info_player_counterterrorist" strings in "CNavArea::ComputeEarliestOccupyTimes" should be this function.
+			 **/
+			"NavAreaTravelDistance<ShortestPathCost>"
+			{
+				"library"	"server"
+				"linux"		"@@_Z21NavAreaTravelDistanceI16ShortestPathCostEfRK6VectorS3_RT_.constprop.127"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\xD9\x05\x2A\x2A\x2A\x2A\x83\x2A\x2A\x53\x8B"
+						/* ? ? ? ? ? ? D9 05 ? ? ? ? 83 ? ? 53 8B */
 			}
 
 			/**

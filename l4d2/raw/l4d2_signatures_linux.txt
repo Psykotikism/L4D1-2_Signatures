@@ -81,6 +81,9 @@ Signature for CBaseShotgun::Reload(void):
 Signature for CBaseTrigger::IsTouching(CBaseEntity *):
 "@_ZN12CBaseTrigger10IsTouchingEP11CBaseEntity"
 
+Signature for CBreakableProp::Break(CBaseEntity *, CTakeDamageInfo const&):
+"@_ZN14CBreakableProp5BreakEP11CBaseEntityRK15CTakeDamageInfo"
+
 Signature for CCarProp::InputSurvivorStandingOnCar(inputdata_t &):
 "@_ZN8CCarProp26InputSurvivorStandingOnCarER11inputdata_t"
 
@@ -134,6 +137,9 @@ Signature for CDirector::FullRestart(void):
 
 Signature for CDirector::GetFurthestSurvivorFlow(void)const:
 "@_ZNK9CDirector23GetFurthestSurvivorFlowEv"
+
+Signature for CDirector::GetGameModeBase(void):
+"@_ZN9CDirector15GetGameModeBaseEv"
 
 Signature for CDirector::GetScriptValue(char const*, char const*, char *, int):
 "@_ZN9CDirector14GetScriptValueEPKcS1_Pci"
@@ -333,6 +339,9 @@ Signature for CLunge::UpdateAbility(void):
 Signature for CMeleeWeaponInfo::Parse(char const*, KeyValues *):
 "@_ZN16CMeleeWeaponInfo5ParseEPKcP9KeyValues"
 
+Signature for CMeleeWeaponInfoStore::GetMeleeWeaponInfo(int):
+"@_ZN21CMeleeWeaponInfoStore18GetMeleeWeaponInfoEi"
+
 Signature for CNavArea::IsBlocked(int, bool)const:
 "@_ZNK8CNavArea9IsBlockedEib"
 
@@ -449,6 +458,9 @@ Signature for CTerrorGameRules::GetMissionFirstMap(KeyValues **):
 
 Signature for CTerrorGameRules::GetMissionInfo(void):
 "@_ZN16CTerrorGameRules14GetMissionInfoEv"
+
+Signature for CTerrorGameRules::GetNumChaptersForMissionAndMode(void):
+"@_ZN16CTerrorGameRules31GetNumChaptersForMissionAndModeEv"
 
 Signature for CTerrorGameRules::GetSurvivorSet(void):
 "@_ZN16CTerrorGameRules14GetSurvivorSetEv"
@@ -858,6 +870,9 @@ Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &):
 Signature for ForEachSurvivor<MinigunnerScan>(MinigunnerScan &):
 "@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
 
+Signature for GetWeaponInfo(CSWeaponID):
+"@_Z13GetWeaponInfo10CSWeaponID"
+
 Signature for IGameSystem::LevelInitPreEntityAllSystems(char const*):
 "@_ZN11IGameSystem28LevelInitPreEntityAllSystemsEPKc"
 
@@ -920,6 +935,9 @@ Signature for Music::Play(char const*, int, float, bool, bool):
 
 Signature for Music::StopPlaying(char const*, float, bool):
 "@_ZN5Music11StopPlayingEPKcfb"
+
+Signature for float NavAreaTravelDistance<ShortestPathCost>(Vector const&, Vector const&, ShortestPathCost &):
+"@_Z21NavAreaTravelDistanceI16ShortestPathCostEfRK6VectorS3_RT_"
 
 Signature for NextBotCombatCharacter::DoThink(void):
 "@_ZN22NextBotCombatCharacter7DoThinkEv"

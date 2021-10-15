@@ -702,6 +702,9 @@ Signature for Tank::LeaveStasis(void):
 Signature for TankAttack::Update(Tank *, float):
 "@_ZN10TankAttack6UpdateEP4Tankf"
 
+Signature for TankBehavior::InitialContainedAction(Tank *):
+"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
+
 Signature for TerrorNavArea::FindRandomSpot(void)const:
 "@_ZNK13TerrorNavArea14FindRandomSpotEv"
 

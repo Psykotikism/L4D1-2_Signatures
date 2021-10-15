@@ -3936,6 +3936,24 @@
 			}
 
 			/**
+			 * TankBehavior::InitialContainedAction(Tank *)
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. Use IDA to get the VTable dump for the "TankBehavior" class on Windows.
+			 * 3. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 4. Look for the target function in the Windows binary.
+			 **/
+			"TankBehavior::InitialContainedAction"
+			{
+				"library"	"server"
+				"linux"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
+				"mac"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x80\x2A\x2A\x2A\x75\x2A\x83\x3D"
+						/* ? ? ? ? ? ? ? ? ? ? ? ? 75 ? 80 ? ? ? 75 ? 83 3D */
+			}
+
+			/**
 			 * TerrorNavArea::FindRandomSpot()
 			 *
 			 * How to find on Windows:

@@ -3936,6 +3936,24 @@
 			}
 
 			/**
+			 * TankBehavior::InitialContainedAction(Tank *)
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. Use IDA to get the VTable dump for the "TankBehavior" class on Windows.
+			 * 3. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 4. Look for the target function in the Windows binary.
+			 **/
+			"TankBehavior::InitialContainedAction"
+			{
+				"library"	"server"
+				"linux"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
+				"mac"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x80\x2A\x2A\x2A\x75\x2A\x83\x3D"
+						/* ? ? ? ? ? ? ? ? ? ? ? ? 75 ? 80 ? ? ? 75 ? 83 3D */
+			}
+
+			/**
 			 * TerrorNavArea::FindRandomSpot()
 			 *
 			 * How to find on Windows:
@@ -10128,6 +10146,24 @@
 				"linux"		"@_ZN10TankAttack6UpdateEP4Tankf"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x2A\x8B\x87\x2A\x2A\x2A\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8D\xB7"
 						/* ? ? ? ? ? ? ? ? ? 53 56 57 8B ? ? 8B 87 ? ? ? ? 8B 90 ? ? ? ? 8D B7 */
+			}
+
+			/**
+			 * TankBehavior::InitialContainedAction(Tank *)
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. Use IDA to get the VTable dump for the "TankBehavior" class on Windows.
+			 * 3. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 4. Look for the target function in the Windows binary.
+			 **/
+			"TankBehavior::InitialContainedAction"
+			{
+				"library"	"server"
+				"linux"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
+				"mac"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\xFF"
+						/* ? ? ? ? ? ? ? ? ? E8 ? ? ? ? 84 ? ? ? 8B ? ? 8B ? 8B 90 ? ? ? ? FF */
 			}
 
 			/**

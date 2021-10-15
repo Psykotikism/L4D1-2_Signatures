@@ -37,20 +37,20 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 - Most of these signatures are heavily wildcarded but have been tested across multiple versions of both games to be very durable. While shorter signatures are ideal, longer but durable ones are more convenient.
 
 ### Signature Count
-- **L4D1**: 263
-- **L4D2**: 368
+- **L4D1**: 264
+- **L4D2**: 369
 
 ### Left 4 Dead
 - Most of the signatures have been verified to have withstood the last landmark update:
-1. `Pre-Current (7-24-2019)` - `21/263` changed since the latest version came out.
+1. `Pre-Current (7-24-2019)` - `21/264` changed since the latest version came out.
 2. `Current (8-9-2021)`
 
 ### Left 4 Dead 2
 - Most of the signatures have been verified to have withstood the last five landmark updates:
-1. `Pre-TLS (6-5-2020)` - `56/368` changed since the latest version came out.
-2. `TLS (9-24-2020)` - `53/368` changed since the latest version came out.
-3. `Post-TLS (2-18-2021)` - `50/368` changed since the latest version came out.
-4. `Pre-Current (6-15-2021)` - `46/368` changed since the latest version came out.
+1. `Pre-TLS (6-5-2020)` - `56/369` changed since the latest version came out.
+2. `TLS (9-24-2020)` - `53/369` changed since the latest version came out.
+3. `Post-TLS (2-18-2021)` - `50/369` changed since the latest version came out.
+4. `Pre-Current (6-15-2021)` - `46/369` changed since the latest version came out.
 5. `Current (10-4-2021)`
 - Keep in mind that does not mean that most of these signatures will never break. It just means that they are durable enough to withstand several major updates unless VALVe updates the code of their respective functions and/or uses different compiler settings.
 
@@ -60,7 +60,7 @@ Thank you to the following people for helping me locate a lot of these functions
 - **Silvers (SilverShot)**: Leaves great notes in his gamedata files and also introduced the method of including the `CC ...` lines plus the first few bytes of following functions to create unique signatures for very short functions.
 - **Lux/LuxLuma**: Uses lots of uncommon functions that no other person uses.
 - **BHaType**: Uses lots of rare functions that no other person thinks to utilize.
-- **Scag/Scags**: Wrote several useful/helpful IDA scripts to help make all of this a faster process.
+- **Scag/Scags**: Wrote several useful/helpful [IDA scripts](https://github.com/Scags/IDA-Scripts) to help make all of this a faster process.
 
 ## Other Resources
 **[All Linux Signatures](https://github.com/dragokas/SM-Signatures)** by Dragokas - A repository for all the Linux signatures in the L4D/L4D2 binaries.

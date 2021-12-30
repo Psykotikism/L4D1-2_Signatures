@@ -585,6 +585,9 @@ Signature for CWeaponSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &) (in-lined with CTankRock::ProximityThink(void)):
 "@_ZN9CTankRock14ProximityThinkEv"
 
+Signature for ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &) [clone]:
+"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_.constprop.265"
+
 Signature for GetWeaponInfo(CSWeaponID):
 "@_Z13GetWeaponInfo10CSWeaponID"
 

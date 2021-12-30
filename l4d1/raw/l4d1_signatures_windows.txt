@@ -780,6 +780,10 @@ Signature for detouring ForEachPlayer<ProximityCheck>:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\xB4\x2A\x2A\x2A\x2A\x2A\x85\x2A\x57\x8B\x2A\x74"
 /* ? ? ? ? ? ? 56 8B B4 ? ? ? ? ? 85 ? 57 8B ? 74 */
 
+Signature for calling ForEachTerrorPlayer<SpawnablePZScan>:
+"\x51\xA1\xB0\xBA\x5E\x10\x53\x56\x57\xBF\x01\x00\x00\x00\x39\x78\x14\x7C\x5B\x8B\x5C\x24\x14\x57\xE8\xF3\xA9"
+/* 51 A1 B0 BA 5E 10 53 56 57 BF 01 00 00 00 39 78 14 7C 5B 8B 5C 24 14 57 E8 F3 A9 */
+
 Signature for detouring GetWeaponInfo:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x33\x2A\x5B\xC3\x80"
 /* ? ? ? ? ? ? ? 75 ? 33 ? 5B C3 80 */

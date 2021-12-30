@@ -3274,6 +3274,22 @@
 			}
 
 			/**
+			 * ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "ragdoll flag is not implemented" string.
+			 * 2. The string can only be found in "z_spawn".
+			 * 3. The first function call below the string should be this function.
+			 **/
+			"ForEachTerrorPlayer<SpawnablePZScan>"
+			{
+				"library"	"server"
+				"linux"		"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_.constprop.265"
+				"windows"	"\x51\xA1\xB0\xBA\x5E\x10\x53\x56\x57\xBF\x01\x00\x00\x00\x39\x78\x14\x7C\x5B\x8B\x5C\x24\x14\x57\xE8\xF3\xA9"
+						/* 51 A1 B0 BA 5E 10 53 56 57 BF 01 00 00 00 39 78 14 7C 5B 8B 5C 24 14 57 E8 F3 A9 */
+			}
+
+			/**
 			 * GetWeaponInfo(CSWeaponID)
 			 *
 			 * How to find on Windows:

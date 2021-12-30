@@ -3274,6 +3274,22 @@
 			}
 
 			/**
+			 * ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "ragdoll flag is not implemented" string.
+			 * 2. The string can only be found in "z_spawn".
+			 * 3. The first function call below the string should be this function.
+			 **/
+			"ForEachTerrorPlayer<SpawnablePZScan>"
+			{
+				"library"	"server"
+				"linux"		"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_.constprop.265"
+				"windows"	"\x51\xA1\xB0\xBA\x5E\x10\x53\x56\x57\xBF\x01\x00\x00\x00\x39\x78\x14\x7C\x5B\x8B\x5C\x24\x14\x57\xE8\xF3\xA9"
+						/* 51 A1 B0 BA 5E 10 53 56 57 BF 01 00 00 00 39 78 14 7C 5B 8B 5C 24 14 57 E8 F3 A9 */
+			}
+
+			/**
 			 * GetWeaponInfo(CSWeaponID)
 			 *
 			 * How to find on Windows:
@@ -4718,7 +4734,7 @@
 			 * How to find on Windows:
 			 * 1. Search for the "ragdoll flag is not implemented\n" string.
 			 * 2. The string can only be found in "z_spawn_old".
-			 * 3. Click on the first function call in "z_spawn" to go to "ZombieManager::SpawnWitch<Vector>".
+			 * 3. Click on the first function call in "z_spawn_old" to go to "ZombieManager::SpawnWitch<Vector>".
 			 * 4. The fourth function call in "ZombieManager::SpawnWitch<Vector>" should be this function.
 			 **/
 			"CBaseEntity::SetAbsAngles"
@@ -4735,7 +4751,7 @@
 			 * How to find on Windows:
 			 * 1. Search for the "ragdoll flag is not implemented\n" string.
 			 * 2. The string can only be found in "z_spawn_old".
-			 * 3. Click on the first function call in "z_spawn" to go to "ZombieManager::SpawnWitch<Vector>".
+			 * 3. Click on the first function call in "z_spawn_old" to go to "ZombieManager::SpawnWitch<Vector>".
 			 * 4. The third function call in "ZombieManager::SpawnWitch<Vector>" should be this function.
 			 **/
 			"CBaseEntity::SetAbsOrigin"
@@ -5199,7 +5215,7 @@
 			 * How to find on Windows:
 			 * 1. Search for the "NumberOfTeamDead" string.
 			 * 2. The string can only be found in "ModifyOrAppendGlobalCriteria".
-			 * 2. The first function call below the string should be this function.
+			 * 3. The first function call below the string should be this function.
 			 **/
 			"CDirector::GetGameModeBase"
 			{
@@ -9336,6 +9352,22 @@
 				"linux"		"@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x57\xBF\x2A\x2A\x2A\x2A\x39\x2A\x2A\x7C\x2A\x53\x8B\x2A\x2A\x56\x57\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x2B\x2A\x2A\xC1\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x82\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x83\xBE\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x75\x2A\x80"
 						/* ? ? ? ? ? ? ? ? 57 BF ? ? ? ? 39 ? ? 7C ? 53 8B ? ? 56 57 E8 ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? ? 85 ? 74 ? 8B 0D ? ? ? ? 2B ? ? C1 ? ? 85 ? 74 ? 8B ? 8B 82 ? ? ? ? 8B ? FF ? 84 ? 74 ? 83 BE ? ? ? ? ? 74 ? 8B ? E8 ? ? ? ? 83 ? ? 75 ? 80 */
+			}
+
+			/**
+			 * ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "ragdoll flag is not implemented" string.
+			 * 2. The string can be found in "z_spawn_old" and "ZSpawnCore".
+			 * 3. The first function call below the string should be this function.
+			 **/
+			"ForEachTerrorPlayer<SpawnablePZScan>"
+			{
+				"library"	"server"
+				"linux"		"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_"
+				"windows"	"\x55\x8B\xEC\xA1\x90\x35\x7F\x10\x53\x56\x57\xBF\x01\x00\x00\x00\x39\x78\x14\x7C\x5A\x8B\x5D\x08\x57\xE8\x32\xFE"
+						/* 55 8B EC A1 90 35 7F 10 53 56 57 BF 01 00 00 00 39 78 14 7C 5A 8B 5D 08 57 E8 32 FE */
 			}
 
 			/**

@@ -870,6 +870,9 @@ Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &):
 Signature for ForEachSurvivor<MinigunnerScan>(MinigunnerScan &):
 "@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
 
+Signature for ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &):
+"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_"
+
 Signature for GetWeaponInfo(CSWeaponID):
 "@_Z13GetWeaponInfo10CSWeaponID"
 

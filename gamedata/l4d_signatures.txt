@@ -1036,6 +1036,22 @@
 			}
 
 			/**
+			 * Checkpoint::ContainsArea(TerrorNavArea *)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Haven't left the initial checkpoint yet" string.
+			 * 2. The string can only be found in "SurvivorBehavior::Update".
+			 * 3. The first function call below the string should be this function.
+			 **/
+			"Checkpoint::ContainsArea"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK10Checkpoint12ContainsAreaEP13TerrorNavArea"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x7E\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x39"
+						/* ? ? ? ? ? ? ? 56 7E ? 8B ? 8B ? ? ? 39 */
+			}
+
+			/**
 			 * CInferno::Spread(Vector const&)
 			 *
 			 * How to find on Windows:
@@ -2120,6 +2136,21 @@
 				"linux"		"@_ZN13CTerrorPlayer18GoAwayFromKeyboardEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x9E"
 						/* ? ? ? ? ? ? 8B ? 8B ? 8B 90 ? ? ? ? 8B 9E */
+			}
+
+			/**
+			 * CTerrorPlayer::GrabVictimWithTongue(CTerrorPlayer*)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Tongue grab starting." string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"CTerrorPlayer::GrabVictimWithTongue"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer20GrabVictimWithTongueEPS_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x2A\x53\x55\x56\x8B"
+						/* ? ? ? ? ? ? ? ? 83 ? ? ? 53 55 56 8B */
 			}
 
 			/**
@@ -3409,6 +3440,25 @@
 			}
 
 			/**
+			 * InfoChangelevel::ChangeLevelNow()
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "InfoChangelevel::StartChangeLevel" function.
+			 * 2. Look for a function being passed through another function along with the values "0.0" and "0".
+			 * 3. That function should be "InfoChangelevel::ChangeLevelSpeechDelay".
+			 * 4. Click on that function to go to "InfoChangelevel::ChangeLevelSpeechDelay".
+			 * 5. Look for a function being passed through another function along with the values "0.0" and "0".
+			 * 6. That function should be this function.
+			 **/
+			"InfoChangelevel::ChangeLevelNow"
+			{
+				"library"	"server"
+				"linux"		"@_ZN15InfoChangelevel14ChangeLevelNowEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B"
+						/* ? ? ? ? ? ? ? ? ? E8 ? ? ? ? 8B 0D ? ? ? ? E8 ? ? ? ? 84 ? 74 ? 8B 0D ? ? ? ? 8B */
+			}
+
+			/**
 			 * InfoChangelevel::StartChangeLevel(Checkpoint const*)
 			 *
 			 * How to find on Windows:
@@ -3702,6 +3752,24 @@
 			}
 
 			/**
+			 * SurvivorBot * NextBotCreatePlayerBot<SurvivorBot>(char const*)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "AddPlayer" or "RemovePlayer" string.
+			 * 2. The string can only be found in "SurvivorReplacement::Restore".
+			 * 3. One of the functions that calls "SurvivorReplacement::Restore" should be "CTerrorPlayer::ReplaceWithBot".
+			 * 4. Look for "SurvivorReplacement::Restore" inside "CTerrorPlayer::ReplaceWithBot".
+			 * 5. The first function call above "SurvivorReplacement::Restore" should be this function.
+			 **/
+			"NextBotCreatePlayerBot<SurvivorBot>"
+			{
+				"library"	"server"
+				"linux"		"@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
+				"windows"	"\x83\x2A\x2A\x56\x57\x68\xB0"
+						/* 83 ? ? 56 57 68 B0 */
+			}
+
+			/**
 			 * Tank * NextBotCreatePlayerBot<Tank>(char const*)
 			 *
 			 * How to find on Windows:
@@ -3813,6 +3881,21 @@
 				"linux"		"@_ZNK11SurvivorBot11IsReachableEP11CBaseEntity"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x6A\x2A\x6A\x2A\x51\x8B\x2A\xD9"
 						/* ? ? ? ? ? ? 56 6A ? 6A ? 51 8B ? D9 */
+			}
+
+			/**
+			 * SurvivorBot::IsReachable(CNavArea *, CNavArea *)
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "SurvivorBot::IsReachable<CBaseEntity>" function.
+			 * 2. The second and last function call in "SurvivorBot::IsReachable<CBaseEntity>" should be this function.
+			 **/
+			"SurvivorBot::IsReachable<CNavArea>"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK11SurvivorBot11IsReachableEP8CNavAreaS1_.part.114"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x2A\x2A\x57\x55\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83"
+						/* ? ? ? ? ? ? ? ? 56 57 8B ? ? ? 57 55 8B ? E8 ? ? ? ? 83 */
 			}
 
 			/**
@@ -3983,6 +4066,38 @@
 				"linux"		"@_ZNK13TerrorNavArea14FindRandomSpotEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xD8\x2A\x2A\xD9\x05\x2A\x2A\x2A\x2A\xD8\x2A\xDF\x2A\xF6\x2A\x2A\x0F\x84\x2A\x2A\x2A\x2A\xD9"
 						/* ? ? ? ? ? ? ? D8 ? ? D9 05 ? ? ? ? D8 ? DF ? F6 ? ? 0F 84 ? ? ? ? D9 */
+			}
+
+			/**
+			 * TerrorNavMesh::GetInitialCheckpoint()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "CREATING BOT %s FOR %s(%d)\n" string.
+			 * 2. The string can only be found in "CreateInfoTransitioningPlayers".
+			 * 3. This function should be two function calls above the "skin" string.
+			 **/
+			"TerrorNavMesh::GetInitialCheckpoint"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK13TerrorNavMesh20GetInitialCheckpointEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x89\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x33"
+						/* ? ? ? ? ? ? 8B 0D ? ? ? ? 89 ? ? ? E8 ? ? ? ? 84 ? 75 ? 33 */
+			}
+
+			/**
+			 * TerrorNavMesh::GetLastCheckpoint()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "No exit checkpoint could be found.\n" string.
+			 * 2. The string can only be found in "WarpToCheckpoint".
+			 * 3. This function should be the first function call in "WarpToCheckpoint".
+			 **/
+			"TerrorNavMesh::GetLastCheckpoint"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK13TerrorNavMesh17GetLastCheckpointEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x33\x2A\x85\x2A\x57\x7E\x2A\x8B\xB1"
+						/* ? ? ? ? ? ? 56 33 ? 85 ? 57 7E ? 8B B1 */
 			}
 
 			/**
@@ -4432,6 +4547,23 @@
 				"linux"		"@_ZL17outtro_stats_doneRK8CCommand"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x3D\x2A\x2A\x2A\x2A\x74\x2A\x68\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\xE8"
 						/* ? ? ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 3D ? ? ? ? 74 ? 68 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 74 ? E8 */
+			}
+
+			/**
+			 * z_spawn(CCommand const&)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for any of the following strings (they can each only be found in this function):
+			 * - "ragdoll flag is not implemented\n"
+			 * - "Common"
+			 * - "mob"
+			 **/
+			"z_spawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZL7z_spawnRK8CCommand"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x55\x56\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x33"
+						/* ? ? ? ? ? ? 55 56 E8 ? ? ? ? 8B ? 33 */
 			}
 		}
 	}
@@ -5649,6 +5781,21 @@
 			}
 
 			/**
+			 * CDirectorChallengeMode::FindRescueAreaTrigger()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Found rescue trigger \"%s\"\n" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"CDirectorChallengeMode::FindRescueAreaTrigger"
+			{
+				"library"	"server"
+				"linux"		"@_ZN22CDirectorChallengeMode21FindRescueAreaTriggerEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x53\x57\x8B\xB8"
+						/* ? ? ? ? ? ? ? ? 83 ? ? 53 57 8B B8 */
+			}
+
+			/**
 			 * CDirectorChallengeMode::ShouldPlayBossMusic(bool *)
 			 *
 			 * How to find on Windows:
@@ -6097,6 +6244,22 @@
 				"mac"		"@_ZN16CGrenadeLauncher13PrimaryAttackEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B"
 						/* ? ? ? ? ? ? 53 56 8B ? E8 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 0F 84 ? ? ? ? 8B */
+			}
+
+			/**
+			 * Checkpoint::ContainsArea(TerrorNavArea *)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Haven't left the initial checkpoint yet" string.
+			 * 2. The string can only be found in "SurvivorBehavior::Update".
+			 * 3. The first function call below the string should be this function.
+			 **/
+			"Checkpoint::ContainsArea"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK10Checkpoint12ContainsAreaEP13TerrorNavArea"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x33\x2A\x56\x85\x2A\x7E\x2A\x8B\x2A\x8B"
+						/* ? ? ? ? ? ? 33 ? 56 85 ? 7E ? 8B ? 8B */
 			}
 
 			/**
@@ -7928,6 +8091,21 @@
 			}
 
 			/**
+			 * CTerrorPlayer::GrabVictimWithTongue(CTerrorPlayer*)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Tongue grab starting." string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"CTerrorPlayer::GrabVictimWithTongue"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer20GrabVictimWithTongueEPS_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x83\x2A\x2A\x55\x8B\x2A\x2A\x89\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x83\x2A\x2A\x2A\x56\x8B\x2A\x57\x89\x2A\x2A\x0F\x85"
+						/* ? ? ? ? ? ? 83 ? ? 83 ? ? 55 8B ? ? 89 ? ? ? 8B ? 83 ? ? A1 ? ? ? ? 83 ? ? ? 56 8B ? 57 89 ? ? 0F 85 */
+			}
+
+			/**
 			 * CTerrorPlayer::Input_GoAwayFromKeyboard()
 			 *
 			 * Note: (Windows) This function is in-lined with the "go_away_from_keyboard" function.
@@ -9511,6 +9689,25 @@
 			}
 
 			/**
+			 * InfoChangelevel::ChangeLevelNow()
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "InfoChangelevel::StartChangeLevel" function.
+			 * 2. Look for a function being passed through another function along with the values "0.0" and "0".
+			 * 3. That function should be "InfoChangelevel::ChangeLevelSpeechDelay".
+			 * 4. Click on that function to go to "InfoChangelevel::ChangeLevelSpeechDelay".
+			 * 5. Look for a function being passed through another function along with the values "0.0" and "0".
+			 * 6. That function should be this function.
+			 **/
+			"InfoChangelevel::ChangeLevelNow"
+			{
+				"library"	"server"
+				"linux"		"@_ZN15InfoChangelevel14ChangeLevelNowEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\xFF\x2A\x84\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x6A"
+						/* ? ? ? ? ? ? ? ? ? 8B ? 8B ? ? FF ? 84 ? 74 ? 8B 0D ? ? ? ? 6A */
+			}
+
+			/**
 			 * InfoChangelevel::StartChangeLevel(Checkpoint const*)
 			 *
 			 * How to find on Windows:
@@ -9900,6 +10097,24 @@
 			}
 
 			/**
+			 * SurvivorBot * NextBotCreatePlayerBot<SurvivorBot>(char const*)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "AddPlayer" or "RemovePlayer" string.
+			 * 2. The string can only be found in "SurvivorReplacement::Restore".
+			 * 3. One of the functions that calls "SurvivorReplacement::Restore" should be "CTerrorPlayer::ReplaceWithBot".
+			 * 4. Look for "SurvivorReplacement::Restore" inside "CTerrorPlayer::ReplaceWithBot".
+			 * 5. The first function call above "SurvivorReplacement::Restore" should be this function.
+			 **/
+			"NextBotCreatePlayerBot<SurvivorBot>"
+			{
+				"library"	"server"
+				"linux"		"@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\xB0"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 B0 */
+			}
+
+			/**
 			 * Tank * NextBotCreatePlayerBot<Tank>(char const*)
 			 *
 			 * How to find on Windows:
@@ -10026,6 +10241,21 @@
 				"linux"		"@_ZNK11SurvivorBot11IsReachableEP11CBaseEntity"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x6A\x2A\x6A\x2A\x6A\x2A\x51\x8B\x2A\xD9"
 						/* ? ? ? ? ? ? ? ? ? 56 6A ? 6A ? 6A ? 51 8B ? D9 */
+			}
+
+			/**
+			 * SurvivorBot::IsReachable(CNavArea *, CNavArea *)
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "SurvivorBot::IsReachable<CBaseEntity>" function.
+			 * 2. The second and last function call in "SurvivorBot::IsReachable<CBaseEntity>" should be this function.
+			 **/
+			"SurvivorBot::IsReachable<CNavArea>"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK11SurvivorBot11IsReachableEP8CNavAreaS1_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x2A\x2A\x56\x57\x8B\x2A\x2A\x53\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83"
+						/* ? ? ? ? ? ? 53 8B ? ? 56 57 8B ? ? 53 57 8B ? E8 ? ? ? ? 83 */
 			}
 
 			/**
@@ -10257,6 +10487,37 @@
 				"linux"		"@_ZNK13TerrorNavArea24ScriptHasSpawnAttributesEi"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x81\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x5D"
 						/* ? ? ? ? ? ? 85 81 ? ? ? ? 0F ? ? 5D */
+			}
+
+			/**
+			 * TerrorNavMesh::GetInitialCheckpoint()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "************\nMost gross danger! Cannot find Landmark named %s!\n************" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"TerrorNavMesh::GetInitialCheckpoint"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK13TerrorNavMesh20GetInitialCheckpointEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x89\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x33"
+						/* ? ? ? ? ? ? 89 ? ? 8B 0D ? ? ? ? E8 ? ? ? ? 84 ? 75 ? 33 */
+			}
+
+			/**
+			 * TerrorNavMesh::GetLastCheckpoint()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "No exit checkpoint could be found.\n" string.
+			 * 2. The string can only be found in "WarpToCheckpoint".
+			 * 3. This function should be the first function call in "WarpToCheckpoint".
+			 **/
+			"TerrorNavMesh::GetLastCheckpoint"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK13TerrorNavMesh17GetLastCheckpointEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x33\x2A\x57\x85\x2A\x7E\x2A\x8B\xB1\x2A\x2A\x2A\x2A\x8B\x2A\x8B"
+						/* ? ? ? ? ? ? 56 33 ? 57 85 ? 7E ? 8B B1 ? ? ? ? 8B ? 8B */
 			}
 
 			/**
@@ -10629,6 +10890,21 @@
 			}
 
 			/**
+			 * ZSpawnCore(int, Vector, QAngle, int, bool, bool, bool)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "ragdoll flag is not implemented\n" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"ZSpawnCore"
+			{
+				"library"	"server"
+				"linux"		"@_ZL10ZSpawnCorei6Vector6QAngleibbb.isra.150"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\xA1\x2A\x2A\x2A\x2A\xF3\x2A\x2A\x2A\x2A\x57"
+						/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? A1 ? ? ? ? F3 ? ? ? ? 57 */
+			}
+
+			/**
 			 * go_away_from_keyboard(CCommand const&)
 			 *
 			 * Note: (Windows) This function is in-lined with the "CTerrorPlayer::Input_GoAwayFromKeyboard" function.
@@ -10675,6 +10951,54 @@
 				"linux"		"@_ZL17outtro_stats_doneRK8CCommand"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x3D\x2A\x2A\x2A\x2A\x74\x2A\x68\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\xE8"
 						/* ? ? ? ? ? ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 3D ? ? ? ? 74 ? 68 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 74 ? E8 */
+			}
+
+			/**
+			 * z_spawn(CCommand const&)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Common" or "witch_bride" string.
+			 * 2. One of the functions that references that string should be this function.
+			 **/
+			"z_spawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZL7z_spawnRK8CCommand"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x53\x56\x57\x8B\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85"
+						/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 53 56 57 8B ? ? E8 ? ? ? ? 8B ? 85 */
+			}
+
+			/**
+			 * z_spawn_old(CCommand const&)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "Couldn't find a %s Spawn position in %d tries\n" string.
+			 * 2. The string can only be found in this function.
+			 **/
+			"z_spawn_old"
+			{
+				"library"	"server"
+				"linux"		"@_ZL11z_spawn_oldRK8CCommand"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\xA1"
+						/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? E8 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? A1 */
+			}
+
+			/**
+			 * Script_ZSpawn(HSCRIPT__ *)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for any of the following strings (they can each only be found in this function):
+			 * - "ScriptWarning: Can't ZSpawn without a position\n"
+			 * - "ScriptWarning: Can't ZSpawn without a type\n"
+			 * - "Can't auto_pos for type %d\n"
+			 * - "Couldn't find a spawn pos for type %d in %d tries\n"
+			 **/
+			"Script_ZSpawn"
+			{
+				"library"	"server"
+				"linux"		"@_Z13Script_ZSpawnP9HSCRIPT__"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x53\x8B\x2A\x2A\x56\x33"
+						/* ? ? ? ? ? ? 8B 0D ? ? ? ? 53 8B ? ? 56 33 */
 			}
 		}
 	}

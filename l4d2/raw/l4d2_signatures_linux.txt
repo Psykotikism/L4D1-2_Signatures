@@ -219,6 +219,9 @@ Signature for CDirector::TryOfferingTankBot(CBaseEntity *, bool):
 Signature for CDirector::UnregisterForbiddenTarget(CBaseEntity *):
 "@_ZN9CDirector25UnregisterForbiddenTargetEP11CBaseEntity"
 
+Signature for CDirectorChallengeMode::FindRescueAreaTrigger(void):
+"@_ZN22CDirectorChallengeMode21FindRescueAreaTriggerEv"
+
 Signature for CDirectorChallengeMode::ShouldPlayBossMusic(bool *)const:
 "@_ZNK22CDirectorChallengeMode19ShouldPlayBossMusicEPb"
 
@@ -299,6 +302,9 @@ Signature for CGib::Spawn(char const*):
 
 Signature for CGrenadeLauncher::PrimaryAttack(void):
 "@_ZN16CGrenadeLauncher13PrimaryAttackEv"
+
+Signature for Checkpoint::ContainsArea(TerrorNavArea *)const:
+"@_ZNK10Checkpoint12ContainsAreaEP13TerrorNavArea"
 
 Signature for CHolidayGift::Create(Vector const&, QAngle const&, QAngle const&, Vector const&, CBaseCombatCharacter *):
 "@_ZN12CHolidayGift6CreateERK6VectorRK6QAngleS5_S2_P20CBaseCombatCharacter"
@@ -618,6 +624,9 @@ Signature for CTerrorPlayer::GiveNamedItem(char const*, int, bool, CBaseEntity *
 Signature for CTerrorPlayer::GoAwayFromKeyboard(void):
 "@_ZN13CTerrorPlayer18GoAwayFromKeyboardEv"
 
+Signature for CTerrorPlayer::GrabVictimWithTongue(CTerrorPlayer*):
+"@_ZN13CTerrorPlayer20GrabVictimWithTongueEPS_"
+
 Signature for CTerrorPlayer::Input_GoAwayFromKeyboard(void):
 "@_ZN13CTerrorPlayer24Input_GoAwayFromKeyboardEv"
 
@@ -897,6 +906,9 @@ Signature for InfectedExecAction::OnInjured(Infected *, CTakeDamageInfo const&):
 Signature for InfectedShoved::OnShoved(Infected *, CBaseEntity *):
 "@_ZN14InfectedShoved8OnShovedEP8InfectedP11CBaseEntity"
 
+Signature for InfoChangelevel::ChangeLevelNow(void):
+"@_ZN15InfoChangelevel14ChangeLevelNowEv"
+
 Signature for InfoChangelevel::StartChangeLevel(Checkpoint const*):
 "@_ZN15InfoChangelevel16StartChangeLevelEPK10Checkpoint"
 
@@ -966,6 +978,9 @@ Signature for Smoker * NextBotCreatePlayerBot<Smoker>(char const*):
 Signature for Spitter * NextBotCreatePlayerBot<Spitter>(char const*):
 "@_Z22NextBotCreatePlayerBotI7SpitterEPT_PKc"
 
+Signature for SurvivorBot * NextBotCreatePlayerBot<SurvivorBot>(char const*):
+"@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
+
 Signature for Tank * NextBotCreatePlayerBot<Tank>(char const*):
 "@_Z22NextBotCreatePlayerBotI4TankEPT_PKc"
 
@@ -989,6 +1004,9 @@ Signature for SurvivorBot::FindScavengeItem(float)const:
 
 Signature for SurvivorBot::IsReachable(CBaseEntity *)const:
 "@_ZNK11SurvivorBot11IsReachableEP11CBaseEntity"
+
+Signature for SurvivorBot::IsReachable(CNavArea *, CNavArea *)const:
+"@_ZNK11SurvivorBot11IsReachableEP8CNavAreaS1_"
 
 Signature for SurvivorBot::IsReachable(Vector const&)const:
 "@_ZNK11SurvivorBot11IsReachableERK6Vector"
@@ -1031,6 +1049,12 @@ Signature for TerrorNavArea::ScriptGetSpawnAttributes(void)const:
 
 Signature for TerrorNavArea::ScriptHasSpawnAttributes(int)const:
 "@_ZNK13TerrorNavArea24ScriptHasSpawnAttributesEi"
+
+Signature for TerrorNavMesh::GetInitialCheckpoint(void)const:
+"@_ZNK13TerrorNavMesh20GetInitialCheckpointEv"
+
+Signature for TerrorNavMesh::GetLastCheckpoint(void)const:
+"@_ZNK13TerrorNavMesh17GetLastCheckpointEv"
 
 Signature for ThrowImpactedSurvivor(CTerrorPlayer *, CTerrorPlayer *, float, bool):
 "@_Z21ThrowImpactedSurvivorP13CTerrorPlayerS0_fb"
@@ -1101,6 +1125,9 @@ Signature for ZombieManager::SpawnWitch(TerrorNavArea const*, QAngle const&, boo
 Signature for ZombieManager::SpawnWitchBride(Vector const&, QAngle const&):
 "@_ZN13ZombieManager15SpawnWitchBrideERK6VectorRK6QAngle"
 
+Signature for ZSpawnCore(int, Vector, QAngle, int, bool, bool, bool) [clone]:
+"@_ZL10ZSpawnCorei6Vector6QAngleibbb.isra.150"
+
 Signature for go_away_from_keyboard(CCommand const&):
 "@_ZL21go_away_from_keyboardRK8CCommand"
 
@@ -1109,4 +1136,13 @@ Signature for nav_update_lighting(CCommand const&):
 
 Signature for outtro_stats_done(CCommand const&):
 "@_ZL17outtro_stats_doneRK8CCommand"
+
+Signature for z_spawn(CCommand const&):
+"@_ZL7z_spawnRK8CCommand"
+
+Signature for z_spawn_old(CCommand const&):
+"@_ZL11z_spawn_oldRK8CCommand"
+
+Signature for Script_ZSpawn(HSCRIPT__ *):
+"@_Z13Script_ZSpawnP9HSCRIPT__"
 

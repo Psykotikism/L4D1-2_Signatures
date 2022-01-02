@@ -256,6 +256,10 @@ Signature for detouring CGib::Spawn:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xD9\x05\x2A\x2A\x2A\x2A\x51\x8B\x2A\xD9\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x80"
 /* ? ? ? ? ? ? 8B ? E8 ? ? ? ? D9 05 ? ? ? ? 51 8B ? D9 ? ? E8 ? ? ? ? 80 */
 
+Signature for detouring Checkpoint::ContainsArea:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x7E\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x39"
+/* ? ? ? ? ? ? ? 56 7E ? 8B ? 8B ? ? ? 39 */
+
 Signature for detouring CInferno::Spread:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x81\xEC\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\x83\xBF"
 /* ? ? ? ? ? ? 81 EC ? ? ? ? 53 56 57 8B ? 83 BF */
@@ -511,6 +515,10 @@ Signature for detouring CTerrorPlayer::GiveNamedItem:
 Signature for detouring CTerrorPlayer::GoAwayFromKeyboard:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x9E"
 /* ? ? ? ? ? ? 8B ? 8B ? 8B 90 ? ? ? ? 8B 9E */
+
+Signature for detouring CTerrorPlayer::GrabVictimWithTongue:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x2A\x53\x55\x56\x8B"
+/* ? ? ? ? ? ? ? ? 83 ? ? ? 53 55 56 8B */
 
 Signature for detouring CTerrorPlayer::IsClassOverLimit:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x8D\x2A\x2A\x50"
@@ -812,6 +820,10 @@ Signature for calling InfectedShoved::OnShoved:
 "\x8B\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x2A\x33\x2A\xC7"
 /* 8B ? ? ? 50 E8 ? ? ? ? 8B ? ? ? 33 ? C7 */
 
+Signature for detouring InfoChangelevel::ChangeLevelNow:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x8B"
+/* ? ? ? ? ? ? ? ? ? E8 ? ? ? ? 8B 0D ? ? ? ? E8 ? ? ? ? 84 ? 74 ? 8B 0D ? ? ? ? 8B */
+
 Signature for detouring InfoChangelevel::StartChangeLevel:
 "\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x83\x2A\x2A\x2A\x56\x8B\x2A\x89"
 /* ? ? ? ? ? ? A1 ? ? ? ? 83 ? ? ? 56 8B ? 89 */
@@ -880,6 +892,10 @@ Signature for calling NextBotCreatePlayerBot<Smoker>:
 "\x83\x2A\x2A\x56\x57\x68\x70"
 /* 83 ? ? 56 57 68 70 */
 
+Signature for calling NextBotCreatePlayerBot<SurvivorBot>:
+"\x83\x2A\x2A\x56\x57\x68\xB0"
+/* 83 ? ? 56 57 68 B0 */
+
 Signature for calling NextBotCreatePlayerBot<Tank>:
 "\x83\x2A\x2A\x56\x57\x68\x30"
 /* 83 ? ? 56 57 68 30 */
@@ -907,6 +923,10 @@ Signature for detouring SurvivorBot::FindScavengeItem:
 Signature for detouring SurvivorBot::IsReachable<CBaseEntity>:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x56\x6A\x2A\x6A\x2A\x51\x8B\x2A\xD9"
 /* ? ? ? ? ? ? 56 6A ? 6A ? 51 8B ? D9 */
+
+Signature for detouring SurvivorBot::IsReachable<CNavArea>:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x2A\x2A\x57\x55\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83"
+/* ? ? ? ? ? ? ? ? 56 57 8B ? ? ? 57 55 8B ? E8 ? ? ? ? 83 */
 
 Signature for detouring SurvivorBot::SetHumanSpectator:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8D\xB3\x2A\x2A\x2A\x2A\x7E"
@@ -947,6 +967,14 @@ Signature for detouring TankBehavior::InitialContainedAction:
 Signature for detouring TerrorNavArea::FindRandomSpot:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xD8\x2A\x2A\xD9\x05\x2A\x2A\x2A\x2A\xD8\x2A\xDF\x2A\xF6\x2A\x2A\x0F\x84\x2A\x2A\x2A\x2A\xD9"
 /* ? ? ? ? ? ? ? D8 ? ? D9 05 ? ? ? ? D8 ? DF ? F6 ? ? 0F 84 ? ? ? ? D9 */
+
+Signature for detouring TerrorNavMesh::GetInitialCheckpoint:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x89\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x33"
+/* ? ? ? ? ? ? 8B 0D ? ? ? ? 89 ? ? ? E8 ? ? ? ? 84 ? 75 ? 33 */
+
+Signature for detouring TerrorNavMesh::GetLastCheckpoint:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x33\x2A\x85\x2A\x57\x7E\x2A\x8B\xB1"
+/* ? ? ? ? ? ? 56 33 ? 85 ? 57 7E ? 8B B1 */
 
 Signature for detouring Witch::DoAttack:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x89\x2A\x2A\x2A\x57"
@@ -1059,4 +1087,8 @@ Signature for detouring nav_update_lighting:
 Signature for detouring outtro_stats_done:
 "\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x3D\x2A\x2A\x2A\x2A\x74\x2A\x68\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\xE8"
 /* ? ? ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 3D ? ? ? ? 74 ? 68 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 74 ? E8 */
+
+Signature for detouring z_spawn:
+"\x2A\x2A\x2A\x2A\x2A\x2A\x55\x56\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x33"
+/* ? ? ? ? ? ? 55 56 E8 ? ? ? ? 8B ? 33 */
 

@@ -192,6 +192,9 @@ Signature for CGib::InitGib(CBaseEntity *, float, float):
 Signature for CGib::Spawn(char const*):
 "@_ZN4CGib5SpawnEPKc"
 
+Signature for Checkpoint::ContainsArea(TerrorNavArea *)const:
+"@_ZNK10Checkpoint12ContainsAreaEP13TerrorNavArea"
+
 Signature for CInferno::Spread(Vector const&):
 "@_ZN8CInferno6SpreadERK6Vector"
 
@@ -383,6 +386,9 @@ Signature for CTerrorPlayer::GiveNamedItem(char const*, int, bool):
 
 Signature for CTerrorPlayer::GoAwayFromKeyboard(void):
 "@_ZN13CTerrorPlayer18GoAwayFromKeyboardEv"
+
+Signature for CTerrorPlayer::GrabVictimWithTongue(CTerrorPlayer*):
+"@_ZN13CTerrorPlayer20GrabVictimWithTongueEPS_"
 
 Signature for CTerrorPlayer::IsClassOverLimit(int):
 "@_ZN13CTerrorPlayer16IsClassOverLimitEi"
@@ -609,6 +615,9 @@ Signature for InfectedExecAction::OnInjured(Infected *, CTakeDamageInfo const&):
 Signature for InfectedShoved::OnShoved(Infected *, CBaseEntity *):
 "@_ZN14InfectedShoved8OnShovedEP8InfectedP11CBaseEntity"
 
+Signature for InfoChangelevel::ChangeLevelNow(void):
+"@_ZN15InfoChangelevel14ChangeLevelNowEv"
+
 Signature for InfoChangelevel::StartChangeLevel(Checkpoint const*):
 "@_ZN15InfoChangelevel16StartChangeLevelEPK10Checkpoint"
 
@@ -660,6 +669,9 @@ Signature for Hunter * NextBotCreatePlayerBot<Hunter>(char const*):
 Signature for Smoker * NextBotCreatePlayerBot<Smoker>(char const*):
 "@_Z22NextBotCreatePlayerBotI6SmokerEPT_PKc"
 
+Signature for SurvivorBot * NextBotCreatePlayerBot<SurvivorBot>(char const*):
+"@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
+
 Signature for Tank * NextBotCreatePlayerBot<Tank>(char const*):
 "@_Z22NextBotCreatePlayerBotI4TankEPT_PKc"
 
@@ -680,6 +692,9 @@ Signature for SurvivorBot::FindScavengeItem(float)const:
 
 Signature for SurvivorBot::IsReachable(CBaseEntity *)const:
 "@_ZNK11SurvivorBot11IsReachableEP11CBaseEntity"
+
+Signature for SurvivorBot::IsReachable(CNavArea *, CNavArea *)const [clone]:
+"@_ZNK11SurvivorBot11IsReachableEP8CNavAreaS1_.part.114"
 
 Signature for SurvivorBot::SetHumanSpectator(CTerrorPlayer *):
 "@_ZN11SurvivorBot17SetHumanSpectatorEP13CTerrorPlayer"
@@ -710,6 +725,12 @@ Signature for TankBehavior::InitialContainedAction(Tank *):
 
 Signature for TerrorNavArea::FindRandomSpot(void)const:
 "@_ZNK13TerrorNavArea14FindRandomSpotEv"
+
+Signature for TerrorNavMesh::GetInitialCheckpoint(void)const:
+"@_ZNK13TerrorNavMesh20GetInitialCheckpointEv"
+
+Signature for TerrorNavMesh::GetLastCheckpoint(void)const:
+"@_ZNK13TerrorNavMesh17GetLastCheckpointEv"
 
 Signature for Witch::DoAttack(CBaseEntity *):
 "@_ZN5Witch8DoAttackEP11CBaseEntity"
@@ -794,4 +815,7 @@ Signature for nav_update_lighting(CCommand const&):
 
 Signature for outtro_stats_done(CCommand const&):
 "@_ZL17outtro_stats_doneRK8CCommand"
+
+Signature for z_spawn(CCommand const&):
+"@_ZL7z_spawnRK8CCommand"
 

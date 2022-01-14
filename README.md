@@ -37,20 +37,20 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 - Most of these signatures are heavily wildcarded but have been tested across multiple versions of both games to be very durable. While shorter signatures are ideal, longer but durable ones are more convenient.
 
 ### Signature Count
-- **L4D1**: 273
-- **L4D2**: 382
+- **L4D1**: 279
+- **L4D2**: 390
 
 ### Left 4 Dead
 - Most of the signatures have been verified to have withstood the last landmark update:
-1. `Pre-Current (7-24-2019)` - `23/273` changed since the latest version came out.
+1. `Pre-Current (7-24-2019)` - `24/279` changed since the latest version came out.
 2. `Current (8-9-2021)`
 
 ### Left 4 Dead 2
 - Most of the signatures have been verified to have withstood the last five landmark updates:
-1. `Pre-TLS (6-5-2020)` - `58/382` changed since the latest version came out.
-2. `TLS (9-24-2020)` - `55/382` changed since the latest version came out.
-3. `Post-TLS (2-18-2021)` - `52/382` changed since the latest version came out.
-4. `Pre-Current (6-15-2021)` - `47/382` changed since the latest version came out.
+1. `Pre-TLS (6-5-2020)` - `58/390` changed since the latest version came out.
+2. `TLS (9-24-2020)` - `55/390` changed since the latest version came out.
+3. `Post-TLS (2-18-2021)` - `52/390` changed since the latest version came out.
+4. `Pre-Current (6-15-2021)` - `47/390` changed since the latest version came out.
 5. `Current (12-9-2021)`
 - Keep in mind that does not mean that most of these signatures will never break. It just means that they are durable enough to withstand several major updates unless VALVe updates the code of their respective functions and/or uses different compiler settings.
 
@@ -58,8 +58,9 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 Thank you to the following people for helping me locate a lot of these functions:
 - **epz/epzminion**: Taught me everything about sigscanning, patching, vtable look-ups, etc.
 - **Silvers (SilverShot)**: Leaves great notes in his gamedata files and also introduced the method of including the `CC ...` lines plus the first few bytes of following functions to create unique signatures for very short functions.
-- **Lux/LuxLuma**: Uses lots of uncommon functions that no other person uses.
-- **BHaType**: Uses lots of rare functions that no other person thinks to utilize.
+- **Lux/LuxLuma**: Uses lots of functions that are uncommonly used.
+- **BHaType**: Uses lots of functions that are rarely used.
+- **cravenge**: Uses some functions that are rarely used.
 - **Scag/Scags**: Wrote several useful/helpful [IDA scripts](https://github.com/Scags/IDA-Scripts) to help make all of this a faster process.
 
 ## Other Resources

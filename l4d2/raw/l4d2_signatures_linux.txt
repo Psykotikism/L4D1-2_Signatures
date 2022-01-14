@@ -306,6 +306,9 @@ Signature for CGrenadeLauncher::PrimaryAttack(void):
 Signature for Checkpoint::ContainsArea(TerrorNavArea *)const:
 "@_ZNK10Checkpoint12ContainsAreaEP13TerrorNavArea"
 
+Signature for Checkpoint::GetLargestArea(void)const:
+"@_ZNK10Checkpoint14GetLargestAreaEv"
+
 Signature for CHolidayGift::Create(Vector const&, QAngle const&, QAngle const&, Vector const&, CBaseCombatCharacter *):
 "@_ZN12CHolidayGift6CreateERK6VectorRK6QAngleS5_S2_P20CBaseCombatCharacter"
 
@@ -371,6 +374,12 @@ Signature for CPipeBombProjectile::Detonate(void):
 
 Signature for CPistol::GetRateOfFire(void)const:
 "@_ZNK7CPistol13GetRateOfFireEv"
+
+Signature for CPropDoorRotatingCheckpoint::IsCheckpointDoor(void)const:
+"@_ZNK27CPropDoorRotatingCheckpoint16IsCheckpointDoorEv"
+
+Signature for CPropDoorRotatingCheckpoint::IsCheckpointExitDoor(void)const:
+"@_ZNK27CPropDoorRotatingCheckpoint20IsCheckpointExitDoorEv"
 
 Signature for CRifle_M60::PrimaryAttack(void):
 "@_ZN10CRifle_M6013PrimaryAttackEv"
@@ -570,6 +579,9 @@ Signature for CTerrorPlayer::CanBecomeGhost(bool):
 Signature for CTerrorPlayer::CancelStagger(void):
 "@_ZN13CTerrorPlayer13CancelStaggerEv"
 
+Signature for CTerrorPlayer::CheckFriendSightings(void):
+"@_ZN13CTerrorPlayer20CheckFriendSightingsEv"
+
 Signature for CTerrorPlayer::ChooseSurvivorCharacter(SurvivorCharacterType)const:
 "@_ZNK13CTerrorPlayer23ChooseSurvivorCharacterE21SurvivorCharacterType"
 
@@ -644,6 +656,12 @@ Signature for CTerrorPlayer::IsStaggering(void)const:
 
 Signature for CTerrorPlayer::MaterializeFromGhost(void):
 "@_ZN13CTerrorPlayer20MaterializeFromGhostEv"
+
+Signature for CTerrorPlayer::ModifyOrAppendCriteria(AI_CriteriaSet &):
+"@_ZN13CTerrorPlayer22ModifyOrAppendCriteriaER14AI_CriteriaSet"
+
+Signature for CTerrorPlayer::ModifyOrAppendDerivedCriteria(AI_CriteriaSet &):
+"@_ZN13CTerrorPlayer29ModifyOrAppendDerivedCriteriaER14AI_CriteriaSet"
 
 Signature for CTerrorPlayer::OnAdrenalineEnd(void):
 "@_ZN13CTerrorPlayer15OnAdrenalineEndEv"
@@ -918,6 +936,9 @@ Signature for InstallBotControl(void):
 Signature for IsAreaConnectedToNonCheckpointArea(TerrorNavArea *):
 "@_Z34IsAreaConnectedToNonCheckpointAreaP13TerrorNavArea"
 
+Signature for IsVisibleToPlayer(Vector const&, CBasePlayer *, int, int, float, CBaseEntity const*, TerrorNavArea **, bool *):
+"@_Z17IsVisibleToPlayerRK6VectorP11CBasePlayeriifPK11CBaseEntityPP13TerrorNavAreaPb"
+
 Signature for KeyValues::FindKey(char const*, bool):
 "@_ZN9KeyValues7FindKeyEPKcb"
 
@@ -1022,6 +1043,9 @@ Signature for SurvivorBot::UseHealingItems(Action<SurvivorBot> *):
 
 Signature for SurvivorLegsMeetRescueVehicleArrival::Update(SurvivorBot *, float):
 "@_ZN36SurvivorLegsMeetRescueVehicleArrival6UpdateEP11SurvivorBotf"
+
+Signature for SurvivorResponseCachedInfo::GetClosestSurvivorTo(SurvivorCharacterType):
+"@_ZN26SurvivorResponseCachedInfo20GetClosestSurvivorToE21SurvivorCharacterType"
 
 Signature for SurvivorResponseCachedInfo::Update(void):
 "@_ZN26SurvivorResponseCachedInfo6UpdateEv"

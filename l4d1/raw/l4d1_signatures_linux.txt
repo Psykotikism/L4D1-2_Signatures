@@ -195,6 +195,9 @@ Signature for CGib::Spawn(char const*):
 Signature for Checkpoint::ContainsArea(TerrorNavArea *)const:
 "@_ZNK10Checkpoint12ContainsAreaEP13TerrorNavArea"
 
+Signature for Checkpoint::GetLargestArea(void)const:
+"@_ZNK10Checkpoint14GetLargestAreaEv"
+
 Signature for CInferno::Spread(Vector const&):
 "@_ZN8CInferno6SpreadERK6Vector"
 
@@ -230,6 +233,12 @@ Signature for CPipeBombProjectile::Detonate(void):
 
 Signature for CPistol::GetRateOfFire(void)const:
 "@_ZNK7CPistol13GetRateOfFireEv"
+
+Signature for CPropDoorRotatingCheckpoint::IsCheckpointDoor(void)const:
+"@_ZNK27CPropDoorRotatingCheckpoint16IsCheckpointDoorEv"
+
+Signature for CPropDoorRotatingCheckpoint::IsCheckpointExitDoor(void)const:
+"@_ZNK27CPropDoorRotatingCheckpoint20IsCheckpointExitDoorEv"
 
 Signature for CServerGameClients::GetPlayerLimits(int &, int &, int &)const:
 "@_ZNK18CServerGameClients15GetPlayerLimitsERiS0_S0_"
@@ -339,6 +348,9 @@ Signature for CTerrorPlayer::CanBecomeGhost(bool):
 Signature for CTerrorPlayer::CancelStagger(void):
 "@_ZN13CTerrorPlayer13CancelStaggerEv"
 
+Signature for CTerrorPlayer::CheckFriendSightings(void):
+"@_ZN13CTerrorPlayer20CheckFriendSightingsEv"
+
 Signature for CTerrorPlayer::CleanupPlayerState(void):
 "@_ZN13CTerrorPlayer18CleanupPlayerStateEv"
 
@@ -401,6 +413,12 @@ Signature for CTerrorPlayer::IsStaggering(void)const:
 
 Signature for CTerrorPlayer::MaterializeFromGhost(void):
 "@_ZN13CTerrorPlayer20MaterializeFromGhostEv"
+
+Signature for CTerrorPlayer::ModifyOrAppendCriteria(AI_CriteriaSet &):
+"@_ZN13CTerrorPlayer22ModifyOrAppendCriteriaER14AI_CriteriaSet"
+
+Signature for CTerrorPlayer::ModifyOrAppendDerivedCriteria(AI_CriteriaSet &):
+"@_ZN13CTerrorPlayer29ModifyOrAppendDerivedCriteriaER14AI_CriteriaSet"
 
 Signature for CTerrorPlayer::OnBeginChangeLevel(char const*, KeyValues *):
 "@_ZN13CTerrorPlayer18OnBeginChangeLevelEPKcP9KeyValues"

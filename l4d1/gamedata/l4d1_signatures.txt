@@ -264,8 +264,8 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN11CBaseEntity14GetUsePriorityEPS_"
-				"windows"	"\xB8\x01\x00\x00\x00\xC2\x04\x00\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xCC\xB0"
-						/* B8 01 00 00 00 C2 04 00 CC CC CC CC CC CC CC CC B0 */
+				"windows"	"\xB8\x01\x2A\x2A\x2A\xC2\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xB0"
+						/* B8 01 ? ? ? C2 ? ? ? ? ? ? ? ? ? ? B0 */
 			}
 
 			/**
@@ -1052,6 +1052,22 @@
 			}
 
 			/**
+			 * Checkpoint::GetLargestArea()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "GetGoalArea: Cannot find end area - no checkpoint or finale located.\n" string.
+			 * 2. The string can only be found in "TerrorNavMesh::FindGoalArea".
+			 * 3. The second function call in "TerrorNavMesh::FindGoalArea" should be this function.
+			 **/
+			"Checkpoint::GetLargestArea"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK10Checkpoint14GetLargestAreaEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x55\x33\x2A\x33"
+						/* ? ? ? ? ? ? 8B ? ? 55 33 ? 33 */
+			}
+
+			/**
 			 * CInferno::Spread(Vector const&)
 			 *
 			 * How to find on Windows:
@@ -1256,6 +1272,42 @@
 				"linux"		"@_ZNK7CPistol13GetRateOfFireEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xFF\x2A\x84\x2A\x8B\x2A\x74\x2A\xE8\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x2A\x8B\x82\x2A\x2A\x2A\x2A\xFF\x2A\x84"
 						/* ? ? ? ? ? ? ? ? ? ? ? FF ? 84 ? 8B ? 74 ? E8 ? ? ? ? 85 ? 74 ? 8B ? 8B ? 8B 82 ? ? ? ? FF ? 84 */
+			}
+
+			/**
+			 * CPropDoorRotatingCheckpoint::IsCheckpointDoor()
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CPropDoorRotatingCheckpoint::`vftable'" to jump to the "CPropDoorRotatingCheckpoint" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"CPropDoorRotatingCheckpoint::IsCheckpointDoor"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK27CPropDoorRotatingCheckpoint16IsCheckpointDoorEv"
+				"windows"	"\xB0\x2A\xC3\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x33"
+						/* B0 ? C3 ? ? ? ? ? ? ? ? ? ? ? ? ? 33 */
+			}
+
+			/**
+			 * CPropDoorRotatingCheckpoint::IsCheckpointExitDoor()
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CPropDoorRotatingCheckpoint::`vftable'" to jump to the "CPropDoorRotatingCheckpoint" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"CPropDoorRotatingCheckpoint::IsCheckpointExitDoor"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK27CPropDoorRotatingCheckpoint20IsCheckpointExitDoorEv"
+				"windows"	"\x8A\x81\x44"
+						/* 8A 81 44 */
 			}
 
 			/**
@@ -1571,7 +1623,7 @@
 			 *
 			 * How to find on Windows:
 			 * 1. Locate the "Director::Restart" function.
-			 * 2. The first function call above the string should be this function.
+			 * 2. This function should be the first function call above the string.
 			 **/
 			"CTerrorGameRules::GetTeamScore"
 			{
@@ -1863,6 +1915,23 @@
 				"linux"		"@_ZN13CTerrorPlayer13CancelStaggerEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\xD8\x9F\x2A\x2A\x2A\x2A\x8D\xB7\x2A\x2A\x2A\x2A\xDF\x2A\xF6\x2A\x2A\x7B\x2A\x8B\x2A\x2A\x8B\x2A\x8D\x2A\x2A\x56\xFF\x2A\xD9\x05\x2A\x2A\x2A\x2A\xD9\x2A\xD9\x87\x2A\x2A\x2A\x2A\x8D\xB7\x2A\x2A\x2A\x2A\xD9\x2A\xDD\x2A\xDF\x2A\xDD\x2A\xF6\x2A\x2A\x7A\x2A\xD9\x2A\x2A\xDD\x2A\xDF\x2A\xF6\x2A\x2A\x7A\x2A\xD9\x2A\x2A\xDD\x2A\xDF\x2A\xF6\x2A\x2A\x7B\x2A\x80\xBE\x2A\x2A\x2A\x2A\x2A\x8D\x86\x2A\x2A\x2A\x2A\x74\x2A\x80\x2A\x2A\x2A\xEB\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\xDD\x2A\x2B\x2A\x52\xE8\x2A\x2A\x2A\x2A\xD9\x2A\xD9\x2A\xD9\x2A\x2A\xD9\x2A\x2A\xD8\x97\x2A\x2A\x2A\x2A\x8D\xB7\x2A\x2A\x2A\x2A\xDF\x2A\xF6\x2A\x2A\x7B\x2A\x80\xBE\x2A\x2A\x2A\x2A\x2A\x8D\x86\x2A\x2A\x2A\x2A\x74\x2A\x80\x2A\x2A\x2A\xEB\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\xDD\x2A\x2B\x2A\x52\xE8\x2A\x2A\x2A\x2A\xD9\x2A\xD9\x2A\xD9\x87\x2A\x2A\x2A\x2A\x8D\xB7\x2A\x2A\x2A\x2A\xDD\x2A\xDF\x2A\xF6\x2A\x2A\x7A\x2A\xD9\x2A\x2A\xDD\x2A\xDF\x2A\xF6\x2A\x2A\x7A\x2A\xD9\x2A\x2A\xDD\x2A\xDF\x2A\xF6\x2A\x2A\x7B\x2A\x80\xBE\x2A\x2A\x2A\x2A\x2A\x8D\x86\x2A\x2A\x2A\x2A\x74\x2A\x80\x2A\x2A\x2A\xD9\x2A\xD9\x2A\x2A\x5F"
 						/* ? ? ? ? ? ? 56 57 8B ? D8 9F ? ? ? ? 8D B7 ? ? ? ? DF ? F6 ? ? 7B ? 8B ? ? 8B ? 8D ? ? 56 FF ? D9 05 ? ? ? ? D9 ? D9 87 ? ? ? ? 8D B7 ? ? ? ? D9 ? DD ? DF ? DD ? F6 ? ? 7A ? D9 ? ? DD ? DF ? F6 ? ? 7A ? D9 ? ? DD ? DF ? F6 ? ? 7B ? 80 BE ? ? ? ? ? 8D 86 ? ? ? ? 74 ? 80 ? ? ? EB ? 8B ? ? 85 ? 74 ? 8B ? DD ? 2B ? 52 E8 ? ? ? ? D9 ? D9 ? D9 ? ? D9 ? ? D8 97 ? ? ? ? 8D B7 ? ? ? ? DF ? F6 ? ? 7B ? 80 BE ? ? ? ? ? 8D 86 ? ? ? ? 74 ? 80 ? ? ? EB ? 8B ? ? 85 ? 74 ? 8B ? DD ? 2B ? 52 E8 ? ? ? ? D9 ? D9 ? D9 87 ? ? ? ? 8D B7 ? ? ? ? DD ? DF ? F6 ? ? 7A ? D9 ? ? DD ? DF ? F6 ? ? 7A ? D9 ? ? DD ? DF ? F6 ? ? 7B ? 80 BE ? ? ? ? ? 8D 86 ? ? ? ? 74 ? 80 ? ? ? D9 ? D9 ? ? 5F */
+			}
+
+			/**
+			 * CTerrorPlayer::CheckFriendSightings()
+			 *
+			 * How to find on Windows:
+			 * 1. Search for any of the following strings (they can each only be found in this function):
+			 * - "CTerrorPlayer::CheckFriendSightings"
+			 * - "DeadCharacter:%s,Distance:%d"
+			 * - "PlayerSeeDeadPlayer"
+			 **/
+			"CTerrorPlayer::CheckFriendSightings"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer20CheckFriendSightingsEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x55\x56\x57\x6A\x2A\x6A\x2A\x68\x2A\x2A\x2A\x2A\x6A\x2A\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\xFF\x15\x2A\x2A\x2A\x2A\x8B\x2A\xE8"
+						/* ? ? ? ? ? ? 53 55 56 57 6A ? 6A ? 68 ? ? ? ? 6A ? 8B ? 8B 0D ? ? ? ? 68 ? ? ? ? FF 15 ? ? ? ? 8B ? E8 */
 			}
 
 			/**
@@ -2216,6 +2285,99 @@
 				"linux"		"@_ZN13CTerrorPlayer20MaterializeFromGhostEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xFF\x2A\x50\xE8\x2A\x2A\x2A\x2A\x50\x8D\x86"
 						/* ? ? ? ? ? ? ? ? ? ? ? FF ? 50 E8 ? ? ? ? 50 8D 86 */
+			}
+
+			/**
+			 * CTerrorPlayer::ModifyOrAppendCriteria(AI_CriteriaSet &)
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for any of the following strings (they can each only be found in this function):
+			 * - "InfectedState"
+			 * - "Alert"
+			 * - "Engaged"
+			 * - "Normal"
+			 * - "Coughing"
+			 * - "OnFire"
+			 * - "Incapacitated"
+			 * - "HangingFromLedge"
+			 * - "PounceVictim"
+			 * - "HangingFromTongue"
+			 * - "Sneaking"
+			 * - "InBattlefield"
+			 * - "InCheckpoint"
+			 * - "InStartArea"
+			 * - "InSafeSpot"
+			 * - "Intensity"
+			 * - "TimeAveragedIntensity"
+			 * - "%ssKilled"
+			 * - "ZombiesKilledWhileIncapacitated"
+			 * - "NumberOfTeamAlive"
+			 * - "NumberOfTeamIncapacitated"
+			 * - "NumberOfTeamDead"
+			 * - "CurrentHealth"
+			 * - "CurrentTemporaryHealth"
+			 * - "%.0f"
+			 * - "IsIncapacitated"
+			 * - "HasFirstAidKit"
+			 * - "HasPainPills"
+			 * - "HasGrenade"
+			 * - "HasMolotov"
+			 * - "IncapacitatedCount"
+			 * - "OnThirdStrike"
+			 * - "DistToNamVet"
+			 * - "DistToTeenGirl"
+			 * - "DistToBiker"
+			 * - "DistToManager"
+			 * - "NumberInSafeSpot"
+			 * - "NumberOutsideSafeSpot"
+			 * - "ZombiePresentNormal"
+			 * - "ZombiePresentSmoker"
+			 * - "ZombiePresentBoomer"
+			 * - "ZombiePresentHunter"
+			 * - "ZombiePresentWitch"
+			 * - "ZombiePresentTank"
+			 * - "holdout"
+			 * - "InCombat"
+			 * - "InCombatMusic"
+			 * - "TimeSinceCombat"
+			 * - "TimeSinceGroupInCombat"
+			 * - "BeingHealed"
+			 * - "LowViolence"
+			 * - "speaking"
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CTerrorPlayer::`vftable'" to jump to the "CTerrorPlayer" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CTerrorPlayer::ModifyOrAppendCriteria"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer22ModifyOrAppendCriteriaER14AI_CriteriaSet"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xFF\x2A\x50\xE8\x2A\x2A\x2A\x2A\x50\x8D\x86"
+						/* ? ? ? ? ? ? ? ? ? ? ? FF ? 50 E8 ? ? ? ? 50 8D 86 */
+			}
+
+			/**
+			 * CTerrorPlayer::ModifyOrAppendDerivedCriteria(AI_CriteriaSet &)
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for the "dist_from_subject" string.
+			 * 2a. The string can only be found in this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CTerrorPlayer::`vftable'" to jump to the "CTerrorPlayer" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CTerrorPlayer::ModifyOrAppendDerivedCriteria"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer29ModifyOrAppendDerivedCriteriaER14AI_CriteriaSet"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x55\x56\x57\xBE"
+						/* ? ? ? ? ? ? 55 56 57 BE */
 			}
 
 			/**
@@ -4058,7 +4220,7 @@
 			 * How to find on Windows:
 			 * 1. Search for the "ragdoll flag is not implemented" string.
 			 * 2. Both functions that reference the string call this function.
-			 * 3. The first function call above the string should be this function.
+			 * 3. This function should be the first function call above the string.
 			 **/
 			"TerrorNavArea::FindRandomSpot"
 			{

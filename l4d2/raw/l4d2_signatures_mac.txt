@@ -1,7 +1,7 @@
-/* From "server.so" */
+/* From "server.dylib" */
 
-Signature for BossZombiePlayerBot::ChooseVictim(CTerrorPlayer *):
-"@_ZN19BossZombiePlayerBot12ChooseVictimEP13CTerrorPlayer"
+Signature for BossZombiePlayerBot::ChooseVictim(CTerrorPlayer *, int, CBaseCombatCharacter *):
+"@_ZN19BossZombiePlayerBot12ChooseVictimEP13CTerrorPlayeriP20CBaseCombatCharacter"
 
 Signature for CreateGameRulesObject(char const*):
 "@_Z21CreateGameRulesObjectPKc"
@@ -35,6 +35,9 @@ Signature for CBaseAnimating::LookupAttachment(char const*):
 
 Signature for CBaseAnimating::SelectWeightedSequence(Activity):
 "@_ZN14CBaseAnimating22SelectWeightedSequenceE8Activity"
+
+Signature for CBaseBackpackItem::StartAction(CBaseBackpackItem::BackpackItemActionType, CBaseBackpackItem::BackpackItemActionTrigger):
+"@_ZN17CBaseBackpackItem11StartActionENS_22BackpackItemActionTypeENS_25BackpackItemActionTriggerE"
 
 Signature for CBaseCombatWeapon::GetMaxClip1(void)const:
 "@_ZNK17CBaseCombatWeapon11GetMaxClip1Ev"
@@ -84,6 +87,18 @@ Signature for CBreakableProp::Break(CBaseEntity *, CTakeDamageInfo const&):
 Signature for CCarProp::InputSurvivorStandingOnCar(inputdata_t &):
 "@_ZN8CCarProp26InputSurvivorStandingOnCarER11inputdata_t"
 
+Signature for CCharge::ActivateAbility(void):
+"@_ZN7CCharge15ActivateAbilityEv"
+
+Signature for CCharge::HandleCustomCollision(CBaseEntity *, Vector const&, Vector const&, CGameTrace *, CMoveData *):
+"@_ZN7CCharge21HandleCustomCollisionEP11CBaseEntityRK6VectorS4_P10CGameTraceP9CMoveData"
+
+Signature for CCharge::IsAbilityReadyToFire(void)const:
+"@_ZNK7CCharge20IsAbilityReadyToFireEv"
+
+Signature for CCharge::UpdateAbility(void):
+"@_ZN7CCharge13UpdateAbilityEv"
+
 Signature for CClaw::OnPlayerHit(CTerrorPlayer *):
 "@_ZN5CClaw11OnPlayerHitEP13CTerrorPlayer"
 
@@ -96,74 +111,161 @@ Signature for CCSPlayer::State_Transition(CSPlayerState):
 Signature for CDeathFallCamera::Enable(CBasePlayer *):
 "@_ZN16CDeathFallCamera6EnableEP11CBasePlayer"
 
-Signature for Director::AreWanderersAllowed(void)const:
-"@_ZNK8Director19AreWanderersAllowedEv"
+Signature for CDirector::AllowWitchesInCheckpoints(void)const:
+"@_ZNK9CDirector25AllowWitchesInCheckpointsEv"
 
-Signature for Director::ClearTeamScores(bool):
-"@_ZN8Director15ClearTeamScoresEb"
+Signature for CDirector::AreTeamsFlipped(void)const:
+"@_ZNK9CDirector15AreTeamsFlippedEv"
 
-Signature for Director::CreateRescuableSurvivors(void):
-"@_ZN8Director24CreateRescuableSurvivorsEv"
+Signature for CDirector::AreWanderersAllowed(void)const:
+"@_ZNK9CDirector19AreWanderersAllowedEv"
 
-Signature for Director::EndVersusModeRound(bool):
-"@_ZN8Director18EndVersusModeRoundEb"
+Signature for CDirector::ClearScavengeScores(bool):
+"@_ZN9CDirector19ClearScavengeScoresEb"
 
-Signature for Director::GetHighestFlowSurvivor(TerrorNavArea::FlowType)const:
-"@_ZNK8Director22GetHighestFlowSurvivorEN13TerrorNavArea8FlowTypeE"
+Signature for CDirector::ClearTeamScores(bool):
+"@_ZN9CDirector15ClearTeamScoresEb"
 
-Signature for Director::HasAnySurvivorLeftSafeArea(void):
-"@_ZN8Director26HasAnySurvivorLeftSafeAreaEv"
+Signature for CDirector::CreateRescuableSurvivors(void):
+"@_ZN9CDirector24CreateRescuableSurvivorsEv"
 
-Signature for Director::IsAnySurvivorInExitCheckpoint(void)const:
-"@_ZNK8Director29IsAnySurvivorInExitCheckpointEv"
+Signature for CDirector::ForceNextStage(void):
+"@_ZN9CDirector14ForceNextStageEv"
 
-Signature for Director::IsAnySurvivorInStartArea(void)const:
-"@_ZNK8Director24IsAnySurvivorInStartAreaEv"
+Signature for CDirector::FullRestart(void):
+"@_ZN9CDirector11FullRestartEv"
 
-Signature for Director::IsFinaleEscapeInProgress(void)const:
-"@_ZNK8Director24IsFinaleEscapeInProgressEv"
+Signature for CDirector::GetFurthestSurvivorFlow(void)const:
+"@_ZNK9CDirector23GetFurthestSurvivorFlowEv"
 
-Signature for Director::IsInTransition(void)const:
-"@_ZNK8Director14IsInTransitionEv"
+Signature for CDirector::GetGameModeBase(void):
+"@_ZN9CDirector15GetGameModeBaseEv"
 
-Signature for Director::IsTeamFull(int, Director::PlayerCountType)const:
-"@_ZNK8Director10IsTeamFullEiNS_15PlayerCountTypeE"
+Signature for CDirector::GetScriptValue(char const*, char const*, char *, int):
+"@_ZN9CDirector14GetScriptValueEPKcS1_Pci"
 
-Signature for Director::OnChangeChapterVote(char const*):
-"@_ZN8Director19OnChangeChapterVoteEPKc"
+Signature for CDirector::GetScriptValue(char const*, float):
+"@_ZN9CDirector14GetScriptValueEPKcf"
 
-Signature for Director::OnChangeMissionVote(char const*):
-"@_ZN8Director19OnChangeMissionVoteEPKc"
+Signature for CDirector::GetScriptValue(char const*, int):
+"@_ZN9CDirector14GetScriptValueEPKci"
 
-Signature for Director::OnFirstSurvivorLeftSafeArea(CTerrorPlayer *):
-"@_ZN8Director27OnFirstSurvivorLeftSafeAreaEP13CTerrorPlayer"
+Signature for CDirector::HasAnySurvivorLeftSafeArea(void):
+"@_ZN9CDirector26HasAnySurvivorLeftSafeAreaEv"
 
-Signature for Director::OnMobRushStart(void):
-"@_ZN8Director14OnMobRushStartEv"
+Signature for CDirector::HideScoreboard(void):
+"@_ZN9CDirector14HideScoreboardEv"
 
-Signature for Director::OnServerShutdown(void):
-"@_ZN8Director16OnServerShutdownEv"
+Signature for CDirector::IsAnySurvivorInExitCheckpoint(void)const:
+"@_ZNK9CDirector29IsAnySurvivorInExitCheckpointEv"
 
-Signature for Director::RegisterForbiddenTarget(CBaseEntity *):
-"@_ZN8Director23RegisterForbiddenTargetEP11CBaseEntity"
+Signature for CDirector::IsAnySurvivorInStartArea(void)const:
+"@_ZNK9CDirector24IsAnySurvivorInStartAreaEv"
 
-Signature for Director::Restart(void):
-"@_ZN8Director7RestartEv"
+Signature for CDirector::IsFinale(void)const:
+"@_ZNK9CDirector8IsFinaleEv"
 
-Signature for Director::RestartScenarioFromVote(char const*):
-"@_ZN8Director23RestartScenarioFromVoteEPKc"
+Signature for CDirector::IsFinaleEscapeInProgress(void)const:
+"@_ZNK9CDirector24IsFinaleEscapeInProgressEv"
 
-Signature for Director::SendInRescueVehicle(void):
-"@_ZN8Director19SendInRescueVehicleEv"
+Signature for CDirector::IsFirstMapInScenario(void)const:
+"@_ZNK9CDirector20IsFirstMapInScenarioEv"
 
-Signature for Director::TryOfferingTankBot(CBaseEntity *, bool):
-"@_ZN8Director18TryOfferingTankBotEP11CBaseEntityb"
+Signature for CDirector::IsInTransition(void)const:
+"@_ZNK9CDirector14IsInTransitionEv"
 
-Signature for Director::UnregisterForbiddenTarget(CBaseEntity *):
-"@_ZN8Director25UnregisterForbiddenTargetEP11CBaseEntity"
+Signature for CDirector::IsTankInPlay(void)const:
+"@_ZNK9CDirector12IsTankInPlayEv"
 
-Signature for Director::UpdateVersusBossSpawning(void):
-"@_ZN8Director24UpdateVersusBossSpawningEv"
+Signature for CDirector::IsTeamFull(int, CDirector::PlayerCountType)const:
+"@_ZNK9CDirector10IsTeamFullEiNS_15PlayerCountTypeE"
+
+Signature for CDirector::OnChangeChapterVote(char const*):
+"@_ZN9CDirector19OnChangeChapterVoteEPKc"
+
+Signature for CDirector::OnChangeMissionVote(char const*):
+"@_ZN9CDirector19OnChangeMissionVoteEPKc"
+
+Signature for CDirector::OnFirstSurvivorLeftSafeArea(CTerrorPlayer *):
+"@_ZN9CDirector27OnFirstSurvivorLeftSafeAreaEP13CTerrorPlayer"
+
+Signature for CDirector::OnMobRushStart(void):
+"@_ZN9CDirector14OnMobRushStartEv"
+
+Signature for CDirector::OnServerShutdown(void):
+"@_ZN9CDirector16OnServerShutdownEv"
+
+Signature for CDirector::RegisterForbiddenTarget(CBaseEntity *):
+"@_ZN9CDirector23RegisterForbiddenTargetEP11CBaseEntity"
+
+Signature for CDirector::ResetMobTimer(void):
+"@_ZN9CDirector13ResetMobTimerEv"
+
+Signature for CDirector::Restart(void):
+"@_ZN9CDirector7RestartEv"
+
+Signature for CDirector::RestartScenarioFromVote(char const*):
+"@_ZN9CDirector23RestartScenarioFromVoteEPKc"
+
+Signature for CDirector::StartRematchVote(void):
+"@_ZN9CDirector16StartRematchVoteEv"
+
+Signature for CDirector::SwapTeams(void):
+"@_ZN9CDirector9SwapTeamsEv"
+
+Signature for CDirector::TryOfferingTankBot(CBaseEntity *, bool):
+"@_ZN9CDirector18TryOfferingTankBotEP11CBaseEntityb"
+
+Signature for CDirector::UnregisterForbiddenTarget(CBaseEntity *):
+"@_ZN9CDirector25UnregisterForbiddenTargetEP11CBaseEntity"
+
+Signature for CDirectorChallengeMode::FindRescueAreaTrigger(void):
+"@_ZN22CDirectorChallengeMode21FindRescueAreaTriggerEv"
+
+Signature for CDirectorChallengeMode::ShouldPlayBossMusic(bool *)const:
+"@_ZNK22CDirectorChallengeMode19ShouldPlayBossMusicEPb"
+
+Signature for CDirectorItemManager::IsMeleeWeaponAllowedToExist(char const*):
+"@_ZN20CDirectorItemManager27IsMeleeWeaponAllowedToExistEPKc"
+
+Signature for CDirectorMusicBanks::OnRoundStart(void):
+"@_ZN19CDirectorMusicBanks12OnRoundStartEv"
+
+Signature for CDirectorScavengeMode::EndScavengeRound(void):
+"@_ZN21CDirectorScavengeMode16EndScavengeRoundEv"
+
+Signature for CDirectorScavengeMode::HideScoreboardNonVirtual(void):
+"@_ZN21CDirectorScavengeMode24HideScoreboardNonVirtualEv"
+
+Signature for CDirectorScavengeMode::OnBeginRoundSetupTime(void):
+"@_ZN21CDirectorScavengeMode21OnBeginRoundSetupTimeEv"
+
+Signature for CDirectorScriptedEventManager::ChangeFinaleStage(CDirectorScriptedEventManager::ScriptedEventStage, char const*):
+"@_ZN29CDirectorScriptedEventManager17ChangeFinaleStageENS_18ScriptedEventStageEPKc"
+
+Signature for CDirectorScriptedEventManager::SendInRescueVehicle(void):
+"@_ZN29CDirectorScriptedEventManager19SendInRescueVehicleEv"
+
+Signature for CDirectorTacticalServices::GetHighestFlowSurvivor(TerrorNavArea::FlowType)const:
+"@_ZNK25CDirectorTacticalServices22GetHighestFlowSurvivorEN13TerrorNavArea8FlowTypeE"
+
+Signature for CDirectorVersusMode::ClearTeamScoresNonVirtual(bool):
+"@_ZN19CDirectorVersusMode25ClearTeamScoresNonVirtualEb"
+
+Signature for CDirectorVersusMode::EndVersusModeRound(bool):
+"@_ZN19CDirectorVersusMode18EndVersusModeRoundEb"
+
+Signature for CDirectorVersusMode::GetMissionVersusBossSpawning(float &, float &, float &, float &, bool &):
+"@_ZN19CDirectorVersusMode28GetMissionVersusBossSpawningERfS0_S0_S0_Rb"
+
+Signature for CDirectorVersusMode::HideScoreboardNonVirtual(void):
+"@_ZN19CDirectorVersusMode24HideScoreboardNonVirtualEv"
+
+Signature for CDirectorVersusMode::OnVersusRoundStarted(void):
+"@_ZN19CDirectorVersusMode20OnVersusRoundStartedEv"
+
+Signature for CDirectorVersusMode::UpdateVersusBossSpawning(void):
+"@_ZN19CDirectorVersusMode24UpdateVersusBossSpawningEv"
 
 Signature for CEntityDissolve::Create(CBaseEntity *, char const*, float, int, bool *):
 "@_ZN15CEntityDissolve6CreateEP11CBaseEntityPKcfiPb"
@@ -174,17 +276,23 @@ Signature for CEnvRockLauncher::LaunchCurrentDir(void):
 Signature for CFinaleTrigger::StartFinale(CTerrorPlayer *):
 "@_ZN14CFinaleTrigger11StartFinaleEP13CTerrorPlayer"
 
-Signature for CFirstAidKit::FinishHealing(void):
-"@_ZN12CFirstAidKit13FinishHealingEv"
+Signature for CFirstAidKit::OnActionComplete(CTerrorPlayer *, CBaseEntity *):
+"@_ZN12CFirstAidKit16OnActionCompleteEP13CTerrorPlayerP11CBaseEntity"
 
-Signature for CFirstAidKit::StartHealing(CFirstAidKit::HealTargetType) [clone]:
-"@_ZN12CFirstAidKit12StartHealingENS_14HealTargetTypeE.part.43"
-
-Signature for CFirstAidKit::StopHealing(void) [clone]:
-"@_ZN12CFirstAidKit11StopHealingEv.part.42"
+Signature for CFirstAidKit::ShouldStartAction(CBaseBackpackItem::BackpackItemActionType, CTerrorPlayer *, CBaseEntity *):
+"@_ZN12CFirstAidKit17ShouldStartActionEN17CBaseBackpackItem22BackpackItemActionTypeEP13CTerrorPlayerP11CBaseEntity"
 
 Signature for CGameRulesProxy::NotifyNetworkStateChanged(void):
 "@_ZN15CGameRulesProxy25NotifyNetworkStateChangedEv"
+
+Signature for CGasCan::Event_Killed(CTakeDamageInfo const&):
+"@_ZN7CGasCan12Event_KilledERK15CTakeDamageInfo"
+
+Signature for CGasCan::OnActionComplete(CTerrorPlayer *, CBaseEntity *):
+"@_ZN7CGasCan16OnActionCompleteEP13CTerrorPlayerP11CBaseEntity"
+
+Signature for CGasCan::ShouldStartAction(CBaseBackpackItem::BackpackItemActionType, CTerrorPlayer *, CBaseEntity *):
+"@_ZN7CGasCan17ShouldStartActionEN17CBaseBackpackItem22BackpackItemActionTypeEP13CTerrorPlayerP11CBaseEntity"
 
 Signature for CGib::InitGib(CBaseEntity *, float, float):
 "@_ZN4CGib7InitGibEP11CBaseEntityff"
@@ -192,14 +300,41 @@ Signature for CGib::InitGib(CBaseEntity *, float, float):
 Signature for CGib::Spawn(char const*):
 "@_ZN4CGib5SpawnEPKc"
 
+Signature for CGrenadeLauncher::PrimaryAttack(void):
+"@_ZN16CGrenadeLauncher13PrimaryAttackEv"
+
 Signature for Checkpoint::ContainsArea(TerrorNavArea *)const:
 "@_ZNK10Checkpoint12ContainsAreaEP13TerrorNavArea"
 
 Signature for Checkpoint::GetLargestArea(void)const:
 "@_ZNK10Checkpoint14GetLargestAreaEv"
 
+Signature for CHolidayGift::Create(Vector const&, QAngle const&, QAngle const&, Vector const&, CBaseCombatCharacter *):
+"@_ZN12CHolidayGift6CreateERK6VectorRK6QAngleS5_S2_P20CBaseCombatCharacter"
+
 Signature for CInferno::Spread(Vector const&):
 "@_ZN8CInferno6SpreadERK6Vector"
+
+Signature for CInsectSwarm::CanHarm(CBaseEntity *)const:
+"@_ZNK12CInsectSwarm7CanHarmEP11CBaseEntity"
+
+Signature for CItem_Adrenaline::OnStartUse(CTerrorPlayer *):
+"@_ZN16CItem_Adrenaline10OnStartUseEP13CTerrorPlayer"
+
+Signature for CItemDefibrillator::OnActionComplete(CTerrorPlayer *, CBaseEntity *):
+"@_ZN18CItemDefibrillator16OnActionCompleteEP13CTerrorPlayerP11CBaseEntity"
+
+Signature for CItemDefibrillator::OnStartAction(CBaseBackpackItem::BackpackItemActionType, CTerrorPlayer *, CBaseEntity *, float):
+"@_ZN18CItemDefibrillator13OnStartActionEN17CBaseBackpackItem22BackpackItemActionTypeEP13CTerrorPlayerP11CBaseEntityf"
+
+Signature for CLeap::ActivateAbility(void):
+"@_ZN5CLeap15ActivateAbilityEv"
+
+Signature for CLeap::IsAbilityReadyToFire(void)const:
+"@_ZNK5CLeap20IsAbilityReadyToFireEv"
+
+Signature for CLeap::UpdateAbility(void):
+"@_ZN5CLeap13UpdateAbilityEv"
 
 Signature for CLunge::ActivateAbility(void):
 "@_ZN6CLunge15ActivateAbilityEv"
@@ -210,6 +345,12 @@ Signature for CLunge::IsAbilityReadyToFire(void)const:
 Signature for CLunge::UpdateAbility(void):
 "@_ZN6CLunge13UpdateAbilityEv"
 
+Signature for CMeleeWeaponInfo::Parse(char const*, KeyValues *):
+"@_ZN16CMeleeWeaponInfo5ParseEPKcP9KeyValues"
+
+Signature for CMeleeWeaponInfoStore::GetMeleeWeaponInfo(int):
+"@_ZN21CMeleeWeaponInfoStore18GetMeleeWeaponInfoEi"
+
 Signature for CNavArea::IsBlocked(int, bool)const:
 "@_ZNK8CNavArea9IsBlockedEib"
 
@@ -219,8 +360,8 @@ Signature for CNavArea::SpliceEdit(CNavArea*):
 Signature for CNavMesh::GetNavArea(Vector const&, float)const:
 "@_ZNK8CNavMesh10GetNavAreaERK6Vectorf"
 
-Signature for CNavMesh::GetNearestNavArea(Vector const&, bool, float, bool, bool)const:
-"@_ZNK8CNavMesh17GetNearestNavAreaERK6Vectorbfbb"
+Signature for CNavMesh::GetNearestNavArea(Vector const&, bool, float, bool, bool, bool)const:
+"@_ZNK8CNavMesh17GetNearestNavAreaERK6Vectorbfbbb"
 
 Signature for CommandNavSave(void):
 "@_Z14CommandNavSavev"
@@ -240,11 +381,41 @@ Signature for CPropDoorRotatingCheckpoint::IsCheckpointDoor(void)const:
 Signature for CPropDoorRotatingCheckpoint::IsCheckpointExitDoor(void)const:
 "@_ZNK27CPropDoorRotatingCheckpoint20IsCheckpointExitDoorEv"
 
+Signature for CRifle_M60::PrimaryAttack(void):
+"@_ZN10CRifle_M6013PrimaryAttackEv"
+
+Signature for CSelfDestruct::ActivateAbility(void):
+"@_ZN13CSelfDestruct15ActivateAbilityEv"
+
+Signature for CSelfDestruct::IsAbilityReadyToFire(void)const:
+"@_ZNK13CSelfDestruct20IsAbilityReadyToFireEv"
+
+Signature for CSelfDestruct::UpdateAbility(void):
+"@_ZN13CSelfDestruct13UpdateAbilityEv"
+
 Signature for CServerGameClients::GetPlayerLimits(int &, int &, int &)const:
 "@_ZNK18CServerGameClients15GetPlayerLimitsERiS0_S0_"
 
 Signature for CSmokeCloudSystem::FireGameEvent(IGameEvent *):
 "@_ZN17CSmokeCloudSystem13FireGameEventEP10IGameEvent"
+
+Signature for CSpitAbility::ActivateAbility(void):
+"@_ZN12CSpitAbility15ActivateAbilityEv"
+
+Signature for CSpitAbility::IsAbilityReadyToFire(void)const:
+"@_ZNK12CSpitAbility20IsAbilityReadyToFireEv"
+
+Signature for CSpitAbility::UpdateAbility(void):
+"@_ZN12CSpitAbility13UpdateAbilityEv"
+
+Signature for CSpitterProjectile::Create(Vector const&, QAngle const&, Vector const&, Vector const&, CBaseCombatCharacter *):
+"@_ZN18CSpitterProjectile6CreateERK6VectorRK6QAngleS2_S2_P20CBaseCombatCharacter"
+
+Signature for CSpitterProjectile::Detonate(void):
+"@_ZN18CSpitterProjectile8DetonateEv"
+
+Signature for CSurvivorDeathModel::Create(CTerrorPlayer *):
+"@_ZN19CSurvivorDeathModel6CreateEP13CTerrorPlayer"
 
 Signature for CTankClaw::DoSwing(void):
 "@_ZN9CTankClaw7DoSwingEv"
@@ -258,22 +429,22 @@ Signature for CTankClaw::OnPlayerHit(CTerrorPlayer *, bool):
 Signature for CTankClaw::OnWindupFinished(void):
 "@_ZN9CTankClaw16OnWindupFinishedEv"
 
-Signature for CTankClaw::SweepFist(Vector const&, Vector const&) [clone]:
-"@_ZN9CTankClaw9SweepFistERK6VectorS2_.constprop.248"
+Signature for CTankClaw::SweepFist(Vector const&, Vector const&):
+"@_ZN9CTankClaw9SweepFistERK6VectorS2_"
 
 Signature for CTankRock::BounceTouch(CBaseEntity *):
 "@_ZN9CTankRock11BounceTouchEP11CBaseEntity"
 
-Signature for CTankRock::Create(Vector const&, QAngle const&, Vector const&, CBaseCombatCharacter *) [clone]:
-"@_ZN9CTankRock6CreateERK6VectorRK6QAngleS2_P20CBaseCombatCharacter.constprop.123"
+Signature for CTankRock::Create(Vector const&, QAngle const&, Vector const&, CBaseCombatCharacter *):
+"@_ZN9CTankRock6CreateERK6VectorRK6QAngleS2_P20CBaseCombatCharacter"
 
 Signature for CTankRock::Detonate(void):
 "@_ZN9CTankRock8DetonateEv"
 
-Signature for CTankRock::OnRelease(Vector const&, QAngle const&, Vector const&, Vector const&) [clone]:
-"@_ZN9CTankRock9OnReleaseERK6VectorRK6QAngleS2_S2_.constprop.121"
+Signature for CTankRock::OnRelease(Vector const&, QAngle const&, Vector const&, Vector const&):
+"@_ZN9CTankRock9OnReleaseERK6VectorRK6QAngleS2_S2_"
 
-Signature for CTankRock::ProximityThink(void) (in-lined with ForEachPlayer<ProximityCheck>(ProximityCheck &)):
+Signature for CTankRock::ProximityThink(void):
 "@_ZN9CTankRock14ProximityThinkEv"
 
 Signature for CTerrorGameMovement::CheckForLadders(bool):
@@ -282,8 +453,17 @@ Signature for CTerrorGameMovement::CheckForLadders(bool):
 Signature for CTerrorGameMovement::DoJump(Vector *):
 "@_ZN19CTerrorGameMovement6DoJumpEP6Vector"
 
-Signature for CTerrorGameRules::ClearTeamScores(void):
-"@_ZN16CTerrorGameRules15ClearTeamScoresEv"
+Signature for CTerrorGameRules::CalculateSurvivalMultiplier(bool):
+"@_ZN16CTerrorGameRules27CalculateSurvivalMultiplierEb"
+
+Signature for CTerrorGameRules::ClearScavengeScores(bool):
+"@_ZN16CTerrorGameRules19ClearScavengeScoresEb"
+
+Signature for CTerrorGameRules::ClearTeamScores(bool):
+"@_ZN16CTerrorGameRules15ClearTeamScoresEb"
+
+Signature for CTerrorGameRules::FastGetSurvivorSet(void):
+"@_ZN16CTerrorGameRules18FastGetSurvivorSetEv"
 
 Signature for CTerrorGameRules::GetMaxHumanPlayers(void)const:
 "@_ZNK16CTerrorGameRules18GetMaxHumanPlayersEv"
@@ -297,8 +477,23 @@ Signature for CTerrorGameRules::GetMissionFirstMap(KeyValues **):
 Signature for CTerrorGameRules::GetMissionInfo(void):
 "@_ZN16CTerrorGameRules14GetMissionInfoEv"
 
-Signature for CTerrorGameRules::GetTeamScore(int, bool)const:
-"@_ZNK16CTerrorGameRules12GetTeamScoreEib"
+Signature for CTerrorGameRules::GetNumChaptersForMissionAndMode(void):
+"@_ZN16CTerrorGameRules31GetNumChaptersForMissionAndModeEv"
+
+Signature for CTerrorGameRules::GetSurvivorSet(void):
+"@_ZN16CTerrorGameRules14GetSurvivorSetEv"
+
+Signature for CTerrorGameRules::GetTeamScore(int, bool):
+"@_ZN16CTerrorGameRules12GetTeamScoreEib"
+
+Signature for CTerrorGameRules::GetVersusCompletion(CTerrorPlayer *):
+"@_ZN16CTerrorGameRules19GetVersusCompletionEP13CTerrorPlayer"
+
+Signature for CTerrorGameRules::GetVersusCompletionPerCharacter(SurvivorCharacterType, int)const:
+"@_ZNK16CTerrorGameRules31GetVersusCompletionPerCharacterE21SurvivorCharacterTypei"
+
+Signature for CTerrorGameRules::HasConfigurableDifficultySetting(void):
+"@_ZN16CTerrorGameRules32HasConfigurableDifficultySettingEv"
 
 Signature for CTerrorGameRules::HasPlayerControlledZombies(void):
 "@_ZN16CTerrorGameRules26HasPlayerControlledZombiesEv"
@@ -306,17 +501,38 @@ Signature for CTerrorGameRules::HasPlayerControlledZombies(void):
 Signature for CTerrorGameRules::IsCoopMode(void):
 "@_ZN16CTerrorGameRules10IsCoopModeEv"
 
-Signature for CTerrorGameRules::IsHoldoutMode(void):
-"@_ZN16CTerrorGameRules13IsHoldoutModeEv"
+Signature for CTerrorGameRules::IsGenericCooperativeMode(void):
+"@_ZN16CTerrorGameRules24IsGenericCooperativeModeEv"
+
+Signature for CTerrorGameRules::IsInIntro(void):
+"@_ZN16CTerrorGameRules9IsInIntroEv"
 
 Signature for CTerrorGameRules::IsMissionFinalMap(void):
 "@_ZN16CTerrorGameRules17IsMissionFinalMapEv"
 
+Signature for CTerrorGameRules::IsRealismMode(void):
+"@_ZN16CTerrorGameRules13IsRealismModeEv"
+
+Signature for CTerrorGameRules::IsScavengeMode(void):
+"@_ZN16CTerrorGameRules14IsScavengeModeEv"
+
+Signature for CTerrorGameRules::IsSurvivalMode(void):
+"@_ZN16CTerrorGameRules14IsSurvivalModeEv"
+
 Signature for CTerrorGameRules::IsVersusMode(void):
 "@_ZN16CTerrorGameRules12IsVersusModeEv"
 
+Signature for CTerrorGameRules::RecordInfectedDamageForVersus(int):
+"@_ZN16CTerrorGameRules29RecordInfectedDamageForVersusEi"
+
+Signature for CTerrorGameRules::ResetRoundNumber(void):
+"@_ZN16CTerrorGameRules16ResetRoundNumberEv"
+
 Signature for CTerrorGameRules::SetCampaignScores(int, int):
 "@_ZN16CTerrorGameRules17SetCampaignScoresEii"
+
+Signature for CTerrorGameRules::SetRoundEndTime(float):
+"@_ZN16CTerrorGameRules15SetRoundEndTimeEf"
 
 Signature for CTerrorGun::EquipSecondWeapon(void):
 "@_ZN10CTerrorGun17EquipSecondWeaponEv"
@@ -339,11 +555,26 @@ Signature for CTerrorGun::ShouldUnzoom(void)const:
 Signature for CTerrorGun::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 "@_ZN10CTerrorGun3UseEP11CBaseEntityS1_8USE_TYPEf"
 
+Signature for CTerrorMeleeWeapon::DoMeleeSwing(void):
+"@_ZN18CTerrorMeleeWeapon12DoMeleeSwingEv"
+
+Signature for CTerrorMeleeWeapon::Holster(CBaseCombatWeapon *):
+"@_ZN18CTerrorMeleeWeapon7HolsterEP17CBaseCombatWeapon"
+
+Signature for CTerrorMeleeWeapon::SecondaryAttack(void):
+"@_ZN18CTerrorMeleeWeapon15SecondaryAttackEv"
+
+Signature for CTerrorMeleeWeapon::StartMeleeSwing(CTerrorPlayer *, bool):
+"@_ZN18CTerrorMeleeWeapon15StartMeleeSwingEP13CTerrorPlayerb"
+
+Signature for CTerrorMeleeWeapon::TestMeleeSwingCollision(Vector const&):
+"@_ZN18CTerrorMeleeWeapon23TestMeleeSwingCollisionERK6Vector"
+
 Signature for CTerrorPlayer::AddUpgrade(SurvivorUpgradeType):
 "@_ZN13CTerrorPlayer10AddUpgradeE19SurvivorUpgradeType"
 
-Signature for CTerrorPlayer::BecomeGhost(ZombieClassType, bool):
-"@_ZN13CTerrorPlayer11BecomeGhostE15ZombieClassTypeb"
+Signature for CTerrorPlayer::BecomeGhost(bool):
+"@_ZN13CTerrorPlayer11BecomeGhostEb"
 
 Signature for CTerrorPlayer::CanBecomeGhost(bool):
 "@_ZN13CTerrorPlayer14CanBecomeGhostEb"
@@ -353,6 +584,9 @@ Signature for CTerrorPlayer::CancelStagger(void):
 
 Signature for CTerrorPlayer::CheckFriendSightings(void):
 "@_ZN13CTerrorPlayer20CheckFriendSightingsEv"
+
+Signature for CTerrorPlayer::ChooseSurvivorCharacter(SurvivorCharacterType)const:
+"@_ZNK13CTerrorPlayer23ChooseSurvivorCharacterE21SurvivorCharacterType"
 
 Signature for CTerrorPlayer::CleanupPlayerState(void):
 "@_ZN13CTerrorPlayer18CleanupPlayerStateEv"
@@ -369,8 +603,11 @@ Signature for CTerrorPlayer::Event_Killed(CTakeDamageInfo const&):
 Signature for CTerrorPlayer::Extinguish(void):
 "@_ZN13CTerrorPlayer10ExtinguishEv"
 
-Signature for CTerrorPlayer::FindUseEntity(float, float, bool *):
-"@_ZN13CTerrorPlayer13FindUseEntityEffPb"
+Signature for CTerrorPlayer::FindUseEntity(float, float, float, bool *, bool):
+"@_ZN13CTerrorPlayer13FindUseEntityEfffPbb"
+
+Signature for CTerrorPlayer::Fling(Vector const&, PlayerAnimEvent_t, CBaseCombatCharacter *, float):
+"@_ZN13CTerrorPlayer5FlingERK6Vector17PlayerAnimEvent_tP20CBaseCombatCharacterf"
 
 Signature for CTerrorPlayer::FireBullet(Vector, QAngle const&, CSWeaponID, int):
 "@_ZN13CTerrorPlayer10FireBulletE6VectorRK6QAngle10CSWeaponIDi"
@@ -390,14 +627,14 @@ Signature for CTerrorPlayer::GetRunTopSpeed(void)const:
 Signature for CTerrorPlayer::GetWalkTopSpeed(void)const:
 "@_ZNK13CTerrorPlayer15GetWalkTopSpeedEv"
 
-Signature for CTerrorPlayer::GiveActiveWeapon(void):
-"@_ZN13CTerrorPlayer16GiveActiveWeaponEv"
+Signature for CTerrorPlayer::GiveActiveWeapon(CTerrorPlayer*):
+"@_ZN13CTerrorPlayer16GiveActiveWeaponEPS_"
 
 Signature for CTerrorPlayer::GiveDefaultItems(void):
 "@_ZN13CTerrorPlayer16GiveDefaultItemsEv"
 
-Signature for CTerrorPlayer::GiveNamedItem(char const*, int, bool):
-"@_ZN13CTerrorPlayer13GiveNamedItemEPKcib"
+Signature for CTerrorPlayer::GiveNamedItem(char const*, int, bool, CBaseEntity *):
+"@_ZN13CTerrorPlayer13GiveNamedItemEPKcibP11CBaseEntity"
 
 Signature for CTerrorPlayer::GoAwayFromKeyboard(void):
 "@_ZN13CTerrorPlayer18GoAwayFromKeyboardEv"
@@ -405,8 +642,14 @@ Signature for CTerrorPlayer::GoAwayFromKeyboard(void):
 Signature for CTerrorPlayer::GrabVictimWithTongue(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer20GrabVictimWithTongueEPS_"
 
+Signature for CTerrorPlayer::Input_GoAwayFromKeyboard(void):
+"@_ZN13CTerrorPlayer24Input_GoAwayFromKeyboardEv"
+
 Signature for CTerrorPlayer::IsClassOverLimit(int):
 "@_ZN13CTerrorPlayer16IsClassOverLimitEi"
+
+Signature for CTerrorPlayer::IsDominatedBySpecialInfected(void)const:
+"@_ZNK13CTerrorPlayer28IsDominatedBySpecialInfectedEv"
 
 Signature for CTerrorPlayer::IsInvulnerable(void)const:
 "@_ZNK13CTerrorPlayer14IsInvulnerableEv"
@@ -423,8 +666,14 @@ Signature for CTerrorPlayer::ModifyOrAppendCriteria(AI_CriteriaSet &):
 Signature for CTerrorPlayer::ModifyOrAppendDerivedCriteria(AI_CriteriaSet &):
 "@_ZN13CTerrorPlayer29ModifyOrAppendDerivedCriteriaER14AI_CriteriaSet"
 
-Signature for CTerrorPlayer::OnBeginChangeLevel(char const*, KeyValues *):
-"@_ZN13CTerrorPlayer18OnBeginChangeLevelEPKcP9KeyValues"
+Signature for CTerrorPlayer::OnAdrenalineEnd(void):
+"@_ZN13CTerrorPlayer15OnAdrenalineEndEv"
+
+Signature for CTerrorPlayer::OnAdrenalineUsed(float):
+"@_ZN13CTerrorPlayer16OnAdrenalineUsedEf"
+
+Signature for CTerrorPlayer::OnBeginChangeLevel(char const*):
+"@_ZN13CTerrorPlayer18OnBeginChangeLevelEPKc"
 
 Signature for CTerrorPlayer::OnEnterGhostState(void):
 "@_ZN13CTerrorPlayer17OnEnterGhostStateEv"
@@ -434,6 +683,9 @@ Signature for CTerrorPlayer::OnEnterIntroCameraState(void):
 
 Signature for CTerrorPlayer::OnFalling(void):
 "@_ZN13CTerrorPlayer9OnFallingEv"
+
+Signature for CTerrorPlayer::OnHitByVomitJar(CBaseCombatCharacter *):
+"@_ZN13CTerrorPlayer15OnHitByVomitJarEP20CBaseCombatCharacter"
 
 Signature for CTerrorPlayer::OnIncapacitatedAsSurvivor(CTakeDamageInfo const&):
 "@_ZN13CTerrorPlayer25OnIncapacitatedAsSurvivorERK15CTakeDamageInfo"
@@ -453,6 +705,9 @@ Signature for CTerrorPlayer::OnLadderMount(void):
 Signature for CTerrorPlayer::OnLedgeGrabbed(Vector const&):
 "@_ZN13CTerrorPlayer14OnLedgeGrabbedERK6Vector"
 
+Signature for CTerrorPlayer::OnLeptOnSurvivor(CTerrorPlayer*):
+"@_ZN13CTerrorPlayer16OnLeptOnSurvivorEPS_"
+
 Signature for CTerrorPlayer::OnLungeEnd(void):
 "@_ZN13CTerrorPlayer10OnLungeEndEv"
 
@@ -462,8 +717,17 @@ Signature for CTerrorPlayer::OnPouncedOnSurvivor(CTerrorPlayer*):
 Signature for CTerrorPlayer::OnPounceEnded(void):
 "@_ZN13CTerrorPlayer13OnPounceEndedEv"
 
+Signature for CTerrorPlayer::OnPummelEnded(bool, CTerrorPlayer*):
+"@_ZN13CTerrorPlayer13OnPummelEndedEbPS_"
+
 Signature for CTerrorPlayer::OnRevived(void):
 "@_ZN13CTerrorPlayer9OnRevivedEv"
+
+Signature for CTerrorPlayer::OnRevivedByDefibrillator(CTerrorPlayer*, CSurvivorDeathModel *):
+"@_ZN13CTerrorPlayer24OnRevivedByDefibrillatorEPS_P19CSurvivorDeathModel"
+
+Signature for CTerrorPlayer::OnRideEnded(CTerrorPlayer*):
+"@_ZN13CTerrorPlayer11OnRideEndedEPS_"
 
 Signature for CTerrorPlayer::OnShovedByPounceLanding(CTerrorPlayer*, bool):
 "@_ZN13CTerrorPlayer23OnShovedByPounceLandingEPS_b"
@@ -471,20 +735,29 @@ Signature for CTerrorPlayer::OnShovedByPounceLanding(CTerrorPlayer*, bool):
 Signature for CTerrorPlayer::OnShovedBySurvivor(CTerrorPlayer*, Vector const&):
 "@_ZN13CTerrorPlayer18OnShovedBySurvivorEPS_RK6Vector"
 
+Signature for CTerrorPlayer::OnSlammedSurvivor(CTerrorPlayer*, bool, bool):
+"@_ZN13CTerrorPlayer17OnSlammedSurvivorEPS_bb"
+
 Signature for CTerrorPlayer::OnStaggered(CBaseEntity *, Vector const*):
 "@_ZN13CTerrorPlayer11OnStaggeredEP11CBaseEntityPK6Vector"
+
+Signature for CTerrorPlayer::OnStartCarryingVictim(CTerrorPlayer*):
+"@_ZN13CTerrorPlayer21OnStartCarryingVictimEPS_"
 
 Signature for CTerrorPlayer::OnTakeDamage_Alive(CTakeDamageInfo const&):
 "@_ZN13CTerrorPlayer18OnTakeDamage_AliveERK15CTakeDamageInfo"
 
-Signature for CTerrorPlayer::OnVomitedUpon(CTerrorPlayer*, bool, bool):
-"@_ZN13CTerrorPlayer13OnVomitedUponEPS_bb"
+Signature for CTerrorPlayer::OnVomitedUpon(CTerrorPlayer*, bool):
+"@_ZN13CTerrorPlayer13OnVomitedUponEPS_b"
 
 Signature for CTerrorPlayer::PlayerZombieAbortControl(void):
 "@_ZN13CTerrorPlayer24PlayerZombieAbortControlEv"
 
 Signature for CTerrorPlayer::PreThink(void):
 "@_ZN13CTerrorPlayer8PreThinkEv"
+
+Signature for CTerrorPlayer::QueuePummelVictim(CTerrorPlayer*, float):
+"@_ZN13CTerrorPlayer17QueuePummelVictimEPS_f"
 
 Signature for CTerrorPlayer::ReleaseTongueVictim(bool):
 "@_ZN13CTerrorPlayer19ReleaseTongueVictimEb"
@@ -501,20 +774,20 @@ Signature for CTerrorPlayer::ResetCheckpointStats(void):
 Signature for CTerrorPlayer::RoundRespawn(void):
 "@_ZN13CTerrorPlayer12RoundRespawnEv"
 
+Signature for CTerrorPlayer::SelectWeightedSequence(Activity):
+"@_ZN13CTerrorPlayer22SelectWeightedSequenceE8Activity"
+
 Signature for CTerrorPlayer::SetBecomeGhostAt(float):
 "@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
 
-Signature for CTerrorPlayer::SetCharacter(void):
-"@_ZN13CTerrorPlayer12SetCharacterEv"
+Signature for CTerrorPlayer::SetCharacter(SurvivorCharacterType):
+"@_ZN13CTerrorPlayer12SetCharacterE21SurvivorCharacterType"
 
-Signature for CTerrorPlayer::SetClass(ZombieClassType) [clone]:
-"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType.part.535"
+Signature for CTerrorPlayer::SetClass(ZombieClassType):
+"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType"
 
 Signature for CTerrorPlayer::SetHealthBuffer(float):
 "@_ZN13CTerrorPlayer15SetHealthBufferEf"
-
-Signature for CTerrorPlayer::SetMainActivity(Activity, bool):
-"@_ZN13CTerrorPlayer15SetMainActivityE8Activityb"
 
 Signature for CTerrorPlayer::SetNextShoveTime(float):
 "@_ZN13CTerrorPlayer16SetNextShoveTimeEf"
@@ -553,10 +826,13 @@ Signature for CTerrorPlayer::Vocalize(char const*, float, float):
 "@_ZN13CTerrorPlayer8VocalizeEPKcff"
 
 Signature for CTerrorPlayer::WarpToValidPositionIfStuck(void) [clone]:
-"@_ZN13CTerrorPlayer26WarpToValidPositionIfStuckEv.part.204"
+"@_ZN13CTerrorPlayer26WarpToValidPositionIfStuckEv.part.198"
 
-Signature for CTerrorWeapon::CanDeploy(void):
-"@_ZN13CTerrorWeapon9CanDeployEv"
+Signature for CTerrorPlayer::Weapon_Drop(CBaseCombatWeapon *, Vector const*, Vector const*):
+"@_ZN13CTerrorPlayer11Weapon_DropEP17CBaseCombatWeaponPK6VectorS4_"
+
+Signature for CTerrorWeapon::CanDeployFor(CTerrorPlayer *):
+"@_ZN13CTerrorWeapon12CanDeployForEP13CTerrorPlayer"
 
 Signature for CTerrorWeapon::OnHit(CGameTrace &, Vector const&, bool):
 "@_ZN13CTerrorWeapon5OnHitER10CGameTraceRK6Vectorb"
@@ -575,6 +851,9 @@ Signature for CTerrorWeaponInfo::Parse(KeyValues *, char const*):
 
 Signature for CThrow::ActivateAbility(void):
 "@_ZN6CThrow15ActivateAbilityEv"
+
+Signature for CThrow::IsAbilityReadyToFire(void)const:
+"@_ZNK6CThrow20IsAbilityReadyToFireEv"
 
 Signature for CThrow::UpdateAbility(void):
 "@_ZN6CThrow13UpdateAbilityEv"
@@ -603,17 +882,26 @@ Signature for CVomit::IsAbilityReadyToFire(void)const:
 Signature for CVomit::UpdateAbility(void):
 "@_ZN6CVomit13UpdateAbilityEv"
 
+Signature for CVomitJarProjectile::Detonate(void):
+"@_ZN19CVomitJarProjectile8DetonateEv"
+
+Signature for CVomitJarProjectile::ExplodeVomit(Vector, Vector):
+"@_ZN19CVomitJarProjectile12ExplodeVomitE6VectorS0_"
+
 Signature for CWeaponAmmoSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 "@_ZN16CWeaponAmmoSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
 
 Signature for CWeaponSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 "@_ZN12CWeaponSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
 
-Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &) (in-lined with CTankRock::ProximityThink(void)):
-"@_ZN9CTankRock14ProximityThinkEv"
+Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &):
+"@_Z13ForEachPlayerI14ProximityCheckEbRT_"
 
-Signature for ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &) [clone]:
-"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_.constprop.265"
+Signature for ForEachSurvivor<MinigunnerScan>(MinigunnerScan &):
+"@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
+
+Signature for ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &):
+"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_"
 
 Signature for GetWeaponInfo(CSWeaponID):
 "@_Z13GetWeaponInfo10CSWeaponID"
@@ -626,6 +914,9 @@ Signature for Infected::AttackSurvivorTeam(void):
 
 Signature for Infected::GetFlowDistance(void)const:
 "@_ZNK8Infected15GetFlowDistanceEv"
+
+Signature for Infected::OnHitByVomitJar(CBaseCombatCharacter *):
+"@_ZN8Infected15OnHitByVomitJarEP20CBaseCombatCharacter"
 
 Signature for Infected::Spawn(void):
 "@_ZN8Infected5SpawnEv"
@@ -645,6 +936,12 @@ Signature for InfoChangelevel::StartChangeLevel(Checkpoint const*):
 Signature for InstallBotControl(void):
 "@_Z17InstallBotControlv"
 
+Signature for IsAreaConnectedToNonCheckpointArea(TerrorNavArea *):
+"@_Z34IsAreaConnectedToNonCheckpointAreaP13TerrorNavArea"
+
+Signature for IsVisibleToPlayer(Vector const&, CBasePlayer *, int, int, float, CBaseEntity const*, TerrorNavArea **, bool *):
+"@_Z17IsVisibleToPlayerRK6VectorP11CBasePlayeriifPK11CBaseEntityPP13TerrorNavAreaPb"
+
 Signature for KeyValues::FindKey(char const*, bool):
 "@_ZN9KeyValues7FindKeyEPKcb"
 
@@ -663,17 +960,26 @@ Signature for KeyValues::GetString(char const*, char const*):
 Signature for KeyValues::SetString(char const*, char const*):
 "@_ZN9KeyValues9SetStringEPKcS1_"
 
+Signature for ModifyOrAppendGlobalCriteria(AI_CriteriaSet *):
+"@_ZL28ModifyOrAppendGlobalCriteriaP14AI_CriteriaSet"
+
 Signature for MovePropAway(CBaseEntity *, CBasePlayer *):
 "@_Z12MovePropAwayP11CBaseEntityP11CBasePlayer"
 
-Signature for Music::Play(char const*, int, float, bool, bool) [clone]:
-"@_ZN5Music4PlayEPKcifbb.constprop.259"
+Signature for Music::IsL4D1(void):
+"@_ZN5Music6IsL4D1Ev"
+
+Signature for Music::OnPZAlert(int, float, char const*, float):
+"@_ZN5Music9OnPZAlertEifPKcf"
+
+Signature for Music::Play(char const*, int, float, bool, bool):
+"@_ZN5Music4PlayEPKcifbb"
 
 Signature for Music::StopPlaying(char const*, float, bool):
 "@_ZN5Music11StopPlayingEPKcfb"
 
-Signature for float NavAreaTravelDistance<ShortestPathCost>(Vector const&, Vector const&, ShortestPathCost &) [clone]:
-"@_Z21NavAreaTravelDistanceI16ShortestPathCostEfRK6VectorS3_RT_.constprop.127"
+Signature for float NavAreaTravelDistance<ShortestPathCost>(Vector const&, Vector const&, ShortestPathCost &):
+"@_Z21NavAreaTravelDistanceI16ShortestPathCostEfRK6VectorS3_RT_"
 
 Signature for NextBotCombatCharacter::DoThink(void):
 "@_ZN22NextBotCombatCharacter7DoThinkEv"
@@ -684,17 +990,29 @@ Signature for NextBotCombatCharacter::Spawn(void):
 Signature for Boomer * NextBotCreatePlayerBot<Boomer>(char const*):
 "@_Z22NextBotCreatePlayerBotI6BoomerEPT_PKc"
 
+Signature for Charger * NextBotCreatePlayerBot<Charger>(char const*):
+"@_Z22NextBotCreatePlayerBotI7ChargerEPT_PKc"
+
 Signature for Hunter * NextBotCreatePlayerBot<Hunter>(char const*):
 "@_Z22NextBotCreatePlayerBotI6HunterEPT_PKc"
 
+Signature for Jockey * NextBotCreatePlayerBot<Jockey>(char const*):
+"@_Z22NextBotCreatePlayerBotI6JockeyEPT_PKc"
+
 Signature for Smoker * NextBotCreatePlayerBot<Smoker>(char const*):
 "@_Z22NextBotCreatePlayerBotI6SmokerEPT_PKc"
+
+Signature for Spitter * NextBotCreatePlayerBot<Spitter>(char const*):
+"@_Z22NextBotCreatePlayerBotI7SpitterEPT_PKc"
 
 Signature for SurvivorBot * NextBotCreatePlayerBot<SurvivorBot>(char const*):
 "@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
 
 Signature for Tank * NextBotCreatePlayerBot<Tank>(char const*):
 "@_Z22NextBotCreatePlayerBotI4TankEPT_PKc"
+
+Signature for NextBotManager::OnCharacterVomitedUpon(CBaseCombatCharacter *):
+"@_ZN14NextBotManager22OnCharacterVomitedUponEP20CBaseCombatCharacter"
 
 Signature for NextBotManager::ShouldUpdate(INextBot *):
 "@_ZN14NextBotManager12ShouldUpdateEP8INextBot"
@@ -714,8 +1032,11 @@ Signature for SurvivorBot::FindScavengeItem(float)const:
 Signature for SurvivorBot::IsReachable(CBaseEntity *)const:
 "@_ZNK11SurvivorBot11IsReachableEP11CBaseEntity"
 
-Signature for SurvivorBot::IsReachable(CNavArea *, CNavArea *)const [clone]:
-"@_ZNK11SurvivorBot11IsReachableEP8CNavAreaS1_.part.114"
+Signature for SurvivorBot::IsReachable(CNavArea *, CNavArea *)const:
+"@_ZNK11SurvivorBot11IsReachableEP8CNavAreaS1_"
+
+Signature for SurvivorBot::IsReachable(Vector const&)const:
+"@_ZNK11SurvivorBot11IsReachableERK6Vector"
 
 Signature for SurvivorBot::SetHumanSpectator(CTerrorPlayer *):
 "@_ZN11SurvivorBot17SetHumanSpectatorEP13CTerrorPlayer"
@@ -728,6 +1049,9 @@ Signature for SurvivorBot::UseHealingItems(Action<SurvivorBot> *):
 
 Signature for SurvivorLegsMeetRescueVehicleArrival::Update(SurvivorBot *, float):
 "@_ZN36SurvivorLegsMeetRescueVehicleArrival6UpdateEP11SurvivorBotf"
+
+Signature for SurvivorResponseCachedInfo::GetClosestSurvivorTo(SurvivorCharacterType):
+"@_ZN26SurvivorResponseCachedInfo20GetClosestSurvivorToE21SurvivorCharacterType"
 
 Signature for SurvivorResponseCachedInfo::Update(void):
 "@_ZN26SurvivorResponseCachedInfo6UpdateEv"
@@ -747,11 +1071,23 @@ Signature for TankBehavior::InitialContainedAction(Tank *):
 Signature for TerrorNavArea::FindRandomSpot(void)const:
 "@_ZNK13TerrorNavArea14FindRandomSpotEv"
 
+Signature for TerrorNavArea::ScriptGetDoor(void):
+"@_ZN13TerrorNavArea13ScriptGetDoorEv"
+
+Signature for TerrorNavArea::ScriptGetSpawnAttributes(void)const:
+"@_ZNK13TerrorNavArea24ScriptGetSpawnAttributesEv"
+
+Signature for TerrorNavArea::ScriptHasSpawnAttributes(int)const:
+"@_ZNK13TerrorNavArea24ScriptHasSpawnAttributesEi"
+
 Signature for TerrorNavMesh::GetInitialCheckpoint(void)const:
 "@_ZNK13TerrorNavMesh20GetInitialCheckpointEv"
 
 Signature for TerrorNavMesh::GetLastCheckpoint(void)const:
 "@_ZNK13TerrorNavMesh17GetLastCheckpointEv"
+
+Signature for ThrowImpactedSurvivor(CTerrorPlayer *, CTerrorPlayer *, float, bool):
+"@_Z21ThrowImpactedSurvivorP13CTerrorPlayerS0_fb"
 
 Signature for Witch::DoAttack(CBaseEntity *):
 "@_ZN5Witch8DoAttackEP11CBaseEntity"
@@ -780,8 +1116,8 @@ Signature for WitchAttack::WitchAttack(CBaseEntity *):
 Signature for WitchLocomotion::IsAreaTraversable(CNavArea const*)const:
 "@_ZNK15WitchLocomotion17IsAreaTraversableEPK8CNavArea"
 
-Signature for ZombieManager::CanZombieSpawnHere(Vector const&, TerrorNavArea *, ZombieClassType, bool, CBaseCombatCharacter *)const [clone]:
-"@_ZNK13ZombieManager18CanZombieSpawnHereERK6VectorP13TerrorNavArea15ZombieClassTypebP20CBaseCombatCharacter.part.89"
+Signature for ZombieManager::CanZombieSpawnHere(Vector const&, TerrorNavArea *, ZombieClassType, bool, CBaseCombatCharacter *)const:
+"@_ZNK13ZombieManager18CanZombieSpawnHereERK6VectorP13TerrorNavArea15ZombieClassTypebP20CBaseCombatCharacter"
 
 Signature for ZombieManager::GetRandomPZSpawnPosition(ZombieClassType, int, CTerrorPlayer *, Vector *)const:
 "@_ZNK13ZombieManager24GetRandomPZSpawnPositionE15ZombieClassTypeiP13CTerrorPlayerP6Vector"
@@ -789,20 +1125,8 @@ Signature for ZombieManager::GetRandomPZSpawnPosition(ZombieClassType, int, CTer
 Signature for ZombieManager::ReplaceTank(CTerrorPlayer *, CTerrorPlayer *):
 "@_ZN13ZombieManager11ReplaceTankEP13CTerrorPlayerS1_"
 
-Signature for ZombieManager::SpawnBoomer(Vector const&, QAngle const&):
-"@_ZN13ZombieManager11SpawnBoomerERK6VectorRK6QAngle"
-
-Signature for ZombieManager::SpawnBoomer(TerrorNavArea const*, QAngle const&):
-"@_ZN13ZombieManager11SpawnBoomerEPK13TerrorNavAreaRK6QAngle"
-
-Signature for ZombieManager::SpawnCommonZombie(TerrorNavArea *, Vector const&, bool)const:
-"@_ZNK13ZombieManager17SpawnCommonZombieEP13TerrorNavAreaRK6Vectorb"
-
-Signature for ZombieManager::SpawnHunter(Vector const&, QAngle const&):
-"@_ZN13ZombieManager11SpawnHunterERK6VectorRK6QAngle"
-
-Signature for ZombieManager::SpawnHunter(TerrorNavArea const*, QAngle const&):
-"@_ZN13ZombieManager11SpawnHunterEPK13TerrorNavAreaRK6QAngle"
+Signature for ZombieManager::SpawnCommonZombie(TerrorNavArea *, Vector const&, ZombieManager::CommonInfectedSpawnDirective):
+"@_ZN13ZombieManager17SpawnCommonZombieEP13TerrorNavAreaRK6VectorNS_28CommonInfectedSpawnDirectiveE"
 
 Signature for ZombieManager::SpawnITMob(int):
 "@_ZN13ZombieManager10SpawnITMobEi"
@@ -810,23 +1134,29 @@ Signature for ZombieManager::SpawnITMob(int):
 Signature for ZombieManager::SpawnMob(int):
 "@_ZN13ZombieManager8SpawnMobEi"
 
-Signature for ZombieManager::SpawnSmoker(Vector const&, QAngle const&):
-"@_ZN13ZombieManager11SpawnSmokerERK6VectorRK6QAngle"
+Signature for ZombieManager::SpawnSpecial(ZombieClassType, Vector const&, QAngle const&):
+"@_ZN13ZombieManager12SpawnSpecialE15ZombieClassTypeRK6VectorRK6QAngle"
 
-Signature for ZombieManager::SpawnSmoker(TerrorNavArea const*, QAngle const&):
-"@_ZN13ZombieManager11SpawnSmokerEPK13TerrorNavAreaRK6QAngle"
+Signature for ZombieManager::SpawnSpecial(ZombieClassType, TerrorNavArea const*, QAngle const&):
+"@_ZN13ZombieManager12SpawnSpecialE15ZombieClassTypePK13TerrorNavAreaRK6QAngle"
 
 Signature for ZombieManager::SpawnTank(Vector const&, QAngle const&):
 "@_ZN13ZombieManager9SpawnTankERK6VectorRK6QAngle"
 
-Signature for ZombieManager::SpawnTank(TerrorNavArea const*, QAngle const&):
-"@_ZN13ZombieManager9SpawnTankEPK13TerrorNavAreaRK6QAngle"
+Signature for ZombieManager::SpawnTank(TerrorNavArea const*, QAngle const&, bool):
+"@_ZN13ZombieManager9SpawnTankEPK13TerrorNavAreaRK6QAngleb"
 
 Signature for ZombieManager::SpawnWitch(Vector const&, QAngle const&):
 "@_ZN13ZombieManager10SpawnWitchERK6VectorRK6QAngle"
 
-Signature for ZombieManager::SpawnWitch(TerrorNavArea const*, QAngle const&):
-"@_ZN13ZombieManager10SpawnWitchEPK13TerrorNavAreaRK6QAngle"
+Signature for ZombieManager::SpawnWitch(TerrorNavArea const*, QAngle const&, bool):
+"@_ZN13ZombieManager10SpawnWitchEPK13TerrorNavAreaRK6QAngleb"
+
+Signature for ZombieManager::SpawnWitchBride(Vector const&, QAngle const&):
+"@_ZN13ZombieManager15SpawnWitchBrideERK6VectorRK6QAngle"
+
+Signature for ZSpawnCore(int, Vector, QAngle, int, bool, bool, bool) [clone]:
+"@_ZL10ZSpawnCorei6Vector6QAngleibbb.isra.150"
 
 Signature for go_away_from_keyboard(CCommand const&):
 "@_ZL21go_away_from_keyboardRK8CCommand"
@@ -839,4 +1169,10 @@ Signature for outtro_stats_done(CCommand const&):
 
 Signature for z_spawn(CCommand const&):
 "@_ZL7z_spawnRK8CCommand"
+
+Signature for z_spawn_old(CCommand const&):
+"@_ZL11z_spawn_oldRK8CCommand"
+
+Signature for Script_ZSpawn(HSCRIPT__ *):
+"@_Z13Script_ZSpawnP9HSCRIPT__"
 

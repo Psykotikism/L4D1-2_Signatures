@@ -1,4 +1,4 @@
-/* From "server.so" */
+/* From "server.dylib" */
 
 Signature for BossZombiePlayerBot::ChooseVictim(CTerrorPlayer *):
 "@_ZN19BossZombiePlayerBot12ChooseVictimEP13CTerrorPlayer"

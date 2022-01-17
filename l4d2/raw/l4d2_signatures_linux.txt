@@ -447,6 +447,9 @@ Signature for CTankRock::OnRelease(Vector const&, QAngle const&, Vector const&, 
 Signature for CTankRock::ProximityThink(void):
 "@_ZN9CTankRock14ProximityThinkEv"
 
+Signature for CTerrorGameMovement::CheckForLadders(bool):
+"@_ZN19CTerrorGameMovement15CheckForLaddersEb"
+
 Signature for CTerrorGameMovement::DoJump(Vector *):
 "@_ZN19CTerrorGameMovement6DoJumpEP6Vector"
 
@@ -956,6 +959,9 @@ Signature for KeyValues::GetString(char const*, char const*):
 
 Signature for KeyValues::SetString(char const*, char const*):
 "@_ZN9KeyValues9SetStringEPKcS1_"
+
+Signature for ModifyOrAppendGlobalCriteria(AI_CriteriaSet *):
+"@_ZL28ModifyOrAppendGlobalCriteriaP14AI_CriteriaSet"
 
 Signature for MovePropAway(CBaseEntity *, CBasePlayer *):
 "@_Z12MovePropAwayP11CBaseEntityP11CBasePlayer"

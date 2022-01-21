@@ -177,11 +177,11 @@ Signature for CFinaleTrigger::StartFinale(CTerrorPlayer *):
 Signature for CFirstAidKit::FinishHealing(void):
 "@_ZN12CFirstAidKit13FinishHealingEv"
 
-Signature for CFirstAidKit::StartHealing(CFirstAidKit::HealTargetType) [clone]:
-"@_ZN12CFirstAidKit12StartHealingENS_14HealTargetTypeE.part.43"
+Signature for CFirstAidKit::StartHealing(CFirstAidKit::HealTargetType):
+"@_ZN12CFirstAidKit12StartHealingENS_14HealTargetTypeE"
 
-Signature for CFirstAidKit::StopHealing(void) [clone]:
-"@_ZN12CFirstAidKit11StopHealingEv.part.42"
+Signature for CFirstAidKit::StopHealing(void):
+"@_ZN12CFirstAidKit11StopHealingEv"
 
 Signature for CGameRulesProxy::NotifyNetworkStateChanged(void):
 "@_ZN15CGameRulesProxy25NotifyNetworkStateChangedEv"
@@ -258,20 +258,20 @@ Signature for CTankClaw::OnPlayerHit(CTerrorPlayer *, bool):
 Signature for CTankClaw::OnWindupFinished(void):
 "@_ZN9CTankClaw16OnWindupFinishedEv"
 
-Signature for CTankClaw::SweepFist(Vector const&, Vector const&) [clone]:
-"@_ZN9CTankClaw9SweepFistERK6VectorS2_.constprop.248"
+Signature for CTankClaw::SweepFist(Vector const&, Vector const&):
+"@_ZN9CTankClaw9SweepFistERK6VectorS2_"
 
 Signature for CTankRock::BounceTouch(CBaseEntity *):
 "@_ZN9CTankRock11BounceTouchEP11CBaseEntity"
 
-Signature for CTankRock::Create(Vector const&, QAngle const&, Vector const&, CBaseCombatCharacter *) [clone]:
-"@_ZN9CTankRock6CreateERK6VectorRK6QAngleS2_P20CBaseCombatCharacter.constprop.123"
+Signature for CTankRock::Create(Vector const&, QAngle const&, Vector const&, CBaseCombatCharacter *):
+"@_ZN9CTankRock6CreateERK6VectorRK6QAngleS2_P20CBaseCombatCharacter"
 
 Signature for CTankRock::Detonate(void):
 "@_ZN9CTankRock8DetonateEv"
 
-Signature for CTankRock::OnRelease(Vector const&, QAngle const&, Vector const&, Vector const&) [clone]:
-"@_ZN9CTankRock9OnReleaseERK6VectorRK6QAngleS2_S2_.constprop.121"
+Signature for CTankRock::OnRelease(Vector const&, QAngle const&, Vector const&, Vector const&):
+"@_ZN9CTankRock9OnReleaseERK6VectorRK6QAngleS2_S2_"
 
 Signature for CTankRock::ProximityThink(void) (in-lined with ForEachPlayer<ProximityCheck>(ProximityCheck &)):
 "@_ZN9CTankRock14ProximityThinkEv"
@@ -507,8 +507,8 @@ Signature for CTerrorPlayer::SetBecomeGhostAt(float):
 Signature for CTerrorPlayer::SetCharacter(void):
 "@_ZN13CTerrorPlayer12SetCharacterEv"
 
-Signature for CTerrorPlayer::SetClass(ZombieClassType) [clone]:
-"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType.part.535"
+Signature for CTerrorPlayer::SetClass(ZombieClassType):
+"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType"
 
 Signature for CTerrorPlayer::SetHealthBuffer(float):
 "@_ZN13CTerrorPlayer15SetHealthBufferEf"
@@ -552,8 +552,8 @@ Signature for CTerrorPlayer::UpdateZombieFrustration(void):
 Signature for CTerrorPlayer::Vocalize(char const*, float, float):
 "@_ZN13CTerrorPlayer8VocalizeEPKcff"
 
-Signature for CTerrorPlayer::WarpToValidPositionIfStuck(void) [clone]:
-"@_ZN13CTerrorPlayer26WarpToValidPositionIfStuckEv.part.204"
+Signature for CTerrorPlayer::WarpToValidPositionIfStuck(void):
+"@_ZN13CTerrorPlayer26WarpToValidPositionIfStuckEv"
 
 Signature for CTerrorWeapon::CanDeploy(void):
 "@_ZN13CTerrorWeapon9CanDeployEv"
@@ -612,8 +612,8 @@ Signature for CWeaponSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &) (in-lined with CTankRock::ProximityThink(void)):
 "@_ZN9CTankRock14ProximityThinkEv"
 
-Signature for ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &) [clone]:
-"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_.constprop.265"
+Signature for ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &):
+"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_"
 
 Signature for GetWeaponInfo(CSWeaponID):
 "@_Z13GetWeaponInfo10CSWeaponID"
@@ -666,14 +666,14 @@ Signature for KeyValues::SetString(char const*, char const*):
 Signature for MovePropAway(CBaseEntity *, CBasePlayer *):
 "@_Z12MovePropAwayP11CBaseEntityP11CBasePlayer"
 
-Signature for Music::Play(char const*, int, float, bool, bool) [clone]:
-"@_ZN5Music4PlayEPKcifbb.constprop.259"
+Signature for Music::Play(char const*, int, float, bool, bool):
+"@_ZN5Music4PlayEPKcifbb"
 
 Signature for Music::StopPlaying(char const*, float, bool):
 "@_ZN5Music11StopPlayingEPKcfb"
 
-Signature for float NavAreaTravelDistance<ShortestPathCost>(Vector const&, Vector const&, ShortestPathCost &) [clone]:
-"@_Z21NavAreaTravelDistanceI16ShortestPathCostEfRK6VectorS3_RT_.constprop.127"
+Signature for float NavAreaTravelDistance<ShortestPathCost>(Vector const&, Vector const&, ShortestPathCost &):
+"@_Z21NavAreaTravelDistanceI16ShortestPathCostEfRK6VectorS3_RT_"
 
 Signature for NextBotCombatCharacter::DoThink(void):
 "@_ZN22NextBotCombatCharacter7DoThinkEv"
@@ -714,8 +714,8 @@ Signature for SurvivorBot::FindScavengeItem(float)const:
 Signature for SurvivorBot::IsReachable(CBaseEntity *)const:
 "@_ZNK11SurvivorBot11IsReachableEP11CBaseEntity"
 
-Signature for SurvivorBot::IsReachable(CNavArea *, CNavArea *)const [clone]:
-"@_ZNK11SurvivorBot11IsReachableEP8CNavAreaS1_.part.114"
+Signature for SurvivorBot::IsReachable(CNavArea *, CNavArea *)const:
+"@_ZNK11SurvivorBot11IsReachableEP8CNavAreaS1_"
 
 Signature for SurvivorBot::SetHumanSpectator(CTerrorPlayer *):
 "@_ZN11SurvivorBot17SetHumanSpectatorEP13CTerrorPlayer"
@@ -780,8 +780,8 @@ Signature for WitchAttack::WitchAttack(CBaseEntity *):
 Signature for WitchLocomotion::IsAreaTraversable(CNavArea const*)const:
 "@_ZNK15WitchLocomotion17IsAreaTraversableEPK8CNavArea"
 
-Signature for ZombieManager::CanZombieSpawnHere(Vector const&, TerrorNavArea *, ZombieClassType, bool, CBaseCombatCharacter *)const [clone]:
-"@_ZNK13ZombieManager18CanZombieSpawnHereERK6VectorP13TerrorNavArea15ZombieClassTypebP20CBaseCombatCharacter.part.89"
+Signature for ZombieManager::CanZombieSpawnHere(Vector const&, TerrorNavArea *, ZombieClassType, bool, CBaseCombatCharacter *)const:
+"@_ZNK13ZombieManager18CanZombieSpawnHereERK6VectorP13TerrorNavArea15ZombieClassTypebP20CBaseCombatCharacter"
 
 Signature for ZombieManager::GetRandomPZSpawnPosition(ZombieClassType, int, CTerrorPlayer *, Vector *)const:
 "@_ZNK13ZombieManager24GetRandomPZSpawnPositionE15ZombieClassTypeiP13CTerrorPlayerP6Vector"

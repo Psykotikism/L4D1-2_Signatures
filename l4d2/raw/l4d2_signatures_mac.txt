@@ -825,8 +825,8 @@ Signature for CTerrorPlayer::UpdateZombieFrustration(void):
 Signature for CTerrorPlayer::Vocalize(char const*, float, float):
 "@_ZN13CTerrorPlayer8VocalizeEPKcff"
 
-Signature for CTerrorPlayer::WarpToValidPositionIfStuck(void) [clone]:
-"@_ZN13CTerrorPlayer26WarpToValidPositionIfStuckEv.part.198"
+Signature for CTerrorPlayer::WarpToValidPositionIfStuck(void):
+"@_ZN13CTerrorPlayer26WarpToValidPositionIfStuckEv"
 
 Signature for CTerrorPlayer::Weapon_Drop(CBaseCombatWeapon *, Vector const*, Vector const*):
 "@_ZN13CTerrorPlayer11Weapon_DropEP17CBaseCombatWeaponPK6VectorS4_"
@@ -1155,8 +1155,8 @@ Signature for ZombieManager::SpawnWitch(TerrorNavArea const*, QAngle const&, boo
 Signature for ZombieManager::SpawnWitchBride(Vector const&, QAngle const&):
 "@_ZN13ZombieManager15SpawnWitchBrideERK6VectorRK6QAngle"
 
-Signature for ZSpawnCore(int, Vector, QAngle, int, bool, bool, bool) [clone]:
-"@_ZL10ZSpawnCorei6Vector6QAngleibbb.isra.150"
+Signature for ZSpawnCore(int, Vector, QAngle, int, bool, bool, bool):
+"@_ZL10ZSpawnCorei6Vector6QAngleibbb"
 
 Signature for go_away_from_keyboard(CCommand const&):
 "@_ZL21go_away_from_keyboardRK8CCommand"

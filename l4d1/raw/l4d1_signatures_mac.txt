@@ -1,5 +1,8 @@
 /* From "server.dylib" */
 
+Signature for AI_CriteriaSet::AppendCriteria(char const*, char const*, float):
+"@_ZN14AI_CriteriaSet14AppendCriteriaEPKcS1_f"
+
 Signature for BossZombiePlayerBot::ChooseVictim(CTerrorPlayer *):
 "@_ZN19BossZombiePlayerBot12ChooseVictimEP13CTerrorPlayer"
 
@@ -45,6 +48,9 @@ Signature for CBaseEntity::ApplyLocalAngularVelocityImpulse(Vector const&):
 Signature for CBaseEntity::Create(char const*, Vector const&, QAngle const&, CBaseEntity*):
 "@_ZN11CBaseEntity6CreateEPKcRK6VectorRK6QAnglePS_"
 
+Signature for CBaseEntity::GetGroundEntity(void):
+"@_ZN11CBaseEntity15GetGroundEntityEv"
+
 Signature for CBaseEntity::GetUsePriority(CBaseEntity*):
 "@_ZN11CBaseEntity14GetUsePriorityEPS_"
 
@@ -68,6 +74,9 @@ Signature for CBasePlayer::SetFOV(CBaseEntity *, int, float, int):
 
 Signature for CBasePlayer::SetModel(char const*):
 "@_ZN11CBasePlayer8SetModelEPKc"
+
+Signature for CBasePlayer::SetViewEntity(CBaseEntity *):
+"@_ZN11CBasePlayer13SetViewEntityEP11CBaseEntity"
 
 Signature for CBasePlayer::WaterMove(void):
 "@_ZN11CBasePlayer9WaterMoveEv"
@@ -216,6 +225,9 @@ Signature for CNavArea::IsBlocked(int, bool)const:
 Signature for CNavArea::SpliceEdit(CNavArea*):
 "@_ZN8CNavArea10SpliceEditEPS_"
 
+Signature for CNavLadder::GetPosAtHeight(float)const:
+"@_ZNK10CNavLadder14GetPosAtHeightEf"
+
 Signature for CNavMesh::GetNavArea(Vector const&, float)const:
 "@_ZNK8CNavMesh10GetNavAreaERK6Vectorf"
 
@@ -273,11 +285,14 @@ Signature for CTankRock::Detonate(void):
 Signature for CTankRock::OnRelease(Vector const&, QAngle const&, Vector const&, Vector const&):
 "@_ZN9CTankRock9OnReleaseERK6VectorRK6QAngleS2_S2_"
 
-Signature for CTankRock::ProximityThink(void) (in-lined with ForEachPlayer<ProximityCheck>(ProximityCheck &)):
+Signature for CTankRock::ProximityThink(void):
 "@_ZN9CTankRock14ProximityThinkEv"
 
 Signature for CTerrorGameMovement::CheckForLadders(bool):
 "@_ZN19CTerrorGameMovement15CheckForLaddersEb"
+
+Signature for CTerrorGameMovement::CheckJumpButton(void):
+"@_ZN19CTerrorGameMovement15CheckJumpButtonEv"
 
 Signature for CTerrorGameMovement::DoJump(Vector *):
 "@_ZN19CTerrorGameMovement6DoJumpEP6Vector"
@@ -426,6 +441,9 @@ Signature for CTerrorPlayer::ModifyOrAppendDerivedCriteria(AI_CriteriaSet &):
 Signature for CTerrorPlayer::OnBeginChangeLevel(char const*, KeyValues *):
 "@_ZN13CTerrorPlayer18OnBeginChangeLevelEPKcP9KeyValues"
 
+Signature for CTerrorPlayer::OnEndChangeLevel(void):
+"@_ZN13CTerrorPlayer16OnEndChangeLevelEv"
+
 Signature for CTerrorPlayer::OnEnterGhostState(void):
 "@_ZN13CTerrorPlayer17OnEnterGhostStateEv"
 
@@ -461,6 +479,9 @@ Signature for CTerrorPlayer::OnPouncedOnSurvivor(CTerrorPlayer*):
 
 Signature for CTerrorPlayer::OnPounceEnded(void):
 "@_ZN13CTerrorPlayer13OnPounceEndedEv"
+
+Signature for CTerrorPlayer::OnPreThinkGhostState(void):
+"@_ZN13CTerrorPlayer20OnPreThinkGhostStateEv"
 
 Signature for CTerrorPlayer::OnRevived(void):
 "@_ZN13CTerrorPlayer9OnRevivedEv"
@@ -518,6 +539,9 @@ Signature for CTerrorPlayer::SetMainActivity(Activity, bool):
 
 Signature for CTerrorPlayer::SetNextShoveTime(float):
 "@_ZN13CTerrorPlayer16SetNextShoveTimeEf"
+
+Signature for CTerrorPlayer::SetPreSpawnClass(ZombieClassType):
+"@_ZN13CTerrorPlayer16SetPreSpawnClassE15ZombieClassType"
 
 Signature for CTerrorPlayer::StartReviving(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer13StartRevivingEPS_"
@@ -609,8 +633,8 @@ Signature for CWeaponAmmoSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, floa
 Signature for CWeaponSpawn::Use(CBaseEntity *, CBaseEntity *, USE_TYPE, float):
 "@_ZN12CWeaponSpawn3UseEP11CBaseEntityS1_8USE_TYPEf"
 
-Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &) (in-lined with CTankRock::ProximityThink(void)):
-"@_ZN9CTankRock14ProximityThinkEv"
+Signature for ForEachPlayer<ProximityCheck>(ProximityCheck &):
+"@_Z13ForEachPlayerI14ProximityCheckEbRT_"
 
 Signature for ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &):
 "@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_"
@@ -666,6 +690,9 @@ Signature for KeyValues::SetString(char const*, char const*):
 Signature for MovePropAway(CBaseEntity *, CBasePlayer *):
 "@_Z12MovePropAwayP11CBaseEntityP11CBasePlayer"
 
+Signature for Music::OnSavedFromLedgeHang(void):
+"@_ZN5Music20OnSavedFromLedgeHangEv"
+
 Signature for Music::Play(char const*, int, float, bool, bool):
 "@_ZN5Music4PlayEPKcifbb"
 
@@ -707,6 +734,12 @@ Signature for ReadWeaponDataFromFileForSlot(IFileSystem *, char const*, unsigned
 
 Signature for SelectModelByPopulation(char const*, CUtlVector<char const*, CUtlMemory<char const*, int>> &):
 "@_Z23SelectModelByPopulationPKcR10CUtlVectorIS0_10CUtlMemoryIS0_iEE"
+
+Signature for SurvivorAttack::SelectTarget(SurvivorBot *):
+"@_ZN14SurvivorAttack12SelectTargetEP11SurvivorBot"
+
+Signature for SurvivorBehavior::SelectMoreDangerousThreat(INextBot const*, CBaseCombatCharacter const*, CBaseCombatCharacter*, CBaseCombatCharacter*)const:
+"@_ZNK16SurvivorBehavior25SelectMoreDangerousThreatEPK8INextBotPK20CBaseCombatCharacterPS3_S6_"
 
 Signature for SurvivorBot::FindScavengeItem(float)const:
 "@_ZNK11SurvivorBot16FindScavengeItemEf"

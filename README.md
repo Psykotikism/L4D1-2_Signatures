@@ -39,20 +39,20 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 - Most of these signatures are heavily wildcarded but have been tested across multiple versions of both games to be very durable. While shorter signatures are ideal, longer but durable ones are more convenient.
 
 ### Signature Count
-- **L4D1**: 279
-- **L4D2**: 390
+- **L4D1**: 291
+- **L4D2**: 404
 
 ### Left 4 Dead
 - Most of the signatures have been verified to have withstood the last landmark update:
-1. `Pre-Current (7-24-2019)` - `24/279` changed since the latest version came out.
+1. `Pre-Current (7-24-2019)` - `25/291` changed since the latest version came out.
 2. `Current (8-9-2021)`
 
 ### Left 4 Dead 2
 - Most of the signatures have been verified to have withstood the last five landmark updates:
-1. `Pre-TLS (6-5-2020)` - `58/390` changed since the latest version came out.
-2. `TLS (9-24-2020)` - `55/390` changed since the latest version came out.
-3. `Post-TLS (2-18-2021)` - `52/390` changed since the latest version came out.
-4. `Pre-Current (6-15-2021)` - `47/390` changed since the latest version came out.
+1. `Pre-TLS (6-5-2020)` - `64/404` changed since the latest version came out.
+2. `TLS (9-24-2020)` - `60/404` changed since the latest version came out.
+3. `Post-TLS (2-18-2021)` - `57/404` changed since the latest version came out.
+4. `Pre-Current (6-15-2021)` - `51/404` changed since the latest version came out.
 5. `Current (12-9-2021)`
 - Keep in mind that does not mean that most of these signatures will never break. It just means that they are durable enough to withstand several major updates unless VALVe updates the code of their respective functions and/or uses different compiler settings.
 

@@ -5,6 +5,22 @@
 		"Signatures"
 		{
 			/**
+			 * AI_CriteriaSet::AppendCriteria(char const*, char const*, float)
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "CTerrorPlayer::ModifyOrAppendCriteria" function.
+			 * 2. This function should be called in several parts of the "CTerrorPlayer::ModifyOrAppendCriteria" function.
+			 **/
+			"AI_CriteriaSet::AppendCriteria"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14AI_CriteriaSet14AppendCriteriaEPKcS1_f"
+				"mac"		"@_ZN14AI_CriteriaSet14AppendCriteriaEPKcS1_f"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x50\x8D\x2A\x2A\x51\xB9"
+						/* ? ? ? ? ? ? 56 8B ? 50 8D ? ? 51 B9 */
+			}
+
+			/**
 			 * BossZombiePlayerBot::ChooseVictim(CTerrorPlayer *, int, CBaseCombatCharacter *)
 			 *
 			 * How to find on Windows:
@@ -292,6 +308,22 @@
 			}
 
 			/**
+			 * CBaseEntity::GetGroundEntity()
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "CTerrorGameMovement::CheckJumpButton" function.
+			 * 2. This function is called in an if-statement by itself without any comparison checks.
+			 **/
+			"CBaseEntity::GetGroundEntity"
+			{
+				"library"	"server"
+				"linux"		"@_ZN11CBaseEntity15GetGroundEntityEv"
+				"mac"		"@_ZN11CBaseEntity15GetGroundEntityEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x74\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x81\x2A\x2A\x2A\x2A\x2A\x03\x2A\x8D\x2A\x2A\x2A\x85\x2A\x74\x2A\xC1\x2A\x2A\x39\x2A\x2A\x75\x2A\x8B\x2A\xC3\x33\x2A\xC3\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xF6\x81"
+						/* ? ? ? ? ? ? 83 ? ? 74 ? 8B ? ? ? ? ? 8B ? 81 ? ? ? ? ? 03 ? 8D ? ? ? 85 ? 74 ? C1 ? ? 39 ? ? 75 ? 8B ? C3 33 ? C3 ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? F6 81 */
+			}
+
+			/**
 			 * CBaseEntity::GetUsePriority(CBaseEntity*)
 			 *
 			 * How to find on Windows:
@@ -430,6 +462,22 @@
 				"mac"		"@_ZN11CBasePlayer8SetModelEPKc"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x3D"
 						/* ? ? ? ? ? ? 56 57 50 8B ? E8 ? ? ? ? 8B 3D */
+			}
+
+			/**
+			 * CBasePlayer::SetViewEntity(CBaseEntity *)
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "CDeathFallCamera::Enable" function.
+			 * 2. The fifth function call in "CDeathFallCamera::Enable" should be this function.
+			 **/
+			"CBasePlayer::SetViewEntity"
+			{
+				"library"	"server"
+				"linux"		"@_ZN11CBasePlayer13SetViewEntityEP11CBaseEntity"
+				"mac"		"@_ZN11CBasePlayer13SetViewEntityEP11CBaseEntity"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x50\x8D\x8F"
+						/* ? ? ? ? ? ? 56 57 8B ? 50 8D 8F */
 			}
 
 			/**
@@ -1776,7 +1824,6 @@
 				"library"	"server"
 				"linux"		"@_ZN16CGrenadeLauncher13PrimaryAttackEv"
 				"mac"		"@_ZN16CGrenadeLauncher13PrimaryAttackEv"
-				"mac"		"@_ZN16CGrenadeLauncher13PrimaryAttackEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B"
 						/* ? ? ? ? ? ? 53 56 8B ? E8 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 0F 84 ? ? ? ? 8B */
 			}
@@ -2142,6 +2189,22 @@
 				"mac"		"@_ZN8CNavArea10SpliceEditEPS_"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x8B\x2A\x2A\xF3\x2A\x2A\x2A\x2A\x56"
 						/* ? ? ? ? ? ? 53 8B ? ? F3 ? ? ? ? 56 */
+			}
+
+			/**
+			 * CNavLadder::GetPosAtHeight(float)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "GetPosAtHeight" string.
+			 * 2. The last function call below the string should be this function.
+			 **/
+			"CNavLadder::GetPosAtHeight"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK10CNavLadder14GetPosAtHeightEf"
+				"mac"		"@_ZNK10CNavLadder14GetPosAtHeightEf"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xF3\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x76\x2A\x8B\x2A\x2A\x8B\x2A\x2A\x89\x2A\x8B\x2A\x2A\x8B\x2A\x2A\x89\x2A\x2A\x89\x2A\x2A\x5D\xC2\x2A\x2A\xF3"
+						/* ? ? ? ? ? ? ? ? F3 ? ? ? ? 0F ? ? 76 ? 8B ? ? 8B ? ? 89 ? 8B ? ? 8B ? ? 89 ? ? 89 ? ? 5D C2 ? ? F3 */
 			}
 
 			/**
@@ -2720,6 +2783,28 @@
 			}
 
 			/**
+			 * CTerrorGameMovement::CheckJumpButton()
+			 *
+			 * How to find on Windows:
+			 * 1a. Locate the "CTerrorGameMovement::DoJump" function.
+			 * 2a. One of the functions that calls "CTerrorGameMovement::DoJump" should be this function.
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CTerrorGameMovement::`vftable'" to jump to the "CTerrorGameMovement" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CTerrorGameMovement::CheckJumpButton"
+			{
+				"library"	"server"
+				"linux"		"@_ZN19CTerrorGameMovement15CheckJumpButtonEv"
+				"mac"		"@_ZN19CTerrorGameMovement15CheckJumpButtonEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\x80\xB8\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x2A\x2A\x83\x2A\x2A\x2A\x32\x2A\x5E\xC3"
+						/* ? ? ? ? ? ? ? ? ? 85 ? 74 ? 80 B8 ? ? ? ? ? 74 ? 8B ? ? 83 ? ? ? 32 ? 5E C3 */
+			}
+
+			/**
 			 * CTerrorGameMovement::DoJump(Vector*)
 			 *
 			 * How to find on Windows:
@@ -3198,9 +3283,10 @@
 			 * 2a. One of the functions that references that string should be this function.
 			 *
 			 * 1b. Find the function's offsets with asherkin's VTable dump.
-			 * 2b. Use IDA to get the VTable dump for the "CTerrorGun" class on Windows.
-			 * 3b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
-			 * 4b. Look for the target function in the Windows binary.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CTerrorGun::`vftable'" to jump to the "CTerrorGun" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
 			 **/
 			"CTerrorGun::EquipSecondWeapon"
 			{
@@ -3310,9 +3396,10 @@
 			 *
 			 * How to find on Windows:
 			 * 1. Find the function's offsets with asherkin's VTable dump.
-			 * 2. Use IDA to get the VTable dump for the "CTerrorGun" class on Windows.
-			 * 3. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
-			 * 4. Look for the target function in the Windows binary.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CTerrorGun::`vftable'" to jump to the "CTerrorGun" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
 			 **/
 			"CTerrorGun::Use"
 			{
@@ -4114,6 +4201,31 @@
 			}
 
 			/**
+			 * CTerrorPlayer::OnEndChangeLevel()
+			 *
+			 * How to find on Windows:
+			 * 1a. Search for any of the following strings (they can each only be found in this function):
+			 * - "OnEndChangelevel %s(%d): %d saved players:\n"
+			 * - "\t%s(%d), state %d\n"
+			 * - "Skipping saved player %s(%d) - restore was already done\n"
+			 * - "Skipping saved player %s(%d) - we're on %s and it's only valid for %s\n"
+			 *
+			 * 1b. Find the function's offsets with asherkin's VTable dump.
+			 * 2b. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3b. Search for "CTerrorPlayer::`vftable'" to jump to the "CTerrorPlayer" vtable.
+			 * 4b. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5b. Look for the target function in the Windows binary.
+			 **/
+			"CTerrorPlayer::OnEndChangeLevel"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer16OnEndChangeLevelEv"
+				"mac"		"@_ZN13CTerrorPlayer16OnEndChangeLevelEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x8B\x0D"
+						/* ? ? ? ? ? ? 53 56 57 8B ? E8 ? ? ? ? 8B ? ? 8B 0D */
+			}
+
+			/**
 			 * CTerrorPlayer::OnEnterGhostState()
 			 *
 			 * How to find on Windows:
@@ -4356,6 +4468,25 @@
 				"mac"		"@_ZN13CTerrorPlayer13OnPounceEndedEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x80\xBB\x2A\x2A\x2A\x2A\x2A\x56\x74"
 						/* ? ? ? ? ? ? ? 80 BB ? ? ? ? ? 56 74 */
+			}
+
+			/**
+			 * CTerrorPlayer::OnPreThinkGhostState()
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CTerrorPlayer::`vftable'" to jump to the "CTerrorPlayer" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"CTerrorPlayer::OnPreThinkGhostState"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer20OnPreThinkGhostStateEv"
+				"mac"		"@_ZN13CTerrorPlayer20OnPreThinkGhostStateEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x83\x2A\x2A\x55\x8B\x2A\x2A\x89\x2A\x2A\x2A\x8B\x2A\x81\xEC\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x8B\x2A\x8B\x0D"
+						/* ? ? ? ? ? ? 83 ? ? 83 ? ? 55 8B ? ? 89 ? ? ? 8B ? 81 EC ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 8B ? 8B 0D */
 			}
 
 			/**
@@ -4796,6 +4927,23 @@
 				"mac"		"@_ZN13CTerrorPlayer16SetNextShoveTimeEf"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x0F\x2F\x2A\x2A\x2A\x2A\x2A\x76\x2A\xF3\x0F\x2A\x2A\x2A\x2A\x2A\x2A\x0F\x2A\x2A\x9F\xF6\x2A\x2A\x7B\x2A\x80\x2A\x2A\x2A\x74\x2A\x80\x2A\x2A\x2A\xF3\x0F\x2A\x2A\x2A\x2A\x2A\x2A\x5E\x5D"
 						/* ? ? ? ? ? ? ? ? 56 8B ? 0F 2F ? ? ? ? ? 76 ? F3 0F ? ? ? ? ? ? 0F ? ? 9F F6 ? ? 7B ? 80 ? ? ? 74 ? 80 ? ? ? F3 0F ? ? ? ? ? ? 5E 5D */
+			}
+
+			/**
+			 * CTerrorPlayer::SetPreSpawnClass(ZombieClassType)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "tank_frustrated" string.
+			 * 2. The string can only be found in "CTerrorPlayer::UpdateZombieFrustration".
+			 * 3. The fourth to last function call in "CTerrorPlayer::UpdateZombieFrustration" with the value "3" passed to it should be this function.
+			 **/
+			"CTerrorPlayer::SetPreSpawnClass"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer16SetPreSpawnClassE15ZombieClassType"
+				"mac"		"@_ZN13CTerrorPlayer16SetPreSpawnClassE15ZombieClassType"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\xF1\x39\xBE\xB8"
+						/* ? ? ? ? ? ? ? ? 8B F1 39 BE B8 */
 			}
 
 			/**
@@ -5451,6 +5599,22 @@
 			}
 
 			/**
+			 * ForEachSurvivor<MinigunnerScan>(MinigunnerScan &)
+			 *
+			 * How to find on Windows:
+			 * 1. Locate the "TankAttack::Update" function.
+			 * 2. This function is called before the "== 0.0" check.
+			 **/
+			"ForEachSurvivor<MinigunnerScan>"
+			{
+				"library"	"server"
+				"linux"		"@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
+				"mac"		"@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x57\xBF\x2A\x2A\x2A\x2A\x39\x2A\x2A\x7C\x2A\x53\x8B\x2A\x2A\x56\x57\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x2B\x2A\x2A\xC1\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x82\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x83\xBE\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x75\x2A\x80"
+						/* ? ? ? ? ? ? ? ? 57 BF ? ? ? ? 39 ? ? 7C ? 53 8B ? ? 56 57 E8 ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? ? 85 ? 74 ? 8B 0D ? ? ? ? 2B ? ? C1 ? ? 85 ? 74 ? 8B ? 8B 82 ? ? ? ? 8B ? FF ? 84 ? 74 ? 83 BE ? ? ? ? ? 74 ? 8B ? E8 ? ? ? ? 83 ? ? 75 ? 80 */
+			}
+
+			/**
 			 * ForEachTerrorPlayer<SpawnablePZScan>(SpawnablePZScan &)
 			 *
 			 * How to find on Windows:
@@ -5483,22 +5647,6 @@
 				"mac"		"@_Z13GetWeaponInfo10CSWeaponID"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x33\x2A\x5B\x5D\xC3\x80"
 						/* ? ? ? ? ? ? ? 85 ? 75 ? 33 ? 5B 5D C3 80 */
-			}
-
-			/**
-			 * ForEachSurvivor<MinigunnerScan>(MinigunnerScan &)
-			 *
-			 * How to find on Windows:
-			 * 1. Locate the "TankAttack::Update" function.
-			 * 2. This function is called before the "== 0.0" check.
-			 **/
-			"ForEachSurvivor<MinigunnerScan>"
-			{
-				"library"	"server"
-				"linux"		"@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
-				"mac"		"@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x57\xBF\x2A\x2A\x2A\x2A\x39\x2A\x2A\x7C\x2A\x53\x8B\x2A\x2A\x56\x57\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x2B\x2A\x2A\xC1\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x82\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x83\xBE\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x75\x2A\x80"
-						/* ? ? ? ? ? ? ? ? 57 BF ? ? ? ? 39 ? ? 7C ? 53 8B ? ? 56 57 E8 ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? ? 85 ? 74 ? 8B 0D ? ? ? ? 2B ? ? C1 ? ? 85 ? 74 ? 8B ? 8B 82 ? ? ? ? 8B ? FF ? 84 ? 74 ? 83 BE ? ? ? ? ? 74 ? 8B ? E8 ? ? ? ? 83 ? ? 75 ? 80 */
 			}
 
 			/**
@@ -5831,6 +5979,25 @@
 			}
 
 			/**
+			 * L4D1SurvivorBehavior::SelectMoreDangerousThreat(INextBot const*, CBaseCombatCharacter const*, CBaseCombatCharacter*, CBaseCombatCharacter*)
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "L4D1SurvivorBehavior::`vftable'" to jump to the "L4D1SurvivorBehavior" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"L4D1SurvivorBehavior::SelectMoreDangerousThreat"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK20L4D1SurvivorBehavior25SelectMoreDangerousThreatEPK8INextBotPK20CBaseCombatCharacterPS3_S6_"
+				"mac"		"@_ZNK20L4D1SurvivorBehavior25SelectMoreDangerousThreatEPK8INextBotPK20CBaseCombatCharacterPS3_S6_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xAC\x9C"
+						/* ? ? ? ? ? ? ? ? 8B ? ? 8B ? 8B ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? AC 9C */
+			}
+
+			/**
 			 * ModifyOrAppendGlobalCriteria(AI_CriteriaSet *)
 			 *
 			 * How to find on Windows:
@@ -5905,6 +6072,25 @@
 				"mac"		"@_ZN5Music9OnPZAlertEifPKcf"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x53\x8B\x2A\x2A\x57\x8B\x2A\xE8"
 						/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 53 8B ? ? 57 8B ? E8 */
+			}
+
+			/**
+			 * Music::OnSavedFromLedgeHang()
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "Music::`vftable'" to jump to the "Music" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"Music::OnSavedFromLedgeHang"
+			{
+				"library"	"server"
+				"linux"		"@_ZN5Music20OnSavedFromLedgeHangEv"
+				"mac"		"@_ZN5Music20OnSavedFromLedgeHangEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\xFF\x2A\x2A\x68\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\xD9\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x6A\x2A\x2A\xD9\x2A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xD9\x2A\x2A\x2A\x2A\x2A\x6A\x2A\x2A\xD9\x2A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xD9\x2A\x2A\x2A\x2A\x2A\x6A\x2A\x2A\xD9\x2A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xD9\x2A\x2A\x2A\x2A\x2A\x6A\x2A\x2A\xD9\x2A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xD9\x2A\x2A\x2A\x2A\x2A\x6A\x2A\x2A\xD9\x2A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x8B"
+						/* ? ? ? ? ? ? ? ? ? 8B ? 8B ? ? ? ? ? FF ? ? 68 ? ? ? ? E8 ? ? ? ? D9 ? ? ? ? ? 83 ? ? 6A ? ? D9 ? ? 68 ? ? ? ? 8B ? E8 ? ? ? ? D9 ? ? ? ? ? 6A ? ? D9 ? ? 68 ? ? ? ? 8B ? E8 ? ? ? ? D9 ? ? ? ? ? 6A ? ? D9 ? ? 68 ? ? ? ? 8B ? E8 ? ? ? ? D9 ? ? ? ? ? 6A ? ? D9 ? ? 68 ? ? ? ? 8B ? E8 ? ? ? ? D9 ? ? ? ? ? 6A ? ? D9 ? ? 68 ? ? ? ? 8B ? E8 ? ? ? ? ? ? ? ? ? ? ? 56 8B ? 8B ? ? ? ? ? 8B */
 			}
 
 			/**
@@ -6225,6 +6411,42 @@
 			}
 
 			/**
+			 * SurvivorAttack::SelectTarget(SurvivorBot *)
+			 *
+			 * How to find on Windows:
+			 * 1. Search for the "%3.2f: %s: NOT FIRING because we would pop the Boomer on a teammate\n" string.
+			 * 2. The string can only be found in "SurvivorAttack::FireWeapon".
+			 * 3. This function should be the second function call above the "%3.2f: %s: NOT FIRING because target is dead/gone\n" string.
+			 **/
+			"SurvivorAttack::SelectTarget"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14SurvivorAttack12SelectTargetEP11SurvivorBot"
+				"mac"		"@_ZN14SurvivorAttack12SelectTargetEP11SurvivorBot"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\x57"
+						/* ? ? ? ? ? ? 53 56 8B ? ? 8B ? 8B 90 ? ? ? ? 8B ? 57 */
+			}
+
+			/**
+			 * SurvivorBehavior::SelectMoreDangerousThreat(INextBot const*, CBaseCombatCharacter const*, CBaseCombatCharacter*, CBaseCombatCharacter*)
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "SurvivorBehavior::`vftable'" to jump to the "SurvivorBehavior" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"SurvivorBehavior::SelectMoreDangerousThreat"
+			{
+				"library"	"server"
+				"linux"		"@_ZNK16SurvivorBehavior25SelectMoreDangerousThreatEPK8INextBotPK20CBaseCombatCharacterPS3_S6_"
+				"mac"		"@_ZNK16SurvivorBehavior25SelectMoreDangerousThreatEPK8INextBotPK20CBaseCombatCharacterPS3_S6_"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x6C\x67"
+						/* ? ? ? ? ? ? ? ? 8B ? ? 8B ? 8B ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 6C 67 */
+			}
+
+			/**
 			 * SurvivorBot::FindScavengeItem(float)
 			 *
 			 * How to find on Windows:
@@ -6455,15 +6677,15 @@
 			 *
 			 * How to find on Windows:
 			 * 1. Find the function's offsets with asherkin's VTable dump.
-			 * 2. Use IDA to get the VTable dump for the "TankBehavior" class on Windows.
-			 * 3. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
-			 * 4. Look for the target function in the Windows binary.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "TankBehavior::`vftable'" to jump to the "TankBehavior" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
 			 **/
 			"TankBehavior::InitialContainedAction"
 			{
 				"library"	"server"
 				"linux"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
-				"mac"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
 				"mac"		"@_ZN12TankBehavior22InitialContainedActionEP4Tank"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\xFF"
 						/* ? ? ? ? ? ? ? ? ? E8 ? ? ? ? 84 ? ? ? 8B ? ? 8B ? 8B 90 ? ? ? ? FF */

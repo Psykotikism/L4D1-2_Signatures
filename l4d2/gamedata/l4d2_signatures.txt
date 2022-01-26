@@ -2656,6 +2656,25 @@
 			}
 
 			/**
+			 * CTankClaw::PrimaryAttack()
+			 *
+			 * How to find on Windows:
+			 * 1. Find the function's offsets with asherkin's VTable dump.
+			 * 2. In IDA Pro, go to the ".rdata" section of the Windows binary.
+			 * 3. Search for "CTankClaw::`vftable'" to jump to the "CTankClaw" vtable.
+			 * 4. Compare your dump's offsets with asherkin's dump's offsets to find the target function.
+			 * 5. Look for the target function in the Windows binary.
+			 **/
+			"CTankClaw::PrimaryAttack"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CTankClaw13PrimaryAttackEv"
+				"mac"		"@_ZN9CTankClaw13PrimaryAttackEv"
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x33\x2A\x57\x8B\x2A\x39\x2A\x2A\x0F"
+						/* ? ? ? ? ? ? ? ? ? 56 33 ? 57 8B ? 39 ? ? 0F */
+			}
+
+			/**
 			 * CTankClaw::SweepFist(Vector const&, Vector const&)
 			 *
 			 * How to find on Windows:

@@ -441,6 +441,9 @@ Signature for CTankClaw::OnPlayerHit(CTerrorPlayer *, bool):
 Signature for CTankClaw::OnWindupFinished(void):
 "@_ZN9CTankClaw16OnWindupFinishedEv"
 
+Signature for CTankClaw::PrimaryAttack(void):
+"@_ZN9CTankClaw13PrimaryAttackEv"
+
 Signature for CTankClaw::SweepFist(Vector const&, Vector const&):
 "@_ZN9CTankClaw9SweepFistERK6VectorS2_"
 

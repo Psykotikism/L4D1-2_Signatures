@@ -1604,7 +1604,7 @@
 			"CTankClaw::SweepFist"
 			{
 				"library"	"server"
-				"linux"		"@_ZN9CTankClaw9SweepFistERK6VectorS2_.constprop.248"
+				"linux"		"@_ZN9CTankClaw9SweepFistERK6VectorS2_.constprop.246"
 				"mac"		"@_ZN9CTankClaw9SweepFistERK6VectorS2_"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x55\x56\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x0F\x84\x2A\x2A\x2A\x2A\x8B\x0D"
 						/* ? ? ? ? ? ? 55 56 8B ? E8 ? ? ? ? 8B ? 85 ? 0F 84 ? ? ? ? 8B 0D */
@@ -2923,7 +2923,7 @@
 			"CTerrorPlayer::OnPreThinkGhostState"
 			{
 				"library"	"server"
-				"linux"		"@_ZN13CTerrorPlayer20OnPreThinkGhostStateEv.part.835"
+				"linux"		"@_ZN13CTerrorPlayer20OnPreThinkGhostStateEv.part.837"
 				"mac"		"@_ZN13CTerrorPlayer20OnPreThinkGhostStateEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x81\xEC\x2A\x2A\x2A\x2A\x53\x56\x8B\x2A\x8B\x0D"
 						/* ? ? ? ? ? ? 81 EC ? ? ? ? 53 56 8B ? 8B 0D */
@@ -3211,7 +3211,7 @@
 			"CTerrorPlayer::SetClass"
 			{
 				"library"	"server"
-				"linux"		"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType.part.535"
+				"linux"		"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType.part.536"
 				"mac"		"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x0F\x85\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x83\x2A\x2A\x3D"
 						/* ? ? ? ? ? ? ? ? 83 ? ? 0F 85 ? ? ? ? A1 ? ? ? ? 83 ? ? 3D */

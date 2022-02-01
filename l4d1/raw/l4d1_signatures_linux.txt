@@ -274,7 +274,7 @@ Signature for CTankClaw::PrimaryAttack(void):
 "@_ZN9CTankClaw13PrimaryAttackEv"
 
 Signature for CTankClaw::SweepFist(Vector const&, Vector const&) [clone]:
-"@_ZN9CTankClaw9SweepFistERK6VectorS2_.constprop.248"
+"@_ZN9CTankClaw9SweepFistERK6VectorS2_.constprop.246"
 
 Signature for CTankRock::BounceTouch(CBaseEntity *):
 "@_ZN9CTankRock11BounceTouchEP11CBaseEntity"
@@ -484,7 +484,7 @@ Signature for CTerrorPlayer::OnPounceEnded(void):
 "@_ZN13CTerrorPlayer13OnPounceEndedEv"
 
 Signature for CTerrorPlayer::OnPreThinkGhostState(void) [clone]:
-"@_ZN13CTerrorPlayer20OnPreThinkGhostStateEv.part.835"
+"@_ZN13CTerrorPlayer20OnPreThinkGhostStateEv.part.837"
 
 Signature for CTerrorPlayer::OnRevived(void):
 "@_ZN13CTerrorPlayer9OnRevivedEv"
@@ -532,7 +532,7 @@ Signature for CTerrorPlayer::SetCharacter(void):
 "@_ZN13CTerrorPlayer12SetCharacterEv"
 
 Signature for CTerrorPlayer::SetClass(ZombieClassType) [clone]:
-"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType.part.535"
+"@_ZN13CTerrorPlayer8SetClassE15ZombieClassType.part.536"
 
 Signature for CTerrorPlayer::SetHealthBuffer(float):
 "@_ZN13CTerrorPlayer15SetHealthBufferEf"

@@ -44,16 +44,29 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 
 ### Left 4 Dead
 - Most of the signatures have been verified to have withstood the last landmark update:
-1. `Pre-Current (7-24-2019)` - `25/292` changed since the latest version came out.
-2. `Current (8-9-2021)`
+1. `Old (7-24-2019)`
+- `25/292` Windows signatures changed since the latest version came out.
+- `3/292` Linux signatures changed since the latest version came out.
+2. `Pre-Current (8-9-2021)`
+- `3/292` Linux signatures changed since the latest version came out.
+3. `Current (1-31-2022)`
 
 ### Left 4 Dead 2
 - Most of the signatures have been verified to have withstood the last five landmark updates:
-1. `Pre-TLS (6-5-2020)` - `64/405` changed since the latest version came out.
-2. `TLS (9-24-2020)` - `60/405` changed since the latest version came out.
-3. `Post-TLS (2-18-2021)` - `57/405` changed since the latest version came out.
-4. `Pre-Current (6-15-2021)` - `51/405` changed since the latest version came out.
+1. `Pre-TLS (6-5-2020)`
+- `64/405` Windows signatures changed since the latest version came out.
+- `8/405` Linux signatures changed since the latest version came out.
+2. `TLS (9-24-2020)`
+- `60/405` Windows signatures changed since the latest version came out.
+- `5/405` Linux signatures changed since the latest version came out.
+3. `Post-TLS (2-18-2021)`
+- `57/405` Windows signatures changed since the latest version came out.
+- `5/405` Linux signatures changed since the latest version came out.
+4. `Pre-Current (6-15-2021)`
+- `51/405` Windows signatures changed since the latest version came out.
 5. `Current (12-9-2021)`
+
+### Reminders
 - Keep in mind that does not mean that most of these signatures will never break. It just means that they are durable enough to withstand several major updates unless VALVe updates the code of their respective functions and/or uses different compiler settings.
 
 ## Credits

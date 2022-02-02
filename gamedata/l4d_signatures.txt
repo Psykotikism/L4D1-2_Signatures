@@ -645,7 +645,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN8Director15ClearTeamScoresEb"
-				"mac"		"@_ZN8Director15ClearTeamScoresEb"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x33\x2A\x3B\x2A\x74\x2A\xE8\x2A\x2A\x2A\x2A\x38"
 						/* ? ? ? ? ? ? ? ? ? ? 33 ? 3B ? 74 ? E8 ? ? ? ? 38 */
 			}
@@ -2500,7 +2499,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer16IsClassOverLimitEi"
-				"mac"		"@_ZN13CTerrorPlayer16IsClassOverLimitEi"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x8D\x2A\x2A\x50"
 						/* ? ? ? ? ? ? ? ? 89 ? ? ? 89 ? ? ? 89 ? ? ? 89 ? ? ? 89 ? ? ? 8D ? ? 50 */
 			}
@@ -3174,7 +3172,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
-				"mac"		"@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\x68\x2A\x2A\x2A\x2A\xD9"
 						/* ? ? ? ? ? ? ? 68 ? ? ? ? 8B ? 68 ? ? ? ? D9 */
 			}
@@ -3355,7 +3352,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer16StopTrackedSoundEPKc"
-				"mac"		"@_ZN13CTerrorPlayer16StopTrackedSoundEPKc"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x74\x2A\x80"
 						/* ? ? ? ? ? ? ? 56 57 8B ? 74 ? 80 */
 			}
@@ -4786,7 +4782,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZNK11WitchAttack9GetVictimEv"
-				"mac"		"@_ZNK11WitchAttack9GetVictimEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83\x2A\x2A\x74\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\x2A\x81\xE1\x2A\x2A\x2A\x2A\xC1\x2A\x2A\x8D\x2A\x2A\x2A\x85\x2A\x74\x2A\xC1\x2A\x2A\x39\x2A\x2A\x75\x2A\x8B\x2A\xC3"
 						/* ? ? ? ? ? ? 75 ? 8B ? ? 83 ? ? 74 ? 8B 15 ? ? ? ? 8B ? 81 E1 ? ? ? ? C1 ? ? 8D ? ? ? 85 ? 74 ? C1 ? ? 39 ? ? 75 ? 8B ? C3 */
 			}
@@ -6036,7 +6031,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN9CDirector19ClearScavengeScoresEb"
-				"mac"		"@_ZN9CDirector19ClearScavengeScoresEb"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x57\x33\x2A\x8B\x2A\x33\x2A\x8D\x2A\x2A\x39"
 						/* ? ? ? ? ? ? 57 33 ? 8B ? 33 ? 8D ? ? 39 */
 			}
@@ -6052,7 +6046,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN9CDirector15ClearTeamScoresEb"
-				"mac"		"@_ZN9CDirector15ClearTeamScoresEb"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x57\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x85\x2A\x74\x2A\x56"
 						/* ? ? ? ? ? ? ? 57 8B ? 8B 0D ? ? ? ? 85 ? 74 ? 56 */
 			}
@@ -7188,8 +7181,8 @@
 				"library"	"server"
 				"linux"		"@_ZN16CItem_Adrenaline10OnStartUseEP13CTerrorPlayer"
 				"mac"		"@_ZN16CItem_Adrenaline10OnStartUseEP13CTerrorPlayer"
-				"windows"	"\x55\x8B\xEC\x56\x8B\x75\x08\x57\x8B\x3E\x6A\x00\x6A\x00\x6A\x00\x6A\x00\x6A\x01\x83\xEC\x08\x8B\xCC\x68\x3C"
-						/* 55 8B EC 56 8B 75 08 57 8B 3E 6A 00 6A 00 6A 00 6A 00 6A 01 83 EC 08 8B CC 68 3C */
+				"windows"	"\x55\x8B\xEC\x56\x8B\x75\x08\x57\x8B\x3E\x6A\x00\x6A\x00\x6A\x00\x6A\x00\x6A\x01\x83\xEC\x08\x8B\xCC\x68\x54"
+						/* 55 8B EC 56 8B 75 08 57 8B 3E 6A 00 6A 00 6A 00 6A 00 6A 01 83 EC 08 8B CC 68 54 */
 			}
 
 			/**
@@ -8033,8 +8026,8 @@
 				"library"	"server"
 				"linux"		"@_ZN9CTankRock14ProximityThinkEv"
 				"mac"		"@_ZN9CTankRock14ProximityThinkEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x28\x2A\x2A\x2A\x53\x56\x57\x33\x2A\x89\x2A\x2A\x89\x2A\x2A\x8B\x2A\x39\x2A\x2A\x74\x2A\x8B\x2A\x2A\x68\xE8"
-						/* ? ? ? ? ? ? A1 28 ? ? ? 53 56 57 33 ? 89 ? ? 89 ? ? 8B ? 39 ? ? 74 ? 8B ? ? 68 E8 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x53\x56\x57\x33\x2A\x89\x2A\x2A\x89\x2A\x2A\x8B\x2A\x39\x2A\x2A\x74\x2A\x8B\x2A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x68\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x57\x57\x57\x57\x8D\x2A\x2A\x51\x50\xFF\x2A\xA1\x2A\x2A\x2A\x2A\x83\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x2A\x6A\x2A\x57\x68\x2A\x2A\x2A\x2A\x57\x89\x2A\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x89\x2A\x2A\x89\x2A\x2A\xFF\x15\x2A\x2A\x2A\x2A\xF3"
+						/* ? ? ? ? ? ? A1 ? ? ? ? 53 56 57 33 ? 89 ? ? 89 ? ? 8B ? 39 ? ? 74 ? 8B ? ? 68 ? ? ? ? 8B ? ? 68 ? ? ? ? 68 ? ? ? ? 68 ? ? ? ? 68 ? ? ? ? 68 ? ? ? ? 57 57 57 57 8D ? ? 51 50 FF ? A1 ? ? ? ? 83 ? ? 8B ? ? 8B ? ? 8B ? ? 6A ? 57 68 ? ? ? ? 57 89 ? ? 8B 0D ? ? ? ? 68 ? ? ? ? 89 ? ? 89 ? ? FF 15 ? ? ? ? F3 */
 			}
 
 			/**
@@ -8358,8 +8351,8 @@
 				"library"	"server"
 				"linux"		"@_ZN16CTerrorGameRules10IsCoopModeEv"
 				"mac"		"@_ZN16CTerrorGameRules10IsCoopModeEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x3C"
-						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 3C */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x2A\x3C"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 ? ? ? ? ? ? ? ? ? 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? ? 3C */
 			}
 
 			/**
@@ -8427,8 +8420,8 @@
 				"library"	"server"
 				"linux"		"@_ZN16CTerrorGameRules13IsRealismModeEv"
 				"mac"		"@_ZN16CTerrorGameRules13IsRealismModeEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x5C"
-						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 5C */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x2A\x64"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 ? ? ? ? ? ? ? ? ? 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? ? 64 */
 			}
 
 			/**
@@ -8443,8 +8436,8 @@
 				"library"	"server"
 				"linux"		"@_ZN16CTerrorGameRules14IsScavengeModeEv"
 				"mac"		"@_ZN16CTerrorGameRules14IsScavengeModeEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x30"
-						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 30 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x2A\x38"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 ? ? ? ? ? ? ? ? ? 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? ? 38 */
 			}
 
 			/**
@@ -8459,8 +8452,8 @@
 				"library"	"server"
 				"linux"		"@_ZN16CTerrorGameRules14IsSurvivalModeEv"
 				"mac"		"@_ZN16CTerrorGameRules14IsSurvivalModeEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x50"
-						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 50 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x2A\x58"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 ? ? ? ? ? ? ? ? ? 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? ? 58 */
 			}
 
 			/**
@@ -8475,8 +8468,8 @@
 				"library"	"server"
 				"linux"		"@_ZN16CTerrorGameRules12IsVersusModeEv"
 				"mac"		"@_ZN16CTerrorGameRules12IsVersusModeEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x05\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x10\x2A\x2A\x2A\xEB\x2A\xA1\xC4\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x64\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x68\x48"
-						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 05 ? ? ? ? ? ? ? ? 74 ? B8 10 ? ? ? EB ? A1 C4 ? ? ? 8B ? ? 85 ? 75 ? B8 64 ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? 68 48 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x85\x2A\x75\x2A\x32\x2A\xC3\xF7\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\x2A\x2A\x2A\x2A\xEB\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x2A\x2A\x2A\x2A\x8B\x2A\x50\x8B\x2A\x2A\xFF\x2A\x85\x2A\x74\x2A\x2A\x50"
+						/* ? ? ? ? ? ? 85 ? 75 ? 32 ? C3 F7 ? ? ? ? ? ? ? ? ? 74 ? B8 ? ? ? ? EB ? A1 ? ? ? ? 8B ? ? 85 ? 75 ? B8 ? ? ? ? 8B ? 50 8B ? ? FF ? 85 ? 74 ? ? 50 */
 			}
 
 			/**
@@ -9214,7 +9207,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer24Input_GoAwayFromKeyboardEv"
-				"mac"		"@_ZN13CTerrorPlayer24Input_GoAwayFromKeyboardEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x8B\x2A\x8B\x90\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x0F\x2A\x2A\xF7\x2A\x1B\x2A\x23\x2A\x5E"
 						/* ? ? ? ? ? ? 8B ? 85 ? 74 ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 84 ? 74 ? 8B ? 8B 90 ? ? ? ? 8B ? FF ? 0F ? ? F7 ? 1B ? 23 ? 5E */
 			}
@@ -9430,7 +9422,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer15OnAdrenalineEndEv"
-				"mac"		"@_ZN13CTerrorPlayer15OnAdrenalineEndEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x57\x8D\xBE\x2A\x2A\x2A\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xD8\x2A\x2A\x83\x2A\x2A\xD9\x2A\x2A\xD9"
 						/* ? ? ? ? ? ? ? 57 8D BE ? ? ? ? 8B ? E8 ? ? ? ? D8 ? ? 83 ? ? D9 ? ? D9 */
 			}
@@ -10036,7 +10027,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer13RemoveUpgradeE19SurvivorUpgradeType"
-				"mac"		"@_ZN13CTerrorPlayer13RemoveUpgradeE19SurvivorUpgradeType"
 				"windows"	"\x55\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x6A\x2A\xFF\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x5D\xFF\x2A\x5D\xC2\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x55"
 						/* 55 8B ? 8B ? 8B ? ? ? ? ? 6A ? FF ? 85 ? 74 ? 8B ? 8B ? 8B ? ? ? ? ? 5D FF ? 5D C2 ? ? ? ? ? ? ? ? ? ? ? ? ? ? 55 */
 			}
@@ -10125,7 +10115,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
-				"mac"		"@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x6A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\x68"
 						/* ? ? ? ? ? ? ? ? 56 6A ? 68 ? ? ? ? 8B ? 68 */
 			}
@@ -10867,7 +10856,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_Z13ForEachPlayerI14ProximityCheckEbRT_"
-				"mac"		"@_Z13ForEachPlayerI14ProximityCheckEbRT_"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\xD8\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x8B\x2A\x2A\x57\x8B\x2A\x85\x2A\x74"
 						/* ? ? ? ? ? ? ? ? ? A1 D8 ? ? ? 33 ? 89 ? ? 56 8B ? ? 57 8B ? 85 ? 74 */
 			}
@@ -10883,7 +10871,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
-				"mac"		"@_Z15ForEachSurvivorI14MinigunnerScanEbRT_"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x57\xBF\x2A\x2A\x2A\x2A\x39\x2A\x2A\x7C\x2A\x53\x8B\x2A\x2A\x56\x57\xE8\x2A\x2A\x2A\x2A\x8B\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x2A\x85\x2A\x74\x2A\x8B\x0D\x2A\x2A\x2A\x2A\x2B\x2A\x2A\xC1\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x82\x2A\x2A\x2A\x2A\x8B\x2A\xFF\x2A\x84\x2A\x74\x2A\x83\xBE\x2A\x2A\x2A\x2A\x2A\x74\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x75\x2A\x80"
 						/* ? ? ? ? ? ? ? ? 57 BF ? ? ? ? 39 ? ? 7C ? 53 8B ? ? 56 57 E8 ? ? ? ? 8B ? 83 ? ? 85 ? 74 ? 8B ? ? 85 ? 74 ? 8B 0D ? ? ? ? 2B ? ? C1 ? ? 85 ? 74 ? 8B ? 8B 82 ? ? ? ? 8B ? FF ? 84 ? 74 ? 83 BE ? ? ? ? ? 74 ? 8B ? E8 ? ? ? ? 83 ? ? 75 ? 80 */
 			}
@@ -10900,9 +10887,8 @@
 			{
 				"library"	"server"
 				"linux"		"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_"
-				"mac"		"@_Z19ForEachTerrorPlayerI15SpawnablePZScanEbRT_"
-				"windows"	"\x55\x8B\xEC\xA1\x90\x35\x7F\x10\x53\x56\x57\xBF\x01\x00\x00\x00\x39\x78\x14\x7C\x5A\x8B\x5D\x08\x57\xE8\x32\xFE"
-						/* 55 8B EC A1 90 35 7F 10 53 56 57 BF 01 00 00 00 39 78 14 7C 5A 8B 5D 08 57 E8 32 FE */
+				"windows"	"\x55\x8B\xEC\xA1\x90\x36\x7F\x10\x53\x56\x57\xBF\x01\x00\x00\x00\x39\x78\x14\x7C\x5A\x8B\x5D\x08\x57\xE8\x42\xFD"
+						/* 55 8B EC A1 90 36 7F 10 53 56 57 BF 01 00 00 00 39 78 14 7C 5A 8B 5D 08 57 E8 42 FD */
 			}
 
 			/**
@@ -11118,7 +11104,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_Z34IsAreaConnectedToNonCheckpointAreaP13TerrorNavArea"
-				"mac"		"@_Z34IsAreaConnectedToNonCheckpointAreaP13TerrorNavArea"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x53\x56\xC7\x45"
 						/* ? ? ? ? ? ? 8B ? ? 53 56 C7 45 */
 			}
@@ -11286,7 +11271,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZL28ModifyOrAppendGlobalCriteriaP14AI_CriteriaSet"
-				"mac"		"@_ZL28ModifyOrAppendGlobalCriteriaP14AI_CriteriaSet"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x53\x8D\x85\x2A\x2A\x2A\x2A\x57\x50\x89"
 						/* ? ? ? ? ? ? ? ? ? A1 ? ? ? ? 33 ? 89 ? ? 53 8D 85 ? ? ? ? 57 50 89 */
 			}
@@ -11477,8 +11461,8 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI6BoomerEPT_PKc"
 				"mac"		"@_Z22NextBotCreatePlayerBotI6BoomerEPT_PKc"
-				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x40\x20"
-						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 40 20 */
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\xB0\x24"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 B0 24 */
 			}
 
 			/**
@@ -11493,8 +11477,8 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI7ChargerEPT_PKc"
 				"mac"		"@_Z22NextBotCreatePlayerBotI7ChargerEPT_PKc"
-				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x40\xCF"
-						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 40 CF */
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\xB0\xD3"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 B0 D3 */
 			}
 
 			/**
@@ -11509,8 +11493,8 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI6HunterEPT_PKc"
 				"mac"		"@_Z22NextBotCreatePlayerBotI6HunterEPT_PKc"
-				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x40\x87"
-						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 40 87 */
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\xA0"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 A0 */
 			}
 
 			/**
@@ -11525,8 +11509,8 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI6JockeyEPT_PKc"
 				"mac"		"@_Z22NextBotCreatePlayerBotI6JockeyEPT_PKc"
-				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\xF0"
-						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 F0 */
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x50\x3C"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 50 3C */
 			}
 
 			/**
@@ -11541,8 +11525,8 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI6SmokerEPT_PKc"
 				"mac"		"@_Z22NextBotCreatePlayerBotI6SmokerEPT_PKc"
-				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x10"
-						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 10 */
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x60"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 60 */
 			}
 
 			/**
@@ -11557,8 +11541,8 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI7SpitterEPT_PKc"
 				"mac"		"@_Z22NextBotCreatePlayerBotI7SpitterEPT_PKc"
-				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\xA0"
-						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 A0 */
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x10"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 10 */
 			}
 
 			/**
@@ -11576,8 +11560,8 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
 				"mac"		"@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
-				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\xB0"
-						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 B0 */
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x50\x7F"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 50 7F */
 			}
 
 			/**
@@ -11592,8 +11576,8 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI4TankEPT_PKc"
 				"mac"		"@_Z22NextBotCreatePlayerBotI4TankEPT_PKc"
-				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\x80"
-						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 80 */
+				"windows"	"\x55\x8B\x2A\x83\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x56\x57\x8B\x2A\x2A\x68\xE0"
+						/* 55 8B ? 83 ? ? A1 ? ? ? ? 33 ? 89 ? ? 56 57 8B ? ? 68 E0 */
 			}
 
 			/**
@@ -11716,8 +11700,8 @@
 				"library"	"server"
 				"linux"		"@_ZNK16SurvivorBehavior25SelectMoreDangerousThreatEPK8INextBotPK20CBaseCombatCharacterPS3_S6_"
 				"mac"		"@_ZNK16SurvivorBehavior25SelectMoreDangerousThreatEPK8INextBotPK20CBaseCombatCharacterPS3_S6_"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x6C\x67"
-						/* ? ? ? ? ? ? ? ? 8B ? ? 8B ? 8B ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 6C 67 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x8B\x2A\x8B\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x7C\x67"
+						/* ? ? ? ? ? ? ? ? 8B ? ? 8B ? 8B ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? ? 7C 67 */
 			}
 
 			/**
@@ -11780,7 +11764,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZNK11SurvivorBot11IsReachableERK6Vector"
-				"mac"		"@_ZNK11SurvivorBot11IsReachableERK6Vector"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x56\x6A\x2A\x6A\x2A\x6A\x2A\x51"
 						/* ? ? ? ? ? ? ? ? ? 8B ? ? 56 6A ? 6A ? 6A ? 51 */
 			}
@@ -12106,7 +12089,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZNK11WitchAttack9GetVictimEv"
-				"mac"		"@_ZNK11WitchAttack9GetVictimEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83\x2A\x2A\x74\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\x2A\x81\xE1\x2A\x2A\x2A\x2A\x03\x2A\x8D\x2A\x2A\x2A\x85\x2A\x74\x2A\xC1\x2A\x2A\x39\x2A\x2A\x75\x2A\x8B\x2A\xC3"
 						/* ? ? ? ? ? ? 75 ? 8B ? ? 83 ? ? 74 ? 8B 15 ? ? ? ? 8B ? 81 E1 ? ? ? ? 03 ? 8D ? ? ? 85 ? 74 ? C1 ? ? 39 ? ? 75 ? 8B ? C3 */
 			}
@@ -12368,7 +12350,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13ZombieManager12SpawnSpecialE15ZombieClassTypePK13TerrorNavAreaRK6QAngle"
-				"mac"		"@_ZN13ZombieManager12SpawnSpecialE15ZombieClassTypePK13TerrorNavAreaRK6QAngle"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x8D\x2A\x2A\x56\x8B\x2A\x83"
 						/* ? ? ? ? ? ? ? 8D ? ? 56 8B ? 83 */
 			}
@@ -12401,8 +12382,8 @@
 				"library"	"server"
 				"linux"		"@_ZN13ZombieManager9SpawnTankEPK13TerrorNavAreaRK6QAngleb"
 				"mac"		"@_ZN13ZombieManager9SpawnTankEPK13TerrorNavAreaRK6QAngleb"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x57\x8B\x2A\x2A\x8B\x2A\x50\x8D\x2A\x2A\x51\x6A\x2A\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x97\x2A\x2A\x2A\x2A\x52\x68\x80"
-						/* ? ? ? ? ? ? 83 ? ? 56 57 8B ? ? 8B ? 50 8D ? ? 51 6A ? 57 8B ? E8 ? ? ? ? 84 ? 75 ? 8B 97 ? ? ? ? 52 68 80 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x57\x8B\x2A\x2A\x8B\x2A\x50\x8D\x2A\x2A\x51\x6A\x2A\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x97\x2A\x2A\x2A\x2A\x52\x68\x98"
+						/* ? ? ? ? ? ? 83 ? ? 56 57 8B ? ? 8B ? 50 8D ? ? 51 6A ? 57 8B ? E8 ? ? ? ? 84 ? 75 ? 8B 97 ? ? ? ? 52 68 98 */
 			}
 
 			/**
@@ -12434,8 +12415,8 @@
 				"library"	"server"
 				"linux"		"@_ZN13ZombieManager10SpawnWitchEPK13TerrorNavAreaRK6QAngleb"
 				"mac"		"@_ZN13ZombieManager10SpawnWitchEPK13TerrorNavAreaRK6QAngleb"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x57\x8B\x2A\x2A\x8B\x2A\x50\x8D\x2A\x2A\x51\x6A\x2A\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x97\x2A\x2A\x2A\x2A\x52\x68\xB8"
-						/* ? ? ? ? ? ? 83 ? ? 56 57 8B ? ? 8B ? 50 8D ? ? 51 6A ? 57 8B ? E8 ? ? ? ? 84 ? 75 ? 8B 97 ? ? ? ? 52 68 B8 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x83\x2A\x2A\x56\x57\x8B\x2A\x2A\x8B\x2A\x50\x8D\x2A\x2A\x51\x6A\x2A\x57\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x97\x2A\x2A\x2A\x2A\x52\x68\xD0"
+						/* ? ? ? ? ? ? 83 ? ? 56 57 8B ? ? 8B ? 50 8D ? ? 51 6A ? 57 8B ? E8 ? ? ? ? 84 ? 75 ? 8B 97 ? ? ? ? 52 68 D0 */
 			}
 
 			/**

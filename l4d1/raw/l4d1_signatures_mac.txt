@@ -108,9 +108,6 @@ Signature for CDeathFallCamera::Enable(CBasePlayer *):
 Signature for Director::AreWanderersAllowed(void)const:
 "@_ZNK8Director19AreWanderersAllowedEv"
 
-Signature for Director::ClearTeamScores(bool):
-"@_ZN8Director15ClearTeamScoresEb"
-
 Signature for Director::CreateRescuableSurvivors(void):
 "@_ZN8Director24CreateRescuableSurvivorsEv"
 
@@ -423,9 +420,6 @@ Signature for CTerrorPlayer::GoAwayFromKeyboard(void):
 Signature for CTerrorPlayer::GrabVictimWithTongue(CTerrorPlayer*):
 "@_ZN13CTerrorPlayer20GrabVictimWithTongueEPS_"
 
-Signature for CTerrorPlayer::IsClassOverLimit(int):
-"@_ZN13CTerrorPlayer16IsClassOverLimitEi"
-
 Signature for CTerrorPlayer::IsInvulnerable(void)const:
 "@_ZNK13CTerrorPlayer14IsInvulnerableEv"
 
@@ -525,9 +519,6 @@ Signature for CTerrorPlayer::ResetCheckpointStats(void):
 Signature for CTerrorPlayer::RoundRespawn(void):
 "@_ZN13CTerrorPlayer12RoundRespawnEv"
 
-Signature for CTerrorPlayer::SetBecomeGhostAt(float):
-"@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
-
 Signature for CTerrorPlayer::SetCharacter(void):
 "@_ZN13CTerrorPlayer12SetCharacterEv"
 
@@ -554,9 +545,6 @@ Signature for CTerrorPlayer::StopBeingRevived(bool):
 
 Signature for CTerrorPlayer::StopRevivingSomeone(bool):
 "@_ZN13CTerrorPlayer19StopRevivingSomeoneEb"
-
-Signature for CTerrorPlayer::StopTrackedSound(char const*):
-"@_ZN13CTerrorPlayer16StopTrackedSoundEPKc"
 
 Signature for CTerrorPlayer::TakeOverBot(bool):
 "@_ZN13CTerrorPlayer11TakeOverBotEb"
@@ -791,9 +779,6 @@ Signature for TerrorNavMesh::GetLastCheckpoint(void)const:
 
 Signature for Witch::DoAttack(CBaseEntity *):
 "@_ZN5Witch8DoAttackEP11CBaseEntity"
-
-Signature for WitchAttack::GetVictim(void)const:
-"@_ZNK11WitchAttack9GetVictimEv"
 
 Signature for WitchAttack::OnAnimationEvent(Infected *, animevent_t *):
 "@_ZN11WitchAttack16OnAnimationEventEP8InfectedP11animevent_t"

@@ -645,7 +645,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN8Director15ClearTeamScoresEb"
-				"mac"		"@_ZN8Director15ClearTeamScoresEb"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x33\x2A\x3B\x2A\x74\x2A\xE8\x2A\x2A\x2A\x2A\x38"
 						/* ? ? ? ? ? ? ? ? ? ? 33 ? 3B ? 74 ? E8 ? ? ? ? 38 */
 			}
@@ -2500,7 +2499,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer16IsClassOverLimitEi"
-				"mac"		"@_ZN13CTerrorPlayer16IsClassOverLimitEi"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x89\x2A\x2A\x2A\x8D\x2A\x2A\x50"
 						/* ? ? ? ? ? ? ? ? 89 ? ? ? 89 ? ? ? 89 ? ? ? 89 ? ? ? 89 ? ? ? 8D ? ? 50 */
 			}
@@ -3174,7 +3172,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
-				"mac"		"@_ZN13CTerrorPlayer16SetBecomeGhostAtEf"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x8B\x2A\x68\x2A\x2A\x2A\x2A\xD9"
 						/* ? ? ? ? ? ? ? 68 ? ? ? ? 8B ? 68 ? ? ? ? D9 */
 			}
@@ -3355,7 +3352,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer16StopTrackedSoundEPKc"
-				"mac"		"@_ZN13CTerrorPlayer16StopTrackedSoundEPKc"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x74\x2A\x80"
 						/* ? ? ? ? ? ? ? 56 57 8B ? 74 ? 80 */
 			}
@@ -4786,7 +4782,6 @@
 			{
 				"library"	"server"
 				"linux"		"@_ZNK11WitchAttack9GetVictimEv"
-				"mac"		"@_ZNK11WitchAttack9GetVictimEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x75\x2A\x8B\x2A\x2A\x83\x2A\x2A\x74\x2A\x8B\x15\x2A\x2A\x2A\x2A\x8B\x2A\x81\xE1\x2A\x2A\x2A\x2A\xC1\x2A\x2A\x8D\x2A\x2A\x2A\x85\x2A\x74\x2A\xC1\x2A\x2A\x39\x2A\x2A\x75\x2A\x8B\x2A\xC3"
 						/* ? ? ? ? ? ? 75 ? 8B ? ? 83 ? ? 74 ? 8B 15 ? ? ? ? 8B ? 81 E1 ? ? ? ? C1 ? ? 8D ? ? ? 85 ? 74 ? C1 ? ? 39 ? ? 75 ? 8B ? C3 */
 			}

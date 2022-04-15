@@ -66,7 +66,9 @@ This is a repository for hosting/storing several L4D1&2 signatures. More signatu
 - `51/405` Windows signatures changed since the latest version came out.
 5. `Pre-Current 2 (12-9-2021)`
 - `17/405` Windows signatures changed since the latest version came out.
-6. `Current (2-1-2022)`
+6. `Pre-Current 3 (2-1-2022)`
+- `7/405` Windows signatures changed since the latest version came out.
+7. `Current (4-14-2022)`
 
 ### Reminders
 - Keep in mind that does not mean that most of these signatures will never break. It just means that they are durable enough to withstand several major updates unless VALVe updates the code of their respective functions and/or uses different compiler settings.

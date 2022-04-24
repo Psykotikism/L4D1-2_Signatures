@@ -1866,7 +1866,7 @@
 			 * Note: (Windows) This function is in-lined with the "CTerrorGameRules::IsVersusMode" function.
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "teamversus" string.
+			 * 1. Search for the "versus" or "teamversus" string.
 			 * 2. One of the functions that references that string should be this function.
 			 **/
 			"CTerrorGameRules::HasPlayerControlledZombies"
@@ -1874,16 +1874,16 @@
 				"library"	"server"
 				"linux"		"@_ZN16CTerrorGameRules26HasPlayerControlledZombiesEv"
 				"mac"		"@_ZN16CTerrorGameRules26HasPlayerControlledZombiesEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\xA0\x2A\x2A\x2A\xEB\x2A\xA1\x54\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x7C\x2A\x2A\x2A\x68\x04"
-						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 A0 ? ? ? EB ? A1 54 ? ? ? 8B ? ? 85 ? 75 ? B8 7C ? ? ? 68 04 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\xA0\x2A\x2A\x2A\xEB\x2A\xA1\x54\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x7C\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74"
+						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 A0 ? ? ? EB ? A1 54 ? ? ? 8B ? ? 85 ? 75 ? B8 7C ? ? ? 68 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 74 */
 			}
 
 			/**
 			 * CTerrorGameRules::IsCoopMode()
 			 *
 			 * How to find on Windows:
-			 * 1. Locate the "outtro_stats_done" function.
-			 * 2. The second function call in "outtro_stats_done" should be this function.
+			 * 1. Search for the "coop" string.
+			 * 2. One of the functions that references that string should be this function.
 			 **/
 			"CTerrorGameRules::IsCoopMode"
 			{
@@ -1933,7 +1933,7 @@
 			 * Note: (Windows) This function is in-lined with the "CTerrorGameRules::HasPlayerControlledZombies" function.
 			 *
 			 * How to find on Windows:
-			 * 1. Search for the "teamversus" string.
+			 * 1. Search for the "versus" or "teamversus" string.
 			 * 2. One of the functions that references that string should be this function.
 			 **/
 			"CTerrorGameRules::IsVersusMode"
@@ -1941,8 +1941,8 @@
 				"library"	"server"
 				"linux"		"@_ZN16CTerrorGameRules12IsVersusModeEv"
 				"mac"		"@_ZN16CTerrorGameRules12IsVersusModeEv"
-				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\xA0\x2A\x2A\x2A\xEB\x2A\xA1\x54\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x7C\x2A\x2A\x2A\x68\x04"
-						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 A0 ? ? ? EB ? A1 54 ? ? ? 8B ? ? 85 ? 75 ? B8 7C ? ? ? 68 04 */
+				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x74\x2A\xB8\xA0\x2A\x2A\x2A\xEB\x2A\xA1\x54\x2A\x2A\x2A\x8B\x2A\x2A\x85\x2A\x75\x2A\xB8\x7C\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74"
+						/* ? ? ? ? ? ? ? ? ? ? 74 ? B8 A0 ? ? ? EB ? A1 54 ? ? ? 8B ? ? 85 ? 75 ? B8 7C ? ? ? 68 ? ? ? ? 50 E8 ? ? ? ? 83 ? ? 85 ? 74 */
 			}
 
 			/**

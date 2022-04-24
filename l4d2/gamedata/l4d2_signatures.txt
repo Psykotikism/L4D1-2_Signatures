@@ -3093,8 +3093,8 @@
 			 * CTerrorGameRules::IsCoopMode()
 			 *
 			 * How to find on Windows:
-			 * 1. Locate the "CTerrorGameRules::IsGenericCooperativeMode" function.
-			 * 2. The first function call in "CTerrorGameRules::IsGenericCooperativeMode" should be this function.
+			 * 1. Search for the "coop" string.
+			 * 2. One of the functions that references that string should be this function.
 			 **/
 			"CTerrorGameRules::IsCoopMode"
 			{
